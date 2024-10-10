@@ -10,7 +10,7 @@ namespace exer3
     internal class connection
     {
         private static string connectionstring = @"Data Source=UYNTHYEE\MSSQLSERVER01;Initial Catalog=account;Integrated Security=True;Trust Server Certificate=True";
-        public SqlConnection getConnection()
+        public static SqlConnection getConnection()
         {
             return new SqlConnection(connectionstring);
         }

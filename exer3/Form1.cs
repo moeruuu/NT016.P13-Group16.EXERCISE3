@@ -6,5 +6,11 @@ namespace exer3
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            signup sup = new signup();
+            sup.ShowDialog();
+        }
     }
 }

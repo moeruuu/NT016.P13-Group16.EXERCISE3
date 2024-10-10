@@ -73,6 +73,15 @@
           }
         }
       },
+      "SuperSimpleTcp/3.0.14": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/SuperSimpleTcp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/SuperSimpleTcp.dll": {}
+        }
+      },
       "System.Data.SqlClient/4.8.6": {
         "type": "package",
         "dependencies": {
@@ -277,6 +286,29 @@
         "version.txt"
       ]
     },
+    "SuperSimpleTcp/3.0.14": {
+      "sha512": "ITlEv4oNbTW0ViwNOFTH9Xk0YMPtP4VrExoXxf4dzH6ajoW9D2HNQZWXBKgsmEhoO3TGgXJSLM/d94NN40Ejtw==",
+      "type": "package",
+      "path": "supersimpletcp/3.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net461/SimpleTcp.xml",
+        "lib/net461/SuperSimpleTcp.dll",
+        "lib/net462/SuperSimpleTcp.dll",
+        "lib/net48/SuperSimpleTcp.dll",
+        "lib/net6.0/SimpleTcp.xml",
+        "lib/net6.0/SuperSimpleTcp.dll",
+        "lib/net7.0/SuperSimpleTcp.dll",
+        "lib/net8.0/SuperSimpleTcp.dll",
+        "lib/netstandard2.1/SimpleTcp.xml",
+        "lib/netstandard2.1/SuperSimpleTcp.dll",
+        "supersimpletcp.3.0.14.nupkg.sha512",
+        "supersimpletcp.nuspec"
+      ]
+    },
     "System.Data.SqlClient/4.8.6": {
       "sha512": "2Ij/LCaTQRyAi5lAv7UUTV9R2FobC8xN9mE0fXBZohum/xLl8IZVmE98Rq5ugQHjCgTBRKqpXRb4ORulRdA6Ig==",
       "type": "package",
@@ -466,6 +498,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "SuperSimpleTcp >= 3.0.14",
       "System.Data.SqlClient >= 4.8.6"
     ]
   },
@@ -513,6 +546,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "SuperSimpleTcp": {
+            "target": "Package",
+            "version": "[3.0.14, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.6, )"
