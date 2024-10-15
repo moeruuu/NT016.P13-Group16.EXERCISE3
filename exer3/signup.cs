@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Net.Mime.MediaTypeNames;
+using System.Security.Cryptography;
 
 namespace exer3
 {
@@ -150,9 +151,19 @@ namespace exer3
             }
             try
             {
+                //Hash password bằng SHA256
+                HashAlgorithm al = SHA256.Create();
+                byte[] inputbyte = Encoding.UTF8.GetBytes(pass);
+                byte[] hashbyte = al.ComputeHash(inputbyte);
+                string hashstring = BitConverter.ToString(hashbyte).Replace("-", "");
+
                 //Lấy IP và port server
                 TcpClient client = new TcpClient("127.0.0.1", 8080);
-                string data = $"{username};{pass};{email};{name};{birthday}";
+                
+                //Gộp các biến thành 1 chuỗi
+                string data = $"{username};{hashstring};{email};{name};{birthday}";
+                
+                //Chuyển sang byte để máy đọc
                 byte[] bytesdata = Encoding.UTF8.GetBytes(data);
                 NetworkStream stream = client.GetStream();
                 stream.Write(bytesdata, 0, bytesdata.Length);
