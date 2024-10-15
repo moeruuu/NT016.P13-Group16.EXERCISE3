@@ -38,7 +38,7 @@
             label8 = new Label();
             linklogin = new LinkLabel();
             tbfullname = new TextBox();
-            tbusename = new TextBox();
+            tbusername = new TextBox();
             tbpass = new TextBox();
             tbcfpass = new TextBox();
             tbemail = new TextBox();
@@ -167,14 +167,14 @@
             tbfullname.Size = new Size(462, 31);
             tbfullname.TabIndex = 9;
             // 
-            // tbusename
+            // tbusername
             // 
-            tbusename.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbusename.ForeColor = Color.PaleVioletRed;
-            tbusename.Location = new Point(253, 200);
-            tbusename.Name = "tbusename";
-            tbusename.Size = new Size(462, 31);
-            tbusename.TabIndex = 10;
+            tbusername.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbusername.ForeColor = Color.PaleVioletRed;
+            tbusername.Location = new Point(253, 200);
+            tbusername.Name = "tbusername";
+            tbusername.Size = new Size(462, 31);
+            tbusername.TabIndex = 10;
             // 
             // tbpass
             // 
@@ -265,7 +265,7 @@
             Controls.Add(tbemail);
             Controls.Add(tbcfpass);
             Controls.Add(tbpass);
-            Controls.Add(tbusename);
+            Controls.Add(tbusername);
             Controls.Add(tbfullname);
             Controls.Add(linklogin);
             Controls.Add(label8);
@@ -294,7 +294,7 @@
         private Label label8;
         private LinkLabel linklogin;
         private TextBox tbfullname;
-        private TextBox tbusename;
+        private TextBox tbusername;
         private TextBox tbpass;
         private TextBox tbcfpass;
         private TextBox tbemail;
