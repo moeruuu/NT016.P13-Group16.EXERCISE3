@@ -22,7 +22,7 @@ namespace exer3
             if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Hide();
-                signup formLogin = new signup();
+                login formLogin = new login();
                 formLogin.ShowDialog();
                 this.Close();
             }
