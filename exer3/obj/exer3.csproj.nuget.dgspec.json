@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\git\\exer3\\exer3.csproj": {}
+    "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\GIT\\exer3\\exer3.csproj": {}
   },
   "projects": {
-    "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\git\\exer3\\exer3.csproj": {
+    "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\GIT\\exer3\\exer3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\git\\exer3\\exer3.csproj",
+        "projectUniqueName": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\GIT\\exer3\\exer3.csproj",
         "projectName": "exer3",
-        "projectPath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\git\\exer3\\exer3.csproj",
+        "projectPath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\GIT\\exer3\\exer3.csproj",
         "packagesPath": "C:\\Users\\KHANH\\.nuget\\packages\\",
         "outputPath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\GIT\\exer3\\obj\\",
         "projectStyle": "PackageReference",

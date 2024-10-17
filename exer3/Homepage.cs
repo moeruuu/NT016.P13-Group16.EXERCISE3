@@ -16,5 +16,22 @@ namespace exer3
         {
             InitializeComponent();
         }
+
+        private void funcLogOut(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                signup formLogin = new signup();
+                formLogin.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void funcExit(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                this.Close();
+        }
     }
 }
