@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -69,10 +70,25 @@ namespace exer3
                     // Check response
                     if (response == "SUCCESS")
                     {
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Homepage homepageform = new Homepage();
-                        homepageform.Show();
-                        this.Hide();
+                        using (SqlConnection con = connection.getConnection())
+                        {
+                            con.Open();
+                            string query = "select fullname from [acc] where username=@tentk";
+                            using (SqlCommand cmd = new SqlCommand(query, con))
+                            {
+                                cmd.Parameters.AddWithValue("@tentk", username);
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+                                if (reader.Read())
+                                {
+                                    string name = reader["Ten"].ToString();
+                                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Homepage homepageform = new Homepage(name);
+                                    homepageform.Show();
+                                    this.Hide();
+                                }
+                            }
+                        }
                     }
                     else
                     {

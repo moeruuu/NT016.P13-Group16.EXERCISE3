@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace exer3
 {
     public partial class Homepage : Form
     {
-        public Homepage()
+        string name;
+        public Homepage(string name)
         {
             InitializeComponent();
+            this.name = name;
+            lbUserInfo.Text = name;
         }
 
         private void funcLogOut(object sender, EventArgs e)
