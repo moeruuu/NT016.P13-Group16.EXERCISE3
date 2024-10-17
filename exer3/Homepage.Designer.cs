@@ -29,33 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
-            pbHomepage = new PictureBox();
             lbWelcome = new Label();
             btnReturn = new Button();
             btnExit = new Button();
             lbUserInfo = new Label();
-            ((System.ComponentModel.ISupportInitialize)pbHomepage).BeginInit();
+            image = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)image).BeginInit();
             SuspendLayout();
-            // 
-            // pbHomepage
-            // 
-            pbHomepage.BackgroundImage = (Image)resources.GetObject("pbHomepage.BackgroundImage");
-            pbHomepage.Location = new Point(281, 140);
-            pbHomepage.Name = "pbHomepage";
-            pbHomepage.Size = new Size(450, 377);
-            pbHomepage.SizeMode = PictureBoxSizeMode.AutoSize;
-            pbHomepage.TabIndex = 0;
-            pbHomepage.TabStop = false;
             // 
             // lbWelcome
             // 
             lbWelcome.AutoSize = true;
             lbWelcome.BackColor = Color.Transparent;
             lbWelcome.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbWelcome.ForeColor = Color.FromArgb(255, 128, 255);
-            lbWelcome.Location = new Point(314, 25);
+            lbWelcome.ForeColor = Color.DarkMagenta;
+            lbWelcome.Location = new Point(392, 31);
+            lbWelcome.Margin = new Padding(4, 0, 4, 0);
             lbWelcome.Name = "lbWelcome";
-            lbWelcome.Size = new Size(390, 40);
+            lbWelcome.Size = new Size(449, 47);
             lbWelcome.TabIndex = 1;
             lbWelcome.Text = "WELCOME TO MY PAGE";
             lbWelcome.TextAlign = ContentAlignment.TopCenter;
@@ -63,14 +54,15 @@
             // btnReturn
             // 
             btnReturn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnReturn.BackColor = SystemColors.Control;
+            btnReturn.BackColor = SystemColors.ButtonHighlight;
             btnReturn.Cursor = Cursors.Hand;
             btnReturn.FlatStyle = FlatStyle.Popup;
             btnReturn.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
             btnReturn.ForeColor = Color.PaleVioletRed;
-            btnReturn.Location = new Point(326, 568);
+            btnReturn.Location = new Point(292, 710);
+            btnReturn.Margin = new Padding(4);
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(114, 49);
+            btnReturn.Size = new Size(258, 61);
             btnReturn.TabIndex = 2;
             btnReturn.Text = "Log out";
             btnReturn.UseVisualStyleBackColor = false;
@@ -79,14 +71,15 @@
             // btnExit
             // 
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnExit.BackColor = SystemColors.Control;
+            btnExit.BackColor = SystemColors.ButtonHighlight;
             btnExit.Cursor = Cursors.Hand;
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
             btnExit.ForeColor = Color.PaleVioletRed;
-            btnExit.Location = new Point(566, 568);
+            btnExit.Location = new Point(708, 710);
+            btnExit.Margin = new Padding(4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(114, 49);
+            btnExit.Size = new Size(243, 61);
             btnExit.TabIndex = 3;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
@@ -98,41 +91,53 @@
             lbUserInfo.BackColor = Color.Transparent;
             lbUserInfo.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbUserInfo.ForeColor = Color.PaleVioletRed;
-            lbUserInfo.Location = new Point(448, 84);
+            lbUserInfo.Location = new Point(550, 104);
+            lbUserInfo.Margin = new Padding(4, 0, 4, 0);
             lbUserInfo.Name = "lbUserInfo";
-            lbUserInfo.Size = new Size(114, 35);
+            lbUserInfo.Size = new Size(136, 40);
             lbUserInfo.TabIndex = 4;
             lbUserInfo.Text = "UserInfo";
             // 
+            // image
+            // 
+            image.BackColor = Color.Transparent;
+            image.Image = (Image)resources.GetObject("image.Image");
+            image.Location = new Point(392, 171);
+            image.Name = "image";
+            image.Size = new Size(458, 472);
+            image.SizeMode = PictureBoxSizeMode.Zoom;
+            image.TabIndex = 5;
+            image.TabStop = false;
+            // 
             // Homepage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
-            BackgroundImage = Properties.Resources.f4559a0ac40cf5c464dd1c321dbd78c0;
-            ClientSize = new Size(1019, 653);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1274, 816);
+            Controls.Add(image);
             Controls.Add(lbUserInfo);
             Controls.Add(btnExit);
             Controls.Add(btnReturn);
             Controls.Add(lbWelcome);
-            Controls.Add(pbHomepage);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Homepage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage";
-            ((System.ComponentModel.ISupportInitialize)pbHomepage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)image).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pbHomepage;
         private Label lbWelcome;
         private Button btnReturn;
         private Button btnExit;
         private Label lbUserInfo;
+        private PictureBox image;
     }
 }
