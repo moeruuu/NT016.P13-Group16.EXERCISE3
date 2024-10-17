@@ -74,6 +74,7 @@
             btnReturn.TabIndex = 2;
             btnReturn.Text = "Log out";
             btnReturn.UseVisualStyleBackColor = false;
+            btnReturn.Click += funcLogOut;
             // 
             // btnExit
             // 
@@ -89,6 +90,7 @@
             btnExit.TabIndex = 3;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += funcExit;
             // 
             // lbUserInfo
             // 

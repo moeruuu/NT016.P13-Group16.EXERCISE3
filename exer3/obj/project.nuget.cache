@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7WbU7UlZwEk=",
+  "dgSpecHash": "LTdkY0jbaxc=",
   "success": true,
-  "projectFilePath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\git\\exer3\\exer3.csproj",
+  "projectFilePath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan3\\GIT\\exer3\\exer3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KHANH\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\KHANH\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
