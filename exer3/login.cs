@@ -73,7 +73,7 @@ namespace exer3
                         using (SqlConnection con = connection.getConnection())
                         {
                             con.Open();
-                            string query = "select fullname from [acc] where username=@tentk";
+                            string query = "select userid, fullname from [acc] where username=@tentk";
                             using (SqlCommand cmd = new SqlCommand(query, con))
                             {
                                 cmd.Parameters.AddWithValue("@tentk", username);
@@ -81,9 +81,10 @@ namespace exer3
                                 SqlDataReader reader = cmd.ExecuteReader();
                                 if (reader.Read())
                                 {
-                                    string name = reader["Ten"].ToString();
+                                    string name = reader["fullname"].ToString();
+                                    int id = Convert.ToInt32(reader["userid"]);
                                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    Homepage homepageform = new Homepage(name);
+                                    Homepage homepageform = new Homepage(name, id);
                                     homepageform.Show();
                                     this.Hide();
                                 }
