@@ -90,6 +90,10 @@ namespace exer3
             {
                 MessageBox.Show("Lỗi kết nối tới server: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                Application.Exit();
+            }
 
         }
         }
