@@ -67,7 +67,7 @@
             // 
             tbpass.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbpass.ForeColor = Color.PaleVioletRed;
-            tbpass.Location = new Point(241, 188);
+            tbpass.Location = new Point(225, 188);
             tbpass.Margin = new Padding(2);
             tbpass.Name = "tbpass";
             tbpass.PasswordChar = '*';
@@ -78,7 +78,7 @@
             // 
             tbusername.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbusername.ForeColor = Color.PaleVioletRed;
-            tbusername.Location = new Point(241, 114);
+            tbusername.Location = new Point(225, 114);
             tbusername.Margin = new Padding(2);
             tbusername.Name = "tbusername";
             tbusername.Size = new Size(370, 27);
@@ -88,17 +88,17 @@
             // 
             linklogin.AutoSize = true;
             linklogin.BackColor = Color.Transparent;
-            linklogin.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linklogin.Font = new Font("Cambria", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             linklogin.ForeColor = Color.Honeydew;
             linklogin.LinkColor = Color.Crimson;
-            linklogin.Location = new Point(576, 268);
+            linklogin.Location = new Point(560, 263);
             linklogin.Margin = new Padding(2, 0, 2, 0);
             linklogin.Name = "linklogin";
-            linklogin.Size = new Size(50, 17);
+            linklogin.Size = new Size(57, 20);
             linklogin.TabIndex = 15;
             linklogin.TabStop = true;
             linklogin.Text = "Signup";
-            linklogin.LinkClicked += linklogin_LinkClicked;
+            linklogin.LinkClicked += linksignup_LinkClicked;
             // 
             // label2
             // 
@@ -106,7 +106,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.PaleVioletRed;
-            label2.Location = new Point(388, 265);
+            label2.Location = new Point(372, 265);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(184, 20);
@@ -117,7 +117,7 @@
             // 
             btnLogin.Font = new Font("Cambria", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.PaleVioletRed;
-            btnLogin.Location = new Point(241, 263);
+            btnLogin.Location = new Point(225, 263);
             btnLogin.Margin = new Padding(2);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(111, 27);
@@ -131,7 +131,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._3046153;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(718, 402);
             Controls.Add(btnLogin);
             Controls.Add(linklogin);
             Controls.Add(label2);
