@@ -113,7 +113,8 @@ namespace exer3
         {
             return Regex.IsMatch(mail, @"^[\w]{4,15}@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
         }
-        private bool checkfullname(string name) {
+        private bool checkfullname(string name)
+        {
             return Regex.IsMatch(name, "^[a-zA-Z]{1,100}$");
         }
 
@@ -135,10 +136,11 @@ namespace exer3
                 MessageBox.Show("Vui lòng nhập mật khẩu từ 6 đến 20 chữ số", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (!checkfullname(name)){
+            if (!checkfullname(name))
+            {
                 MessageBox.Show("Vui lòng nhập họ tên đúng định dạng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
             if (!checkmail(email))
             {
                 MessageBox.Show("Vui lòng nhập email đúng định dạng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -159,10 +161,10 @@ namespace exer3
 
                 //Lấy IP và port server
                 TcpClient client = new TcpClient("127.0.0.1", 8080);
-                
+
                 //Gộp các biến thành 1 chuỗi
                 string data = $"{username};{hashstring};{email};{name};{birthday}";
-                
+
                 //Chuyển sang byte để máy đọc
                 byte[] bytesdata = Encoding.UTF8.GetBytes(data);
                 NetworkStream stream = client.GetStream();
@@ -179,7 +181,7 @@ namespace exer3
 
                     DialogResult rs = MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK);
                     if (rs == System.Windows.Forms.DialogResult.OK)
-                    this.Close();
+                        this.Close();
                 }
                 else
                 {
@@ -188,10 +190,18 @@ namespace exer3
                 stream.Close();
                 client.Close();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Lỗi kết nối đến server: " + ex.Message);
             }
+        }
+
+        private void linklogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            login loginform = new login();
+            this.Hide ();
+            loginform.ShowDialog();
+            
         }
     }
 }
