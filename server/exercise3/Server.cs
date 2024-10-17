@@ -127,7 +127,7 @@ namespace exercise3
                         cmd.ExecuteNonQuery();
                     }
                 }
-                return "Đăng kí thành công";
+                return "Success";
             }
             catch (Exception ex)
             { 
