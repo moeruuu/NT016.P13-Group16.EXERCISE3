@@ -25,3 +25,4 @@ C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\refint\exer3.dll
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.pdb
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.genruntimeconfig.cache
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\ref\exer3.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\SuperSimpleTcp.dll
