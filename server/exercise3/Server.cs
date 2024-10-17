@@ -14,6 +14,7 @@ namespace exercise3
         private Thread serverThread;
         private bool isrunning = false;
         private string connectionString = "Server=127.0.0.1;Database=account;User Id=sa;Password=your_password;";
+        int getuserid;
 
         public TCPserver()
         {
@@ -87,6 +88,9 @@ namespace exercise3
                 case "LOGIN":
                     response = LoginUser(request[1], request[2]);
                     break;
+                case "LOGOUT": 
+                    response = logout(request[1]);
+                    break;
                 default:
                     response = "INVALID_COMMAND";
                     break;
@@ -122,7 +126,7 @@ namespace exercise3
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@pass", password);
                         cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@fullname", name);  
+                        cmd.Parameters.AddWithValue("@fullname", name);
                         cmd.Parameters.AddWithValue("@birthday", birthday);
                         cmd.ExecuteNonQuery();
                     }
@@ -130,8 +134,8 @@ namespace exercise3
                 return "Success";
             }
             catch (Exception ex)
-            { 
-                return $"Có lỗi xảy ra {ex.Message}";  
+            {
+                return $"Có lỗi xảy ra {ex.Message}";
             }
         }
 
@@ -170,6 +174,42 @@ namespace exercise3
             else
             {
                 lstLog.Items.Add(message);
+            }
+        }
+
+        private string logout(string username)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "select userid from [account] where username = @username";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        getuserid = (int)cmd.ExecuteScalar();
+                    }
+                    string deletetokens = "delete from token where userid=@getuserid";
+                    using (SqlCommand cm = new SqlCommand(deletetokens, conn))
+                    {
+                        cm.Parameters.AddWithValue("@getuserid", getuserid);
+                        cm.ExecuteNonQuery();
+                    }
+                    string chousercook = "update user set logging=0 where userid=@getuserid";
+                    using (SqlCommand cmnek = new SqlCommand(chousercook, conn))
+                    {
+                        cmnek.Parameters.AddWithValue("@getuserid", getuserid);
+                        cmnek.ExecuteNonQuery();
+                    }
+                    UpdateLog($"{username} đã đăng xuất!");
+                    return "cook";
+
+                }
+            }
+            catch
+            {
+                return "Lỗi";
             }
         }
     }
