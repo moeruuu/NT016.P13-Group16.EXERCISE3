@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             lbWelcome = new Label();
-            btnReturn = new Button();
-            btnExit = new Button();
+            funcLogOut = new Button();
+            funcExit = new Button();
             lbUserInfo = new Label();
             image = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)image).BeginInit();
@@ -51,39 +51,39 @@
             lbWelcome.Text = "WELCOME TO MY PAGE";
             lbWelcome.TextAlign = ContentAlignment.TopCenter;
             // 
-            // btnReturn
+            // funcLogOut
             // 
-            btnReturn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnReturn.BackColor = SystemColors.ButtonHighlight;
-            btnReturn.Cursor = Cursors.Hand;
-            btnReturn.FlatStyle = FlatStyle.Popup;
-            btnReturn.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
-            btnReturn.ForeColor = Color.PaleVioletRed;
-            btnReturn.Location = new Point(292, 710);
-            btnReturn.Margin = new Padding(4);
-            btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(258, 61);
-            btnReturn.TabIndex = 2;
-            btnReturn.Text = "Log out";
-            btnReturn.UseVisualStyleBackColor = false;
-            btnReturn.Click += funcLogOut;
+            funcLogOut.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            funcLogOut.BackColor = SystemColors.ButtonHighlight;
+            funcLogOut.Cursor = Cursors.Hand;
+            funcLogOut.FlatStyle = FlatStyle.Popup;
+            funcLogOut.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
+            funcLogOut.ForeColor = Color.PaleVioletRed;
+            funcLogOut.Location = new Point(292, 710);
+            funcLogOut.Margin = new Padding(4);
+            funcLogOut.Name = "funcLogOut";
+            funcLogOut.Size = new Size(258, 61);
+            funcLogOut.TabIndex = 2;
+            funcLogOut.Text = "Log out";
+            funcLogOut.UseVisualStyleBackColor = false;
+//            funcLogOut.Click += funcLogOut_Click;
             // 
-            // btnExit
+            // funcExit
             // 
-            btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnExit.BackColor = SystemColors.ButtonHighlight;
-            btnExit.Cursor = Cursors.Hand;
-            btnExit.FlatStyle = FlatStyle.Popup;
-            btnExit.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
-            btnExit.ForeColor = Color.PaleVioletRed;
-            btnExit.Location = new Point(708, 710);
-            btnExit.Margin = new Padding(4);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(243, 61);
-            btnExit.TabIndex = 3;
-            btnExit.Text = "Exit";
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += funcExit;
+            funcExit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            funcExit.BackColor = SystemColors.ButtonHighlight;
+            funcExit.Cursor = Cursors.Hand;
+            funcExit.FlatStyle = FlatStyle.Popup;
+            funcExit.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
+            funcExit.ForeColor = Color.PaleVioletRed;
+            funcExit.Location = new Point(708, 710);
+            funcExit.Margin = new Padding(4);
+            funcExit.Name = "funcExit";
+            funcExit.Size = new Size(243, 61);
+            funcExit.TabIndex = 3;
+            funcExit.Text = "Exit";
+            funcExit.UseVisualStyleBackColor = false;
+//            funcExit.Click += funcExit_Click;
             // 
             // lbUserInfo
             // 
@@ -118,8 +118,8 @@
             ClientSize = new Size(1274, 816);
             Controls.Add(image);
             Controls.Add(lbUserInfo);
-            Controls.Add(btnExit);
-            Controls.Add(btnReturn);
+            Controls.Add(funcExit);
+            Controls.Add(funcLogOut);
             Controls.Add(lbWelcome);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(4);
@@ -128,6 +128,7 @@
             Name = "Homepage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage";
+          //  Load += Homepage_Load;
             ((System.ComponentModel.ISupportInitialize)image).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -135,8 +136,8 @@
 
         #endregion
         private Label lbWelcome;
-        private Button btnReturn;
-        private Button btnExit;
+        private Button funcLogOut;
+        private Button funcExit;
         private Label lbUserInfo;
         private PictureBox image;
     }
