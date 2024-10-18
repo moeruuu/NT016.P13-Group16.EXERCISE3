@@ -5,6 +5,9 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
 
 namespace exercise3
 {
@@ -29,6 +32,7 @@ namespace exercise3
             isrunning = true;
             lblStatus.Text = $"Server đang chạy trên cổng {port}";
             btnStart.Enabled = false;
+            btnStart.BackColor = Color.DimGray;
             btnStop.Enabled = true;
         }
 
@@ -103,7 +107,13 @@ namespace exercise3
                     response = LoginUser(request[1], request[2]);
                     break;
                 case "LOGOUT": 
-                    response = logout(request[1]);
+                    response = LogOut(request[1]);
+                    break;
+                case "VERIFY_TOKEN":
+                    response = VerifyToken(request[1]);
+                    break;
+                case "REFRESH_TOKEN":
+                    response = RefreshToken(request[1], request[2]);
                     break;
                 default:
                     response = "INVALID_COMMAND";
@@ -168,11 +178,25 @@ namespace exercise3
                 if (reader.HasRows)
                 {
                     reader.Read();
+                    int userid = Int32.Parse(reader["UserID"].ToString());
                     string fullName = reader["FullName"].ToString();
                     string email = reader["Email"].ToString();
                     string birthday = reader["Birthday"].ToString();
+
+                    //tạo access_token và refresh_token
+                    string accesstoken = GenerateAccessToken(username);
+                    string refreshtoken = GenerateRefreshToken();
+
+                    string addvalues = "INSERT INTO [TOKEN] (UserID, RefreshToken, UsedToken, CreatedTime, ExpiresTime) VALUES (@userid, @refreshtoken, 1, GETDATE(), DATEADD(MINUTE, 30, GETDATE()))";
+                    using (SqlCommand command = new SqlCommand(addvalues, conn))
+                    {
+                        command.Parameters.AddWithValue("@userid", userid);
+                        cmd.Parameters.AddWithValue("@refreshtoken", refreshtoken);
+                        cmd.ExecuteNonQuery();
+                    }
+
                     UpdateLog($"{username} đã đăng nhập");
-                    return $"Đăng nhập thành công |Username: {username}|FullName: {fullName}|Email: {email}|Birthday: {birthday}";
+                    return $"Đăng nhập thành công!|UserID: {userid}|Username: {username}|FullName: {fullName}|Email: {email}|Birthday: {birthday}|AccessToken: {accesstoken}|RefreshToken: {refreshtoken}";
                 }
 
                 return "Đăng nhập thất bại";
@@ -191,7 +215,107 @@ namespace exercise3
             }
         }
 
-        private string logout(string username)
+        private string GenerateAccessToken(string username)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("exercise3_LTMCB"));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var tokenDescriptor = new JwtSecurityToken(
+                issuer: "yourAppName",
+                audience: "yourAppName",
+                claims: null,
+                expires: DateTime.Now.AddMinutes(30),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
+        }
+
+        private string GenerateRefreshToken()
+        {
+            var randomnumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomnumber);
+                return Convert.ToBase64String(randomnumber);
+            }
+        }
+
+        private string VerifyToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes("exercise3_LTMCB");
+
+            try
+            {
+                tokenHandler.ValidateToken(token, 
+                    new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidIssuer = "yourAppName",
+                        ValidAudience = "yourAppName",
+                        ClockSkew = TimeSpan.Zero
+                    }, 
+                out SecurityToken validatedToken);
+
+                // Token hợp lệ
+                return "VALID";
+            }
+            catch
+            {
+                // Token không hợp lệ
+                return "INVALID";
+            }
+        }
+
+        private string RefreshToken(string refreshtoken, string username)
+        {
+            // Kiểm tra Refresh Token có hợp lệ không
+            if (ValidateRefreshToken(refreshtoken))
+            {
+                // Tạo Access Token mới
+                string newAccessToken = GenerateAccessToken(username);
+
+                // Trả về Access Token mới cho client
+                return  $"SUCCESS|{newAccessToken}";
+            }
+            else
+            {
+                // Refresh Token không hợp lệ
+                return "FAILED";
+            }
+        }
+
+        private bool ValidateRefreshToken(string refreshtoken)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM [TOKEN] WHERE  RefreshToken = @RefreshToken";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@RefreshToken", refreshtoken);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    //kiem tra token hợp lệ
+                    int usedtoken = reader.GetInt16(0);
+                    DateTime expirestime = reader.GetDateTime(5);
+                    if (usedtoken > 0 || expirestime < DateTime.Now)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+        private string LogOut(string username)
         {
             try
             {
