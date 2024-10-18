@@ -30,6 +30,7 @@ namespace exer3
         {
             InitializeComponent();
             StartTokenValidation();
+            activeloggingindatabase();
         }
 
         public void Homepage_load(user USER)
