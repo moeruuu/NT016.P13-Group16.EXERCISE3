@@ -26,22 +26,7 @@ namespace exer3
             this.name = name;
             this.id = id;
             lbUserInfo.Text = name;
-            activeloggingindatabase();
 
-        }
-
-        private void activeloggingindatabase()
-        {
-            using (SqlConnection con = connection.getConnection())
-            {
-                con.Open();
-                string changestatus = "update [acc] set logging=1 when userid=@id";
-                using (SqlCommand cmd = new SqlCommand(changestatus, con))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
-                }
-            }
         }
 
         private void Homepage_Load(object sender, EventArgs e)
