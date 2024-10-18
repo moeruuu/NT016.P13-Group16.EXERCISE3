@@ -23,7 +23,7 @@ namespace exercise3
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            int port = int.Parse(txtPort.Text);
+            int port = Convert.ToInt32(txtPort.Text);
             serverThread = new Thread(() => StartServer(port));
             serverThread.Start();
             isrunning = true;
@@ -120,7 +120,7 @@ namespace exercise3
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string addvalues = "INSERT INTO [account] (username, pass, email, fullname, birthday) VALUES (@username, @pass, @email, @fullname, @birthday)";
+                    string addvalues = "insert into [acc] (username, pass, email, fullname, birthday) values (@username, @pass, @email, @fullname, @birthday)";
                     using (SqlCommand cmd = new SqlCommand(addvalues, con))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
@@ -131,11 +131,11 @@ namespace exercise3
                         cmd.ExecuteNonQuery();
                     }
                 }
-                return "Success";
+                return "Đăng xuất thành công";
             }
             catch (Exception ex)
             {
-                return $"Có lỗi xảy ra {ex.Message}";
+                return $"Có lỗi xảy ra: {ex.Message}";
             }
         }
 
@@ -144,7 +144,7 @@ namespace exercise3
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM [account] WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT * FROM [acc] WHERE Username = @Username AND Password = @Password";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Username", username);
                 cmd.Parameters.AddWithValue("@Password", password);
@@ -184,7 +184,7 @@ namespace exercise3
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "select userid from [account] where username = @username";
+                    string query = "select userid from [acc] where username = @username";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
