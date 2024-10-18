@@ -17,6 +17,7 @@ namespace exercise3
         private Thread serverThread;
         private bool isrunning = false;
         private string connectionString = "Server=127.0.0.1;Database=account;User Id=sa;Password=your_password;";
+        int getuserid;
 
         public TCPserver()
         {
@@ -25,7 +26,7 @@ namespace exercise3
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            int port = int.Parse(txtPort.Text);
+            int port = Convert.ToInt32(txtPort.Text);
             serverThread = new Thread(() => StartServer(port));
             serverThread.Start();
             isrunning = true;
@@ -91,6 +92,9 @@ namespace exercise3
                 case "LOGIN":
                     response = LoginUser(request[1], request[2]);
                     break;
+                case "LOGOUT": 
+                    response = LogOut(request[1]);
+                    break;
                 case "VERIFY_TOKEN":
                     response = VerifyToken(request[1]);
                     break;
@@ -126,22 +130,22 @@ namespace exercise3
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string addvalues = "INSERT INTO [acc] (username, pass, email, fullname, birthday) VALUES (@username, @pass, @email, @fullname, @birthday)";
+                    string addvalues = "insert into [acc] (username, pass, email, fullname, birthday) values (@username, @pass, @email, @fullname, @birthday)";
                     using (SqlCommand cmd = new SqlCommand(addvalues, con))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@pass", password);
                         cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@fullname", name);  
+                        cmd.Parameters.AddWithValue("@fullname", name);
                         cmd.Parameters.AddWithValue("@birthday", birthday);
                         cmd.ExecuteNonQuery();
                     }
                 }
-                return "Success";
+                return "Đăng xuất thành công";
             }
             catch (Exception ex)
-            { 
-                return $"Có lỗi xảy ra {ex.Message}";  
+            {
+                return $"Có lỗi xảy ra: {ex.Message}";
             }
         }
 
@@ -294,6 +298,42 @@ namespace exercise3
                     }
                 }
                 return true;
+            }
+        }
+
+        private string LogOut(string username)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "select userid from [acc] where username = @username";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        getuserid = (int)cmd.ExecuteScalar();
+                    }
+                    string deletetokens = "delete from token where userid=@getuserid";
+                    using (SqlCommand cm = new SqlCommand(deletetokens, conn))
+                    {
+                        cm.Parameters.AddWithValue("@getuserid", getuserid);
+                        cm.ExecuteNonQuery();
+                    }
+                    string chousercook = "update user set logging=0 where userid=@getuserid";
+                    using (SqlCommand cmnek = new SqlCommand(chousercook, conn))
+                    {
+                        cmnek.Parameters.AddWithValue("@getuserid", getuserid);
+                        cmnek.ExecuteNonQuery();
+                    }
+                    UpdateLog($"{username} đã đăng xuất!");
+                    return "cook";
+
+                }
+            }
+            catch
+            {
+                return "Lỗi";
             }
         }
     }
