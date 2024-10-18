@@ -48,11 +48,19 @@ namespace exercise3
 
         private void StartServer(int port)
         {
+        try
+        {
             server = new TcpListener(IPAddress.Any, port);
             server.Start();
             UpdateLog($"Server đang chạy trên cổng {port}");
+        }
+            catch (Exception ex)
+            {
+                UpdateLog("Lỗi khởi động Server " + ex.Message);
+                return ;
+            }
 
-            while (!cancellationToken.IsCancellationRequested)
+            while (!cancellationToken.Token.IsCancellationRequested)
             {
                 try
                 {
