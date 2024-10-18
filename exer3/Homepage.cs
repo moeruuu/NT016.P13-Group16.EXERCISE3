@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Net;
+using System.Net.Sockets;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace exer3
 {
@@ -50,6 +53,18 @@ namespace exer3
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                string request = $"LOGOUT|{name}";
+                using (TcpClient tcpClient = new TcpClient("127.0.0.1", 8080))
+                {
+                    NetworkStream stream = tcpClient.GetStream();
+                    byte[] data = Encoding.ASCII.GetBytes(request);
+                    stream.Write(data, 0, data.Length);
+
+                    byte[] bytes = new byte[4098];
+                    int bytesRead = stream.Read(bytes, 0, bytes.Length);
+                    string response = Encoding.ASCII.GetString(bytes, 0, bytesRead);
+                    MessageBox.Show(response);
+                }
                 this.Hide();
                 login formLogin = new login();
                 formLogin.ShowDialog();
