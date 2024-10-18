@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
-            pbHomepage = new PictureBox();
             lbWelcome = new Label();
             btnReturn = new Button();
             btnExit = new Button();
@@ -37,18 +36,17 @@
             lbBirthday = new Label();
             lbEmail = new Label();
             lbUserID = new Label();
-            ((System.ComponentModel.ISupportInitialize)pbHomepage).BeginInit();
             SuspendLayout();
             // 
             // pbHomepage
             // 
-            pbHomepage.BackgroundImage = (Image)resources.GetObject("pbHomepage.BackgroundImage");
-            pbHomepage.Location = new Point(59, 144);
-            pbHomepage.Name = "pbHomepage";
-            pbHomepage.Size = new Size(450, 377);
-            pbHomepage.SizeMode = PictureBoxSizeMode.AutoSize;
-            pbHomepage.TabIndex = 0;
-            pbHomepage.TabStop = false;
+            //pbHomepage.BackgroundImage = (Image)resources.GetObject("pbHomepage.BackgroundImage");
+            //pbHomepage.Location = new Point(59, 144);
+            //pbHomepage.Name = "pbHomepage";
+            //pbHomepage.Size = new Size(450, 377);
+            //pbHomepage.SizeMode = PictureBoxSizeMode.AutoSize;
+            //pbHomepage.TabIndex = 0;
+            //pbHomepage.TabStop = false;
             // 
             // lbWelcome
             // 
@@ -77,7 +75,6 @@
             btnReturn.TabIndex = 2;
             btnReturn.Text = "Log out";
             btnReturn.UseVisualStyleBackColor = false;
-            btnReturn.Click += funcLogOut;
             // 
             // btnExit
             // 
@@ -93,7 +90,6 @@
             btnExit.TabIndex = 3;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += funcExit;
             // 
             // lbFullname
             // 
@@ -157,14 +153,12 @@
             Controls.Add(btnExit);
             Controls.Add(btnReturn);
             Controls.Add(lbWelcome);
-            Controls.Add(pbHomepage);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Homepage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage";
-            ((System.ComponentModel.ISupportInitialize)pbHomepage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
