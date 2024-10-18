@@ -170,8 +170,6 @@
         }
 
         #endregion
-
-        private PictureBox pbHomepage;
         private Label lbWelcome;
         private Button btnReturn;
         private Button btnExit;
