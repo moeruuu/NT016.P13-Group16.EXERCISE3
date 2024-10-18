@@ -113,10 +113,7 @@ namespace exer3
         {
             return Regex.IsMatch(mail, @"^[\w]{4,15}@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
         }
-        private bool checkfullname(string name)
-        {
-            return Regex.IsMatch(name, "^[a-zA-Z]{1,100}$");
-        }
+        
 
         private void btnsignup_Click(object sender, EventArgs e)
         {
@@ -126,6 +123,11 @@ namespace exer3
             string name = tbfullname.Text;
             string email = tbemail.Text;
             DateTime birthday = new DateTime((int)cbyear.SelectedItem, (int)cbmonth.SelectedItem, (int)cbday.SelectedItem);
+            if (cbday.SelectedIndex == -1 || cbmonth.SelectedIndex==-1 || cbyear.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng nhập ngày/tháng/năm sinh", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (!checkusername(username))
             {
                 MessageBox.Show("Vui lòng nhập tên đăng nhập không chứa kí tự đặc biệt và dài từ 5 đến 15 chữ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -136,11 +138,11 @@ namespace exer3
                 MessageBox.Show("Vui lòng nhập mật khẩu từ 6 đến 20 chữ số", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (!checkfullname(name))
+           /* if (!checkfullname(name))
             {
                 MessageBox.Show("Vui lòng nhập họ tên đúng định dạng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
+*/
             if (!checkmail(email))
             {
                 MessageBox.Show("Vui lòng nhập email đúng định dạng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
