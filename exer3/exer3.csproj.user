@@ -2,6 +2,12 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Compile Update="Homepage.cs">
+<<<<<<< HEAD
+=======
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="login.cs">
+>>>>>>> 4110aa4af388a91693b1f43736f6cfbdd380df92
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="signup.cs">
