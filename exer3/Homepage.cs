@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
@@ -11,6 +12,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Net;
+using System.Net.Sockets;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace exer3
 {
@@ -18,6 +24,8 @@ namespace exer3
     {
         private System.Timers.Timer tokenValidationTimer;
         private user userinfo;
+        string name;
+        int id;
         public Homepage()
         {
             InitializeComponent();
@@ -40,11 +48,25 @@ namespace exer3
 
         }
 
-        private void funcLogOut(object sender, EventArgs e)
+        private void activeloggingindatabase()
+        {
+            using (SqlConnection con = connection.getConnection())
+            {
+                con.Open();
+                string changestatus = "update [acc] set logging=1 when userid=@id";
+                using (SqlCommand cmd = new SqlCommand(changestatus, con))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        private void funcLogOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
                 this.Hide();
                 login formLogin = new login();
                 formLogin.ShowDialog();
@@ -53,7 +75,7 @@ namespace exer3
             }
         }
 
-        private void funcExit(object sender, EventArgs e)
+        private void funcExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -151,4 +173,9 @@ namespace exer3
 
 
     }
+
+   
+
+
+
 }
