@@ -33,14 +33,17 @@
             lbWelcome = new Label();
             btnReturn = new Button();
             btnExit = new Button();
-            lbUserInfo = new Label();
+            lbFullname = new Label();
+            lbBirthday = new Label();
+            lbEmail = new Label();
+            lbUserID = new Label();
             ((System.ComponentModel.ISupportInitialize)pbHomepage).BeginInit();
             SuspendLayout();
             // 
             // pbHomepage
             // 
             pbHomepage.BackgroundImage = (Image)resources.GetObject("pbHomepage.BackgroundImage");
-            pbHomepage.Location = new Point(281, 140);
+            pbHomepage.Location = new Point(59, 144);
             pbHomepage.Name = "pbHomepage";
             pbHomepage.Size = new Size(450, 377);
             pbHomepage.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -68,7 +71,7 @@
             btnReturn.FlatStyle = FlatStyle.Popup;
             btnReturn.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
             btnReturn.ForeColor = Color.PaleVioletRed;
-            btnReturn.Location = new Point(326, 568);
+            btnReturn.Location = new Point(753, 592);
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(114, 49);
             btnReturn.TabIndex = 2;
@@ -84,7 +87,7 @@
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
             btnExit.ForeColor = Color.PaleVioletRed;
-            btnExit.Location = new Point(566, 568);
+            btnExit.Location = new Point(893, 592);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(114, 49);
             btnExit.TabIndex = 3;
@@ -92,17 +95,53 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += funcExit;
             // 
-            // lbUserInfo
+            // lbFullname
             // 
-            lbUserInfo.AutoSize = true;
-            lbUserInfo.BackColor = Color.Transparent;
-            lbUserInfo.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbUserInfo.ForeColor = Color.PaleVioletRed;
-            lbUserInfo.Location = new Point(448, 84);
-            lbUserInfo.Name = "lbUserInfo";
-            lbUserInfo.Size = new Size(114, 35);
-            lbUserInfo.TabIndex = 4;
-            lbUserInfo.Text = "UserInfo";
+            lbFullname.AutoSize = true;
+            lbFullname.BackColor = Color.Transparent;
+            lbFullname.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbFullname.ForeColor = Color.PaleVioletRed;
+            lbFullname.Location = new Point(595, 322);
+            lbFullname.Name = "lbFullname";
+            lbFullname.Size = new Size(137, 35);
+            lbFullname.TabIndex = 4;
+            lbFullname.Text = "Fullname: ";
+            // 
+            // lbBirthday
+            // 
+            lbBirthday.AutoSize = true;
+            lbBirthday.BackColor = Color.Transparent;
+            lbBirthday.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbBirthday.ForeColor = Color.PaleVioletRed;
+            lbBirthday.Location = new Point(595, 383);
+            lbBirthday.Name = "lbBirthday";
+            lbBirthday.Size = new Size(122, 35);
+            lbBirthday.TabIndex = 5;
+            lbBirthday.Text = "Birthday:";
+            // 
+            // lbEmail
+            // 
+            lbEmail.AutoSize = true;
+            lbEmail.BackColor = Color.Transparent;
+            lbEmail.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbEmail.ForeColor = Color.PaleVioletRed;
+            lbEmail.Location = new Point(595, 445);
+            lbEmail.Name = "lbEmail";
+            lbEmail.Size = new Size(88, 35);
+            lbEmail.TabIndex = 6;
+            lbEmail.Text = "Email:";
+            // 
+            // lbUserID
+            // 
+            lbUserID.AutoSize = true;
+            lbUserID.BackColor = Color.Transparent;
+            lbUserID.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbUserID.ForeColor = Color.PaleVioletRed;
+            lbUserID.Location = new Point(595, 270);
+            lbUserID.Name = "lbUserID";
+            lbUserID.Size = new Size(101, 35);
+            lbUserID.TabIndex = 7;
+            lbUserID.Text = "UserID:";
             // 
             // Homepage
             // 
@@ -111,7 +150,10 @@
             BackColor = Color.DimGray;
             BackgroundImage = Properties.Resources.f4559a0ac40cf5c464dd1c321dbd78c0;
             ClientSize = new Size(1019, 653);
-            Controls.Add(lbUserInfo);
+            Controls.Add(lbUserID);
+            Controls.Add(lbEmail);
+            Controls.Add(lbBirthday);
+            Controls.Add(lbFullname);
             Controls.Add(btnExit);
             Controls.Add(btnReturn);
             Controls.Add(lbWelcome);
@@ -133,6 +175,9 @@
         private Label lbWelcome;
         private Button btnReturn;
         private Button btnExit;
-        private Label lbUserInfo;
+        private Label lbFullname;
+        private Label lbBirthday;
+        private Label lbEmail;
+        private Label lbUserID;
     }
 }
