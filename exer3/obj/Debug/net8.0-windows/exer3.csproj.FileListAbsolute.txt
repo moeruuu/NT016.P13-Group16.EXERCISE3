@@ -10,7 +10,6 @@ C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\runtimes\win-x86\nativ
 C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.csproj.AssemblyReference.cache
-C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.Form1.resources
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.Properties.Resources.resources
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.signup.resources
 C:\Users\DELL\Videos\exer3\exer3\obj\Debug\net8.0-windows\exer3.csproj.GenerateResource.cache
@@ -94,3 +93,12 @@ D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan3\GIT222\exer3\bin\Debug\net8.0-win
 D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan3\GIT222\exer3\obj\Debug\net8.0-windows\exer3.csproj.Up2Date
 D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan3\GIT222\exer3\obj\Debug\net8.0-windows\exer3.genruntimeconfig.cache
 D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan3\GIT222\exer3\obj\Debug\net8.0-windows\ref\exer3.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.Bcl.TimeProvider.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\DELL\Videos\exer3\exer3\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll

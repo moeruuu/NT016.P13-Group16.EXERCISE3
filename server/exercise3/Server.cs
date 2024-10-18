@@ -34,6 +34,7 @@ namespace exercise3
             btnStart.Enabled = false;
             btnStart.BackColor = Color.DimGray;
             btnStop.Enabled = true;
+            MessageBox.Show("Kết nối thành công");
         }
 
         private void btnStop_Click(object sender, EventArgs e)
