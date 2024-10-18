@@ -61,7 +61,7 @@ namespace exercise3
                 return ;
             }
 
-            while (!cancellationToken.Token.IsCancellationRequested)
+            while (!cancellationTokenSource.Token.IsCancellationRequested)
             {
                 try
                 {
