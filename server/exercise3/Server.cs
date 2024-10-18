@@ -63,6 +63,19 @@ namespace exercise3
             server.Stop();
         }
 
+        private void activeloggingindatabase(string username)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                string changestatus = "update [acc] set logging=1 when username=@username";
+                using (SqlCommand cmd = new SqlCommand(changestatus, con))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         private void StopServer()
         {
             isrunning = false;
@@ -86,6 +99,7 @@ namespace exercise3
                     response = Signupprocessing(request[1]);
                     break;
                 case "LOGIN":
+                    activeloggingindatabase(request[1]);
                     response = LoginUser(request[1], request[2]);
                     break;
                 case "LOGOUT": 
