@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,7 +54,7 @@ namespace exer3
 
             try
             {
-                using (TcpClient client = new TcpClient("127.0.0.1", 8888))
+                using (TcpClient client = new TcpClient("127.0.0.1", 8080))
                 using (NetworkStream stream = client.GetStream())
                 {
                     // Send login message to server
@@ -64,15 +65,25 @@ namespace exer3
                     // Response from server
                     byte[] buffer = new byte[256];
                     int bytesRead = stream.Read(buffer, 0, buffer.Length);
-                    string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-
+                    string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                    string[] response = datareceived.Split('|');
                     // Check response
-                    if (response == "SUCCESS")
+                    if (response[0] == "Đăng nhập thành công!")
                     {
+                        user userinfo = new user();
+                        userinfo.userid = Int32.Parse(response[1].Split(":")[1].Trim());
+                        userinfo.username = response[2].Split(':')[1].Trim();
+                        userinfo.fullname = response[3].Split(':')[1].Trim();
+                        userinfo.email = response[4].Split(':')[1].Trim();
+                        userinfo.birthday = response[5].Split(':')[1].Trim();
+                        userinfo.accesstoken = response[6].Split(":")[1].Trim();
+                        userinfo.refreshtoken = response[7].Split(":")[1].Trim();
+
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Homepage homepageform = new Homepage();
-                        homepageform.Show();
-                        this.Hide();
+                        Homepage formHome = new Homepage();
+                        formHome.Homepage_load(userinfo);
+                        formHome.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
@@ -96,5 +107,5 @@ namespace exer3
             }
 
         }
-        }
+    }
 }
