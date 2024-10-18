@@ -18,6 +18,7 @@ namespace exercise3
         private bool isrunning = false;
         private string connectionString = "Server=127.0.0.1;Database=account;User Id=sa;Password=your_password;";
         int getuserid;
+        private CancellationTokenSource cancellationTokenSource;
 
         public TCPserver()
         {
@@ -27,6 +28,7 @@ namespace exercise3
         private void btnStart_Click(object sender, EventArgs e)
         {
             int port = Convert.ToInt32(txtPort.Text);
+            cancellationTokenSource = new CancellationTokenSource();
             serverThread = new Thread(() => StartServer(port));
             serverThread.Start();
             isrunning = true;
@@ -50,7 +52,7 @@ namespace exercise3
             server.Start();
             UpdateLog($"Server đang chạy trên cổng {port}");
 
-            while (isrunning)
+            while (!cancellationToken.IsCancellationRequested)
             {
                 try
                 {
@@ -82,7 +84,7 @@ namespace exercise3
         }
         private void StopServer()
         {
-            isrunning = false;
+            cancellationTokenSource.Cancel();
             server.Stop();
             UpdateLog("Server đã dừng.");
         }
