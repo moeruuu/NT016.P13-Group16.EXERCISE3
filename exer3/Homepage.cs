@@ -30,7 +30,6 @@ namespace exer3
         {
             InitializeComponent();
             StartTokenValidation();
-            activeloggingindatabase();
         }
 
         public void Homepage_load(user USER)
@@ -47,20 +46,6 @@ namespace exer3
             lbBirthday.Text = $"Birthday: {userinfo.birthday}";
             lbEmail.Text = $"Email: {userinfo.email}";
 
-        }
-
-        private void activeloggingindatabase()
-        {
-            using (SqlConnection con = connection.getConnection())
-            {
-                con.Open();
-                string changestatus = "update [acc] set logging=1 when userid=@id";
-                using (SqlCommand cmd = new SqlCommand(changestatus, con))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
-                }
-            }
         }
 
 

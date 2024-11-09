@@ -68,3 +68,9 @@ C:\Users\DELL\Videos\exer3\server\exercise3\obj\Debug\net8.0-windows\refint\exer
 C:\Users\DELL\Videos\exer3\server\exercise3\obj\Debug\net8.0-windows\exercise3.pdb
 C:\Users\DELL\Videos\exer3\server\exercise3\obj\Debug\net8.0-windows\exercise3.genruntimeconfig.cache
 C:\Users\DELL\Videos\exer3\server\exercise3\obj\Debug\net8.0-windows\ref\exercise3.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\DnsClient.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\SharpCompress.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Snappier.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\ZstdSharp.dll

@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DELL\\Videos\\exer3\\server\\",
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\users\\dell\\videos\\exer3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\users\\dell\\videos\\exer3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,13 +93,29 @@
               "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\User.cs",
+              "RelativeDocumentMoniker": "exercise3\\User.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\User.cs",
+              "RelativeToolTip": "exercise3\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:24:17.865Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Server.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\Server.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\Server.cs [Design]",
-              "RelativeToolTip": "exercise3\\Server.cs [Design]",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs [Design]*",
+              "RelativeToolTip": "exercise3\\Server.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T11:42:26.895Z",
               "EditorCaption": " [Design]"
@@ -104,24 +124,23 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Server.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\Server.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\Server.cs",
-              "RelativeToolTip": "exercise3\\Server.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCQAAAAyAAAA",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs*",
+              "RelativeToolTip": "exercise3\\Server.cs*",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAAALwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T09:25:22.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Program.cs",
               "RelativeDocumentMoniker": "exercise3\\Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Program.cs",
               "RelativeToolTip": "exercise3\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T11:36:10.626Z"
             }

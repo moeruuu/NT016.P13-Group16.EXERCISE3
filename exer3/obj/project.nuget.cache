@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VPCLjtuZHP8Qh79HsykoQqZOGNwxrQUDm/NvMn0Pr1LQkQLFaKhzBBGhXIYXg2lwAloCwwihQ4ZOho5xpmAmcQ==",
+  "dgSpecHash": "K75mXOgYKUCfGPc5hQSkMYAAVv/JX1K1zpmIvS8I6claXIRmA+AjYWEBhJUHyvaC97B58Vg/lKkE58r3QSw8nQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Videos\\exer3\\exer3\\exer3.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\exer3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.bcl.timeprovider\\8.0.1\\microsoft.bcl.timeprovider.8.0.1.nupkg.sha512",
