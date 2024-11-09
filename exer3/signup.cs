@@ -115,7 +115,7 @@ namespace exer3
         }
         
 
-        private void btnsignup_Click(object sender, EventArgs e)
+        private async void btnsignup_Click(object sender, EventArgs e)
         {
             string username = tbusername.Text;
             string pass = tbpass.Text;
@@ -163,22 +163,24 @@ namespace exer3
 
                 //Lấy IP và port server
                 TcpClient client = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = client.GetStream();
 
                 //Gộp các biến thành 1 chuỗi
-                string data = $"{username};{hashstring};{email};{name};{birthday}";
+                string data = $"signup:{username};{hashstring};{email};{name};{birthday}";
 
                 //Chuyển sang byte để máy đọc
                 byte[] bytesdata = Encoding.UTF8.GetBytes(data);
-                NetworkStream stream = client.GetStream();
-                stream.Write(bytesdata, 0, bytesdata.Length);
+                await stream.WriteAsync(bytesdata, 0, bytesdata.Length);
+                MessageBox.Show(data);
+
 
                 //Lấy response từ server
                 byte[] responseData = new byte[256];
-                int bytes = stream.Read(responseData, 0, responseData.Length);
+                int bytes = await stream.ReadAsync(responseData, 0, responseData.Length);
                 string response = Encoding.UTF8.GetString(responseData, 0, bytes);
 
                 //Tạo một chuỗi để server gửi Success nghĩa là đã đăng ký thành công
-                if (response == "Success")
+                if (response.Contains("thành công"))
                 {
 
                     DialogResult rs = MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK);
@@ -205,5 +207,6 @@ namespace exer3
             loginform.ShowDialog();
             
         }
+
     }
 }

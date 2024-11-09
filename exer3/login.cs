@@ -30,7 +30,7 @@ namespace exer3
             signupform.ShowDialog();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             string username = tbusername.Text;
             string pass = tbpass.Text;
@@ -61,11 +61,11 @@ namespace exer3
                     // Send login message to server
                     string message = $"LOGIN|{username}|{hashedPassword}";
                     byte[] data = Encoding.UTF8.GetBytes(message);
-                    stream.Write(data, 0, data.Length);
+                    await stream.WriteAsync(data, 0, data.Length);
 
                     // Response from server
                     byte[] buffer = new byte[256];
-                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                     string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     string[] response = datareceived.Split('|');
                     // Check response
