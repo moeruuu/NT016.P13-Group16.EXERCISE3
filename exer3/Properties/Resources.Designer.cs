@@ -73,6 +73,16 @@ namespace exer3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Download_Free_Vectors__Images__Photos___Videos___Vecteezy {
+            get {
+                object obj = ResourceManager.GetObject("Download Free Vectors, Images, Photos & Videos _ Vecteezy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap f4559a0ac40cf5c464dd1c321dbd78c0 {
             get {
                 object obj = ResourceManager.GetObject("f4559a0ac40cf5c464dd1c321dbd78c0", resourceCulture);

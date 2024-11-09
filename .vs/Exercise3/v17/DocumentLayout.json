@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\C#\\Exercise3\\server\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\C#\\Exercise3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise3\\server\\exercise3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise3\\server\\exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\C#\\Exercise3\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 28,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -131,54 +114,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise3\\server\\exercise3\\User.cs",
-              "RelativeDocumentMoniker": "exercise3\\User.cs",
-              "ToolTip": "C:\\C#\\Exercise3\\server\\exercise3\\User.cs",
-              "RelativeToolTip": "exercise3\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T07:24:17.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Server.cs [Design]",
-              "DocumentMoniker": "C:\\C#\\Exercise3\\server\\exercise3\\Server.cs",
-              "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\C#\\Exercise3\\server\\exercise3\\Server.cs [Design]",
-              "RelativeToolTip": "exercise3\\Server.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T11:42:26.895Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Server.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise3\\server\\exercise3\\Server.cs",
-              "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\C#\\Exercise3\\server\\exercise3\\Server.cs",
-              "RelativeToolTip": "exercise3\\Server.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAAUwLsAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T09:25:22.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise3\\server\\exercise3\\Program.cs",
-              "RelativeDocumentMoniker": "exercise3\\Program.cs",
-              "ToolTip": "C:\\C#\\Exercise3\\server\\exercise3\\Program.cs",
-              "RelativeToolTip": "exercise3\\Program.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T11:36:10.626Z"
             }
           ]
         },
