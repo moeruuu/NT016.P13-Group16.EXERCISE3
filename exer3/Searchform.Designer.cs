@@ -61,7 +61,7 @@
             txtSearch.ForeColor = Color.PaleVioletRed;
             txtSearch.Location = new Point(246, 106);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(222, 30);
+            txtSearch.Size = new Size(244, 30);
             txtSearch.TabIndex = 1;
             // 
             // btnSearch
@@ -83,7 +83,7 @@
             dgvBoooks.Location = new Point(246, 180);
             dgvBoooks.Name = "dgvBoooks";
             dgvBoooks.RowHeadersWidth = 51;
-            dgvBoooks.Size = new Size(222, 188);
+            dgvBoooks.Size = new Size(244, 188);
             dgvBoooks.TabIndex = 3;
             // 
             // btnCreateBookshelf
@@ -91,7 +91,7 @@
             btnCreateBookshelf.BackColor = Color.LavenderBlush;
             btnCreateBookshelf.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreateBookshelf.ForeColor = Color.PaleVioletRed;
-            btnCreateBookshelf.Location = new Point(574, 339);
+            btnCreateBookshelf.Location = new Point(574, 327);
             btnCreateBookshelf.Name = "btnCreateBookshelf";
             btnCreateBookshelf.Size = new Size(128, 29);
             btnCreateBookshelf.TabIndex = 4;
