@@ -85,9 +85,10 @@ namespace exer3
                         //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Homepage formHome = new Homepage();
-                        formHome.Homepage_load(userinfo);
-                        formHome.ShowDialog();
+                        Searchform seachform = new Searchform();
+                        //formHome.Homepage_load(userinfo);
+                        //formHome.ShowDialog();
+                        seachform.ShowDialog();
                         this.Close();
                     }
                     else
