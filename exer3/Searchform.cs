@@ -17,16 +17,9 @@ namespace exer3
             InitializeComponent();
         }
 
-
-
-
-
-        private void labelBookList_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
-
-
-
     }
 }

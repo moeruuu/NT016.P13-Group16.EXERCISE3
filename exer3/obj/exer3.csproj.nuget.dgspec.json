@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#\\Exercise3\\exer3\\exer3.csproj": {}
+    "C:\\C#\\Exercise3chung\\exer3\\exer3.csproj": {}
   },
   "projects": {
-    "C:\\C#\\Exercise3\\exer3\\exer3.csproj": {
+    "C:\\C#\\Exercise3chung\\exer3\\exer3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#\\Exercise3\\exer3\\exer3.csproj",
+        "projectUniqueName": "C:\\C#\\Exercise3chung\\exer3\\exer3.csproj",
         "projectName": "exer3",
-        "projectPath": "C:\\C#\\Exercise3\\exer3\\exer3.csproj",
+        "projectPath": "C:\\C#\\Exercise3chung\\exer3\\exer3.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\C#\\Exercise3\\exer3\\obj\\",
+        "outputPath": "C:\\C#\\Exercise3chung\\exer3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

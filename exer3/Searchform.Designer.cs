@@ -39,6 +39,8 @@
             labelBookList = new Label();
             labelShelfName = new Label();
             labelShelfDiscription = new Label();
+            progressBar1 = new ProgressBar();
+            buttonExit = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBoooks).BeginInit();
             SuspendLayout();
             // 
@@ -91,7 +93,7 @@
             btnCreateBookshelf.BackColor = Color.LavenderBlush;
             btnCreateBookshelf.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreateBookshelf.ForeColor = Color.PaleVioletRed;
-            btnCreateBookshelf.Location = new Point(574, 327);
+            btnCreateBookshelf.Location = new Point(596, 327);
             btnCreateBookshelf.Name = "btnCreateBookshelf";
             btnCreateBookshelf.Size = new Size(128, 29);
             btnCreateBookshelf.TabIndex = 4;
@@ -139,7 +141,6 @@
             labelBookList.Size = new Size(173, 23);
             labelBookList.TabIndex = 8;
             labelBookList.Text = "Danh sách cuốn sách";
-            labelBookList.Click += labelBookList_Click;
             // 
             // labelShelfName
             // 
@@ -165,13 +166,37 @@
             labelShelfDiscription.TabIndex = 10;
             labelShelfDiscription.Text = "Mô tả";
             // 
+            // progressBar1
+            // 
+            progressBar1.BackColor = Color.LavenderBlush;
+            progressBar1.ForeColor = Color.PaleVioletRed;
+            progressBar1.Location = new Point(248, 405);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(242, 29);
+            progressBar1.TabIndex = 11;
+            // 
+            // buttonExit
+            // 
+            buttonExit.BackColor = Color.LavenderBlush;
+            buttonExit.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonExit.ForeColor = Color.PaleVioletRed;
+            buttonExit.Location = new Point(777, 327);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(94, 29);
+            buttonExit.TabIndex = 12;
+            buttonExit.Text = "Thoát";
+            buttonExit.UseVisualStyleBackColor = false;
+            buttonExit.Click += buttonExit_Click;
+            // 
             // Searchform
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Download_Free_Vectors__Images__Photos___Videos___Vecteezy;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(931, 482);
+            ClientSize = new Size(931, 518);
+            Controls.Add(buttonExit);
+            Controls.Add(progressBar1);
             Controls.Add(labelShelfDiscription);
             Controls.Add(labelShelfName);
             Controls.Add(labelBookList);
@@ -184,7 +209,7 @@
             Controls.Add(txtSearch);
             Controls.Add(label1);
             Name = "Searchform";
-            Text = "Searchform";
+            Text = "Tìm kiếm sách";
             ((System.ComponentModel.ISupportInitialize)dgvBoooks).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -203,5 +228,7 @@
         private Label labelBookList;
         private Label labelShelfName;
         private Label labelShelfDiscription;
+        private ProgressBar progressBar1;
+        private Button buttonExit;
     }
 }
