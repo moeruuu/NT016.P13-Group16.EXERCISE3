@@ -104,7 +104,7 @@ namespace exer3
             using (NetworkStream stream = client.GetStream())
             {
                 // Gửi yêu cầu xác thực token
-                string message = $"VERIFY_TOKEN|{userinfo.accesstoken}";
+                string message = $"VERIFY_TOKEN{userinfo.accesstoken}";
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 stream.Write(data, 0, data.Length);
 
@@ -129,7 +129,7 @@ namespace exer3
             using (NetworkStream stream = client.GetStream())
             {
                 // Gửi yêu cầu làm mới token
-                string message = $"REFRESH_TOKEN|{userinfo.refreshtoken}|{userinfo.username}";
+                string message = $"REFRESH_TOKEN{userinfo.refreshtoken}|{userinfo.username}";
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 stream.Write(data, 0, data.Length);
 

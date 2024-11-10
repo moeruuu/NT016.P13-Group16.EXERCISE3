@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace exercise3
 {
     public class User
     {
+        [BsonId]
         public ObjectId UserId { get; set; }
 
         public string Fullname { get; set; }
@@ -24,6 +26,7 @@ namespace exercise3
         public DateTime Birthday { get; set; }
         
         public bool logging { get; set; }
+
         
     }
 }

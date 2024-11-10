@@ -12,6 +12,11 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Text.Json;
+using MongoDB.Driver.Core.Events;
+using MongoDB.Driver.Core.Configuration;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Security.Policy;
 
 namespace exercise3
 {
@@ -23,8 +28,9 @@ namespace exercise3
         private MongoClient mongoClient;
         private IMongoDatabase database;
         private IMongoCollection<User> accCollection;
-        private IMongoCollection<BsonDocument> tokenCollection;
+        private IMongoCollection<Token> tokenCollection;
         private CancellationTokenSource cancellationTokenSource;
+        private readonly User users;
 
         public TCPserver()
         {
@@ -32,7 +38,7 @@ namespace exercise3
             mongoClient = new MongoClient("mongodb+srv://baitapcuacoHoi:khongbietlam@clusterbaitap.nibhk.mongodb.net/");
             database = mongoClient.GetDatabase("BT3");
             accCollection = database.GetCollection<User>("Users");
-            tokenCollection = database.GetCollection<BsonDocument>("token");
+            tokenCollection = database.GetCollection<Token>("Token");
         }
 
         private async Task activeloggingindatabase(string username)
@@ -51,63 +57,118 @@ namespace exercise3
                 Builders<User>.Filter.Eq("Email", strings[2])
                 );
             if (strings.Length < 5) return "Tài khoản đã tồn tại";
-            if (!DateTime.TryParse(strings[4], out DateTime birthday))
+            if (!DateTime.TryParse(strings[4].Trim(), out DateTime birthday))
             {
                 return "Ngày sinh không hợp lệ"; // Return an error if the date format is incorrect
             }
             var document = new User
             {
-                Username = strings[0],
-                Password = strings[1],
-                Email = strings[2],
-                Fullname = strings[3],
+                UserId = ObjectId.GenerateNewId(),
+                Username = strings[0].Trim(),
+                Password = strings[1].Trim(),
+                Email = strings[2].Trim(),
+                Fullname = strings[3].Trim(),
                 Birthday = birthday,
                 logging = false
             };
-
+            UpdateLog($"{strings[0]}: Đăng ký thành công!");
             await accCollection.InsertOneAsync(document);
             return "Đăng ký thành công";
         }
 
-        private async Task<string> LoginUser(string username, string password)
+        private async Task<string> LoginUser(string requestfromclient)
         {
-            var filter = Builders<User>.Filter.And(
-                Builders<User>.Filter.Eq("Username", username),
-                Builders<User>.Filter.Eq("Password", password)
-            );
-
-            var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
-            if (userDoc == null) return "Đăng nhập thất bại";
-
-            var userid = userDoc.UserId;
-            var accesstoken = GenerateAccessToken(username);
-            var refreshtoken = GenerateRefreshToken();
-
-            var tokenDoc = new BsonDocument
+            try
             {
-                { "userid", userid },
-                { "RefreshToken", refreshtoken },
-                { "UsedToken", 1 },
-                { "CreatedTime", DateTime.UtcNow },
-                { "ExpiresTime", DateTime.UtcNow.AddMinutes(30) }
-            };
+                var strings = requestfromclient.Split('|');
+                //MessageBox.Show(strings[1]);
+                var filter =  Builders<User>.Filter.Eq(u => u.Username, strings[0].Trim());
+                var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
+                
+                if (userDoc == null)
+                {
+                    return "Không tìm thấy người dùng";
+                }
+                string password = strings[1].Trim();
+                //MessageBox.Show(password + "HII");
+                if (strings[1].Trim() != userDoc.Password.Trim())
+                {
+                    return "Sai mật khẩu";
+                }
+                
 
-            await tokenCollection.InsertOneAsync(tokenDoc);
+                var userid = userDoc.UserId;
+               // MessageBox.Show(userDoc.UserId.ToString());
+                var accesstoken = GenerateAccessToken(strings[0].Trim());
+                var refreshtoken = GenerateRefreshToken();
 
-            UpdateLog($"{username} đã đăng nhập");
-            return $"Đăng nhập thành công!|UserID: {userid}|Username: {username}|AccessToken: {accesstoken}|RefreshToken: {refreshtoken}";
+                var tokenDoc = new Token
+                {
+                    Id = ObjectId.GenerateNewId(),
+                    UserId = userid,
+                    RefreshToken = refreshtoken,
+                    UsedToken = 1,
+                    CreateTime = DateTime.Now,
+                    ExpiresTime = DateTime.Now.AddMinutes(30),
+                };
+                activeloggingindatabase(strings[0].Trim());
+                await tokenCollection.InsertOneAsync(tokenDoc);
+
+                UpdateLog($"{strings[0].Trim()} đã đăng nhập");
+                return $"SUCESS{userDoc.UserId}|{userDoc.Username}|{userDoc.Fullname}|{userDoc.Email}|{userDoc.Birthday}|{accesstoken}";
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+                return "Đăng nhập thất bại!";
+            }
         }
 
+        private async Task<string> RefreshToken(string message)
+        {
+            var strings = message.Split('|');
+
+            if (ValidateRefreshToken(strings[0].Trim()))
+            {
+
+                string newAccessToken = GenerateAccessToken(strings[1].Trim());
+                return $"SUCCESS|{newAccessToken}";
+                UpdateLog($"{strings[1].Trim()}: Tạo Token mới thành công!");
+            }
+            else
+            {
+                return "FAILED";
+            }
+        }
+
+        private bool ValidateRefreshToken(string refreshtoken)
+        {
+            var filter = Builders<Token>.Filter.Eq("RefreshToken", refreshtoken);
+            var tokenDocument = tokenCollection.Find(filter).FirstOrDefault();
+            if (tokenDocument != null)
+            {
+                int usedToken = tokenDocument.UsedToken; 
+                DateTime expiresTime = tokenDocument.ExpiresTime;
+
+                if (usedToken > 0 || expiresTime < DateTime.UtcNow)
+                {
+                    return false;
+                }
+            }
+            return true;
+
+        }
 
         private async Task<string> LogOut(string username)
         {
             var userFilter = Builders<User>.Filter.Eq("Username", username);
             var userDoc = await accCollection.Find(userFilter).FirstOrDefaultAsync();
 
+
             if (userDoc == null) return "Lỗi: Tài khoản không tồn tại";
             var userid = userDoc.UserId.ToString();
 
-            var tokenFilter = Builders<BsonDocument>.Filter.Eq("userid", userid);
+            var tokenFilter = Builders<Token>.Filter.Eq("userid", userid);
             await tokenCollection.DeleteManyAsync(tokenFilter);
 
             var update = Builders<User>.Update.Set("Logging", false);
@@ -133,7 +194,7 @@ namespace exercise3
 
         private string GenerateAccessToken(string username)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("exercise3_LTMCB"));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("0NoDHn8CwloyRZMw1YqXlxIdGhyaJbzr"));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var tokenDescriptor = new JwtSecurityToken(
                 issuer: "yourAppName",
@@ -155,7 +216,38 @@ namespace exercise3
             }
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        private async Task<string> VerifyToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes("exercise3_LTMCB");
+
+            try
+            {
+                tokenHandler.ValidateToken(token,
+                    new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidIssuer = "yourAppName",
+                        ValidAudience = "yourAppName",
+                        ClockSkew = TimeSpan.Zero
+                    },
+                out SecurityToken validatedToken);
+
+                // Token hợp lệ
+                return "VALID";
+            }
+            catch
+            {
+                // Token không hợp lệ
+                return "INVALID";
+                UpdateLog($"{users.Username}: Token không hợp lệ");
+            }
+        }
+
+            private void btnStop_Click(object sender, EventArgs e)
         {
             if (isrunning)
             {
@@ -175,7 +267,7 @@ namespace exercise3
                 {
                     int port = Convert.ToInt32(txtPort.Text);
                     StartListeningAsync(port);
-                    
+
                     //UpdateLog($"Server đã bắt đầu trên port {port}");
                 }
                 catch (Exception ex)
@@ -199,6 +291,7 @@ namespace exercise3
             while (isrunning)
             {
                 var tcpClient = await server.AcceptTcpClientAsync();
+                ReceiveData(tcpClient);
             }
         }
 
@@ -210,6 +303,53 @@ namespace exercise3
                 isrunning = false;
                 UpdateLog("[SERVER]: Server đã đóng!");
             }
+        }
+
+        private async Task ReceiveData(TcpClient tcpClient)
+        {
+            byte[] bytes = new byte[128];
+            NetworkStream stream = tcpClient.GetStream();
+            while (stream.CanRead && isrunning)
+            {
+                int bytesRead = await stream.ReadAsync(bytes, 0, bytes.Length);
+                if (bytesRead == 0)
+                    break;
+                string incomingMessage = Encoding.UTF8.GetString(bytes);
+                if (incomingMessage.StartsWith("signup:"))
+                {
+                    incomingMessage = incomingMessage.Replace("signup:", "");
+                    string messgaetoclient = await Signupprocessing(incomingMessage);
+                    SendMessageToClient(tcpClient, messgaetoclient);
+                    //UpdateLog("SERVER: Client đã đăng ký thành công!");
+                }
+                else if (incomingMessage.StartsWith("LOGIN"))
+                {
+                    incomingMessage = incomingMessage.Replace("LOGIN", "");
+                    //UpdateLog(incomingMessage);
+                    string messgaetoclient = await LoginUser(incomingMessage);
+                    SendMessageToClient(tcpClient, messgaetoclient);
+                }
+                else if (incomingMessage.StartsWith("REFRESH_TOKEN"))
+                {
+                    incomingMessage = incomingMessage.Replace("REFRESH_TOKEN", "");
+                    string messgaetoclient = await RefreshToken(incomingMessage);
+                    SendMessageToClient(tcpClient, messgaetoclient);
+                }
+                else if (incomingMessage.StartsWith("VERIFY_TOKEN"))
+                {
+                    incomingMessage = incomingMessage.Replace("VERIFY_TOKEN", "");
+                    string messgaetoclient = await VerifyToken(incomingMessage);
+                    SendMessageToClient(tcpClient, messgaetoclient);
+                }
+
+            }
+        }
+
+        private async Task SendMessageToClient(TcpClient tcpClient, string message)
+        {
+            byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+            NetworkStream stream = tcpClient.GetStream();
+            await stream.WriteAsync(messageBytes, 0, messageBytes.Length);
         }
     }
 }
