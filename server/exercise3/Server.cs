@@ -90,8 +90,13 @@ namespace exercise3
                     return "Không tìm thấy người dùng";
                 }
                 string password = strings[1].Trim();
+
+                HashAlgorithm al = SHA256.Create();
+                byte[] inputbyte = Encoding.UTF8.GetBytes(password);
+                byte[] hashbyte = al.ComputeHash(inputbyte);
+                string hashedPassword = BitConverter.ToString(hashbyte).Replace("-", "");
                 //MessageBox.Show(password + "HII");
-                if (strings[1].Trim() != userDoc.Password.Trim())
+                if (hashedPassword != userDoc.Password.Trim())
                 {
                     return "Sai mật khẩu";
                 }
@@ -119,7 +124,7 @@ namespace exercise3
             }
             catch (Exception ex) {
 
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return "Đăng nhập thất bại!";
             }
         }

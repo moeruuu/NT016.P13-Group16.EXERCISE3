@@ -47,11 +47,6 @@ namespace exer3
                 return;
             }
 
-            HashAlgorithm al = SHA256.Create();
-            byte[] inputbyte = Encoding.UTF8.GetBytes(pass);
-            byte[] hashbyte = al.ComputeHash(inputbyte);
-            string hashedPassword = BitConverter.ToString(hashbyte).Replace("-", "");
-
 
             try
             {
@@ -59,10 +54,10 @@ namespace exer3
                 using (NetworkStream stream = client.GetStream())
                 {
                     // Send login message to server
-                    string message = $"LOGIN{username}|{hashedPassword}|";
+                    string message = $"LOGIN{username}|{pass}|";
                     byte[] data = Encoding.UTF8.GetBytes(message);
                     await stream.WriteAsync(data, 0, data.Length);
-                    await stream.FlushAsync();
+                    //await stream.FlushAsync();
                    
 
                     // Response from server
@@ -81,7 +76,7 @@ namespace exer3
                         userinfo.fullname = response[2].Trim();
                         userinfo.email = response[3].Trim();
                         userinfo.birthday = response[4].Trim();
-                        userinfo.accesstoken = response[5].Trim();
+                        userinfo.accesstoken = response[5].Trim(); 
                         //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -93,7 +88,7 @@ namespace exer3
                     }
                     else
                     {
-                        MessageBox.Show(datareceived);
+                        //MessageBox.Show(datareceived);
                         MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 

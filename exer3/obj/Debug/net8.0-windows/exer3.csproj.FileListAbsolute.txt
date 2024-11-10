@@ -141,3 +141,4 @@ C:\C#\Exercise3\exer3\obj\Debug\net8.0-windows\exer3.pdb
 C:\C#\Exercise3\exer3\obj\Debug\net8.0-windows\exer3.genruntimeconfig.cache
 C:\C#\Exercise3\exer3\obj\Debug\net8.0-windows\ref\exer3.dll
 C:\C#\Exercise3\exer3\obj\Debug\net8.0-windows\exer3.Searchform.resources
+C:\Users\DELL\Videos\Exer3\exer3\obj\Debug\net8.0-windows\exer3.Searchform.resources
