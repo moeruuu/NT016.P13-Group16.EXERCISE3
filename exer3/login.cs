@@ -33,7 +33,7 @@ namespace exer3
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             string username = tbusername.Text;
-            string pass = tbpass.Text;
+            string pass = tbpass.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(username))
             {
@@ -59,26 +59,30 @@ namespace exer3
                 using (NetworkStream stream = client.GetStream())
                 {
                     // Send login message to server
-                    string message = $"LOGIN|{username}|{hashedPassword}";
+                    string message = $"LOGIN{username}|{hashedPassword}|";
                     byte[] data = Encoding.UTF8.GetBytes(message);
                     await stream.WriteAsync(data, 0, data.Length);
+                    await stream.FlushAsync();
+                   
 
                     // Response from server
                     byte[] buffer = new byte[256];
                     int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                     string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                    string[] response = datareceived.Split('|');
+                    //MessageBox.Show(datareceived);
                     // Check response
-                    if (response[0] == "Đăng nhập thành công!")
+                    if (datareceived.StartsWith("SUCESS"))
                     {
+                        datareceived = datareceived.Replace("SUCESS", "");
+                        string[] response = datareceived.Split('|');
                         user userinfo = new user();
-                        userinfo.userid = Int32.Parse(response[1].Split(":")[1].Trim());
-                        userinfo.username = response[2].Split(':')[1].Trim();
-                        userinfo.fullname = response[3].Split(':')[1].Trim();
-                        userinfo.email = response[4].Split(':')[1].Trim();
-                        userinfo.birthday = response[5].Split(':')[1].Trim();
-                        userinfo.accesstoken = response[6].Split(":")[1].Trim();
-                        userinfo.refreshtoken = response[7].Split(":")[1].Trim();
+                        userinfo.userid = response[0].Trim();
+                        userinfo.username = response[1].Trim();
+                        userinfo.fullname = response[2].Trim();
+                        userinfo.email = response[3].Trim();
+                        userinfo.birthday = response[4].Trim();
+                        userinfo.accesstoken = response[5].Trim();
+                        //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Homepage formHome = new Homepage();
@@ -88,6 +92,7 @@ namespace exer3
                     }
                     else
                     {
+                        MessageBox.Show(datareceived);
                         MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -101,10 +106,6 @@ namespace exer3
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi kết nối tới server: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Application.Exit();
             }
 
         }

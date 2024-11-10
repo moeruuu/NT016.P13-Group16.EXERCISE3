@@ -171,7 +171,7 @@ namespace exer3
                 //Chuyển sang byte để máy đọc
                 byte[] bytesdata = Encoding.UTF8.GetBytes(data);
                 await stream.WriteAsync(bytesdata, 0, bytesdata.Length);
-                MessageBox.Show(data);
+                //MessageBox.Show(data);
 
 
                 //Lấy response từ server
@@ -185,13 +185,19 @@ namespace exer3
 
                     DialogResult rs = MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK);
                     if (rs == System.Windows.Forms.DialogResult.OK)
+                    {
+                        login loginform = new login();
+                        //this.Hide();
+                        loginform.ShowDialog();
                         this.Close();
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Tài khoản đã tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 stream.Close();
+                
                 client.Close();
             }
             catch (Exception ex)
