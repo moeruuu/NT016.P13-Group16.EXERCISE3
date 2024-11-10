@@ -12,11 +12,19 @@ namespace exer3
 {
     public partial class Searchform : Form
     {
-        public Searchform()
+        private readonly user users;
+        public Searchform(user userinfo)
         {
             InitializeComponent();
+            users = userinfo;
+            WelcomeText();
         }
 
+        private void WelcomeText()
+        {
+            MessageBox.Show(users.fullname);
+            labelName.Text += users.fullname;
+        }
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
