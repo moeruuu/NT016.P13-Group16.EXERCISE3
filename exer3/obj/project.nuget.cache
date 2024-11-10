@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b4qOO0/8cCk=",
+  "dgSpecHash": "FA2yaCa2Q8g=",
   "success": true,
-  "projectFilePath": "C:\\C#\\Exercise3\\exer3\\exer3.csproj",
+  "projectFilePath": "C:\\C#\\Exercise3chung\\exer3\\exer3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.timeprovider\\8.0.1\\microsoft.bcl.timeprovider.8.0.1.nupkg.sha512",

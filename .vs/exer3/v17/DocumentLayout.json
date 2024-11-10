@@ -1,33 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DELL\\Videos\\Exer3\\",
+  "WorkspaceRootPath": "C:\\C#\\Exercise3chung\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\searchform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise3chung\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise3chung\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise3chung\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise3chung\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,8 +62,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 31,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:908254218:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:4:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
@@ -47,10 +91,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -90,10 +130,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -106,27 +142,115 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Homepage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Homepage.cs",
-              "RelativeDocumentMoniker": "exer3\\Homepage.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Homepage.cs [Design]",
-              "RelativeToolTip": "exer3\\Homepage.cs [Design]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\Program.cs",
+              "RelativeDocumentMoniker": "exer3\\Program.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\Program.cs*",
+              "RelativeToolTip": "exer3\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T06:17:53.565Z",
+              "WhenOpened": "2024-11-10T10:41:41.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Searchform.cs [Design]",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\Searchform.cs",
+              "RelativeDocumentMoniker": "exer3\\Searchform.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\Searchform.cs [Design]",
+              "RelativeToolTip": "exer3\\Searchform.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T10:41:28.238Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Searchform.Designer.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\Searchform.Designer.cs",
+              "RelativeDocumentMoniker": "exer3\\Searchform.Designer.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\Searchform.Designer.cs",
+              "RelativeToolTip": "exer3\\Searchform.Designer.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAD4v44AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T10:41:12.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Searchform.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\Searchform.cs",
+              "RelativeDocumentMoniker": "exer3\\Searchform.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\Searchform.cs",
+              "RelativeToolTip": "exer3\\Searchform.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwBEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T10:40:55.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookDetailsPage.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\BookDetailsPage.cs",
+              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\BookDetailsPage.cs*",
+              "RelativeToolTip": "exer3\\BookDetailsPage.cs*",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAlwBoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T10:39:14.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookDetailsPage.cs [Design]",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\BookDetailsPage.cs",
+              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\BookDetailsPage.cs [Design]*",
+              "RelativeToolTip": "exer3\\BookDetailsPage.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T10:25:00.886Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "signup.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\signup.cs",
               "RelativeDocumentMoniker": "exer3\\signup.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\signup.cs",
               "RelativeToolTip": "exer3\\signup.cs",
               "ViewState": "AQIAAHIAAAAAAAAAAAAqwHgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -135,37 +259,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Homepage.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Homepage.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\Homepage.cs",
               "RelativeDocumentMoniker": "exer3\\Homepage.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Homepage.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\Homepage.cs",
               "RelativeToolTip": "exer3\\Homepage.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAADwv0gAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T07:41:27.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T07:41:27.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\login.cs",
               "RelativeDocumentMoniker": "exer3\\login.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\login.cs",
               "RelativeToolTip": "exer3\\login.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAqwEcAAAASAAAA",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAqwEcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T07:39:03.255Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\login.cs",
               "RelativeDocumentMoniker": "exer3\\login.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs [Design]",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\login.cs [Design]",
               "RelativeToolTip": "exer3\\login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T07:38:49.62Z",
@@ -173,28 +296,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "user.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\user.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\user.cs",
               "RelativeDocumentMoniker": "exer3\\user.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\user.cs",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\user.cs",
               "RelativeToolTip": "exer3\\user.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T07:38:26.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T07:38:26.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "signup.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\signup.cs",
               "RelativeDocumentMoniker": "exer3\\signup.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs [Design]",
+              "ToolTip": "C:\\C#\\Exercise3chung\\exer3\\signup.cs [Design]",
               "RelativeToolTip": "exer3\\signup.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T07:38:15.78Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Homepage.cs [Design]",
+              "DocumentMoniker": "C:\\C#\\Exercise3chung\\exer3\\Homepage.cs",
+              "RelativeDocumentMoniker": "exer3\\Homepage.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Homepage.cs [Design]",
+              "RelativeToolTip": "..\\..\\Users\\DELL\\Videos\\Exer3\\exer3\\Homepage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T06:17:53.565Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
