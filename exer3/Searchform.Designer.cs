@@ -90,6 +90,7 @@
             dgvBoooks.Location = new Point(49, 225);
             dgvBoooks.Margin = new Padding(4);
             dgvBoooks.Name = "dgvBoooks";
+            dgvBoooks.ReadOnly = true;
             dgvBoooks.RowHeadersWidth = 51;
             dgvBoooks.Size = new Size(561, 288);
             dgvBoooks.TabIndex = 3;
