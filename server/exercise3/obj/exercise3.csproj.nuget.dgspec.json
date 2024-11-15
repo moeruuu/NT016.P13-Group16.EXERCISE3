@@ -11,7 +11,7 @@
         "projectName": "exercise3",
         "projectPath": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -60,6 +64,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Newtonsoft.Json.Bson": {
+              "target": "Package",
+              "version": "[1.0.3, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

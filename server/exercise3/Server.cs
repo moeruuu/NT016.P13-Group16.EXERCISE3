@@ -17,6 +17,7 @@ using MongoDB.Driver.Core.Configuration;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Security.Policy;
+using Newtonsoft.Json;
 
 namespace exercise3
 {
@@ -31,14 +32,17 @@ namespace exercise3
         private IMongoCollection<Token> tokenCollection;
         private CancellationTokenSource cancellationTokenSource;
         private readonly User users;
+        private readonly BookService bookService;
+        private static string name;
 
-        public TCPserver()
+        public TCPserver(BookService book)
         {
             InitializeComponent();
             mongoClient = new MongoClient("mongodb+srv://baitapcuacoHoi:khongbietlam@clusterbaitap.nibhk.mongodb.net/");
             database = mongoClient.GetDatabase("BT3");
             accCollection = database.GetCollection<User>("Users");
             tokenCollection = database.GetCollection<Token>("Token");
+            bookService = book;
         }
 
         private async Task activeloggingindatabase(string username)
@@ -100,8 +104,7 @@ namespace exercise3
                 {
                     return "Sai mật khẩu";
                 }
-                
-
+                name = userDoc.Username;
                 var userid = userDoc.UserId;
                // MessageBox.Show(userDoc.UserId.ToString());
                 var accesstoken = GenerateAccessToken(strings[0].Trim());
@@ -346,7 +349,14 @@ namespace exercise3
                     string messgaetoclient = await VerifyToken(incomingMessage);
                     SendMessageToClient(tcpClient, messgaetoclient);
                 }
+                else if (incomingMessage.StartsWith("SEARCHBOOK"))
+                {
+                    incomingMessage = incomingMessage.Replace("SEARCHBOOK", "");
+                    var messagetoclient = await bookService.SearchBooks(incomingMessage);
+                    UpdateLog($"{name} đã tra sách");
+                    SendListToClient(tcpClient, messagetoclient);
 
+                }
             }
         }
 
@@ -357,6 +367,20 @@ namespace exercise3
             await stream.WriteAsync(messageBytes, 0, messageBytes.Length);
         }
 
-        
+        public async Task SendListToClient<T>(TcpClient tcpClient, List<T> list)
+        {
+            try
+            {
+                string jsonMessage = JsonConvert.SerializeObject(list);
+                byte[] bytes = Encoding.UTF8.GetBytes(jsonMessage);
+                NetworkStream stream = tcpClient.GetStream();
+                await stream.WriteAsync(bytes, 0, bytes.Length);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

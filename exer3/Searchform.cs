@@ -1,42 +1,47 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Filters;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static exer3.BookService;
 
 namespace exer3
 {
     public partial class Searchform : Form
     {
         private readonly user users;
-        private readonly BookService bookService;
-        public Searchform(user userinfo, BookService book)
+        private readonly Book book;
+        public Searchform(user userinfo, Book book)
         {
             InitializeComponent();
             users = userinfo;
             WelcomeText();
-            bookService = book;
+            //bookService = book;
             CreateDataGridView();
+            this.book = book;
         }
 
         private void WelcomeText()
         {
-            MessageBox.Show(users.fullname);
+            //MessageBox.Show(users.fullname);
             labelName.Text += users.fullname;
         }
 
         private void CreateDataGridView()
         {
             dgvBoooks.Columns.Clear();
+            dgvBoooks.Columns.Add("ID", "ID");
+            dgvBoooks.Columns.Add("Etag", "Etag");
             dgvBoooks.Columns.Add("Title", "Title");
             dgvBoooks.Columns.Add("Authors", "Authors");
             dgvBoooks.Columns.Add("Publisher", "Publisher");
-            dgvBoooks.Columns.Add("Description", "Description");
+            dgvBoooks.Columns.Add("PublishedDate", "publishedDate");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -44,10 +49,6 @@ namespace exer3
             this.Close();
         }
 
-        public string ListtoString(List<string> motlist)
-        {
-            return motlist != null ? string.Join(", ", motlist) : "Unknow";
-        }
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
@@ -58,19 +59,58 @@ namespace exer3
             }
             try
             {
-                var books = await bookService.SearchBooks(txtSearch.Text);
-                if (books != null && books.Any())
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
+
+                string message = "SEARCHBOOK" + txtSearch.Text.Trim();
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] bytes = new byte[4096];
+                int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
+
+//                dgvBoooks.Rows.Add(response);
+
+                List<Book> books = JsonConvert.DeserializeObject<List<Book>>(response);
+
+                // MessageBox.Show(books[1].ToString());
+                progressBar.Minimum = 0;
+                if (books.Count > 0)
                 {
-                    //var bindingList = new BindingList<Book>(books);
+                    progressBar.Maximum = books.Count;
+                    progressBar.Value = 0;
+                }
+                else
+                {
+                    progressBar.Maximum = 1;
+                    progressBar.Value = 0;
+                }
+
+                if (books != null && books.Count > 0)
+                {
                     foreach (var book in books)
                     {
-                        dgvBoooks.Rows.Add(book.Title, ListtoString(book.Authors), book.Publisher, book.Description);
+                        progressBar.Value++;
+                        string authors = book.Authors != null ? string.Join(", ", book.Authors) : "No authors";
+                        string publisher = book.Publisher ?? "Unknown";
+                        string publishedDate = book.PublishedDate ?? "Unknown";
+
+                        dgvBoooks.Rows.Add(
+                            book.ID ?? "Unknown",
+                            book.Etag ?? "Unknown",
+                            book.Title ?? "No Title",
+                            authors,
+                            publisher,
+                            publishedDate
+                        );
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy sách nào!");
+                    MessageBox.Show("Không tìm tháy sách nào!");
                 }
+
             }
             catch (Exception ex)
             {

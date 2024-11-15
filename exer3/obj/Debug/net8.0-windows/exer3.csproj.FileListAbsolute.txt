@@ -184,3 +184,8 @@ C:\C#\Exercise3chung\exer3\obj\Debug\net8.0-windows\exer3.BookDetailsPage.resour
 C:\Users\DELL\Videos\Exer3\exer3\obj\Debug\net8.0-windows\exer3.BookDetailsPage.resources
 C:\Users\DELL\Videos\Exer3\exer3\obj\Debug\net8.0-windows\exer3.Searchform.resources
 C:\Users\DELL\Videos\Exer3\exer3\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\DELL\Videos\Exer3\exer3\bin\Debug\net8.0-windows\Google.Apis.dll
+C:\Users\DELL\Videos\Exer3\exer3\bin\Debug\net8.0-windows\Google.Apis.Auth.dll
+C:\Users\DELL\Videos\Exer3\exer3\bin\Debug\net8.0-windows\Google.Apis.Core.dll
+C:\Users\DELL\Videos\Exer3\exer3\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\DELL\Videos\Exer3\exer3\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll

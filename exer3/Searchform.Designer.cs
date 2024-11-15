@@ -87,11 +87,11 @@
             // 
             dgvBoooks.BackgroundColor = Color.LavenderBlush;
             dgvBoooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBoooks.Location = new Point(308, 225);
+            dgvBoooks.Location = new Point(49, 225);
             dgvBoooks.Margin = new Padding(4);
             dgvBoooks.Name = "dgvBoooks";
             dgvBoooks.RowHeadersWidth = 51;
-            dgvBoooks.Size = new Size(305, 235);
+            dgvBoooks.Size = new Size(561, 288);
             dgvBoooks.TabIndex = 3;
             // 
             // btnCreateBookshelf
@@ -146,7 +146,7 @@
             labelBookList.BackColor = Color.Transparent;
             labelBookList.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelBookList.ForeColor = Color.PaleVioletRed;
-            labelBookList.Location = new Point(49, 225);
+            labelBookList.Location = new Point(49, 180);
             labelBookList.Margin = new Padding(4, 0, 4, 0);
             labelBookList.Name = "labelBookList";
             labelBookList.Size = new Size(218, 30);
@@ -183,10 +183,10 @@
             // 
             progressBar.BackColor = Color.LavenderBlush;
             progressBar.ForeColor = Color.PaleVioletRed;
-            progressBar.Location = new Point(310, 506);
+            progressBar.Location = new Point(49, 544);
             progressBar.Margin = new Padding(4);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(302, 36);
+            progressBar.Size = new Size(561, 36);
             progressBar.TabIndex = 11;
             // 
             // buttonExit
