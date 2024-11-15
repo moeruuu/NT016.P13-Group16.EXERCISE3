@@ -356,5 +356,7 @@ namespace exercise3
             NetworkStream stream = tcpClient.GetStream();
             await stream.WriteAsync(messageBytes, 0, messageBytes.Length);
         }
+
+        
     }
 }

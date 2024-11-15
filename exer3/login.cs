@@ -80,7 +80,8 @@ namespace exer3
                         //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Searchform seachform = new Searchform(userinfo);
+                        BookService book = new BookService();
+                        Searchform seachform = new Searchform(userinfo, book);
                         //formHome.Homepage_load(userinfo);
                         //formHome.ShowDialog();
                         seachform.ShowDialog();

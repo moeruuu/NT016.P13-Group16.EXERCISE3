@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "SuperSimpleTcp": {
               "target": "Package",
               "version": "[3.0.14, )"
