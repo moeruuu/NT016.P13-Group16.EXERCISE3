@@ -106,31 +106,31 @@ namespace exercise3
             string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={search}&key={key}";
             try
             {
-                using (var client = new HttpClient())
-                {
+            using (var client = new HttpClient())
+            {
                     string accesstoken = await GetAccessToken();
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accesstoken);
-                    var response = await client.GetStringAsync(apiUrl);
-                    var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
+                var response = await client.GetStringAsync(apiUrl);
+                var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
 
-                    List<Book> books = new List<Book>();
-                    
+                List<Book> books = new List<Book>();
 
-                    foreach (var item in booksResponse.items)
+
+                foreach (var item in booksResponse.items)
+                {
+                    books.Add(new Book
                     {
-                        books.Add(new Book
-                        {
-                            ID = item.volumeInfo.id,
-                            Etag = item.volumeInfo.etag,
-                            Title = item.volumeInfo.title,
-                            Authors = item.volumeInfo.authors,
-                            Publisher = item.volumeInfo.publisher,
-                            PublishedDate = item.volumeInfo.publishedDate
-                        });
-                    }
-
-                    return books;
+                        ID = item.volumeInfo.id,
+                        Etag = item.volumeInfo.etag,
+                        Title = item.volumeInfo.title,
+                        Authors = item.volumeInfo.authors,
+                        Publisher = item.volumeInfo.publisher,
+                        PublishedDate = item.volumeInfo.publishedDate
+                    });
                 }
+
+                return books;
+            }
             }
             catch (Exception ex)
             {
