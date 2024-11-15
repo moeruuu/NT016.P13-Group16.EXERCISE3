@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\users\\dell\\videos\\exer3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,9 +30,9 @@
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\BookService.cs",
               "RelativeDocumentMoniker": "exercise3\\BookService.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\BookService.cs",
-              "RelativeToolTip": "exercise3\\BookService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAABFAAAA",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\BookService.cs*",
+              "RelativeToolTip": "exercise3\\BookService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T10:25:49.585Z",
               "IsPinned": true,
@@ -116,8 +116,7 @@
               "RelativeToolTip": "exercise3\\Server.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAgwE0BAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T09:25:22.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T09:25:22.372Z"
             },
             {
               "$type": "Document",
@@ -129,8 +128,7 @@
               "RelativeToolTip": "exercise3\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T11:36:10.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T11:36:10.626Z"
             }
           ]
         }

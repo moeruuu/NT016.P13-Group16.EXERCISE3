@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JdO/HvdCNMiTA4QgBODxkQwiDI2xDZl4A6LUnN6Mq7b/G2yrr6se7mhTYxdTIanN2q1R8Uit4u6JLOUBxEeKYA==",
+  "dgSpecHash": "Yjs4P+mO6fTi5IhOKGcMrCLryLcXPHtnHlB7BUJXhKVKXSHOdWtG/RTh8I8qdbNwR+omPxXyW3ef+0JBS2jjHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
