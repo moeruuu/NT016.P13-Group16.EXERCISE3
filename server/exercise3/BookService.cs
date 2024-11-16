@@ -11,14 +11,14 @@ using static System.Formats.Asn1.AsnWriter;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Util.Store;
+using DotNetEnv;
 
 namespace exercise3
 {
     public class BookService
     {
-        private static readonly string key = Environment.GetEnvironmentVariable("GOOGLE_KEY");
-        private readonly string clientid = Environment.GetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID");
-        private readonly string clientsecret = Environment.GetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_SECRET");
+        private static readonly string clientid = "733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com";
+        private static readonly string clientsecret = "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";
         private static readonly string baseurl = @"https://www.googleapis.com/books/v1";
 
 
@@ -35,11 +35,13 @@ namespace exercise3
                     ClientId = clientid,
                     ClientSecret = clientsecret,
                 };
+
+                //MessageBox.Show(clientid + '\n' + clientsecret);
                 var flow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer
                 {
                     ClientSecrets = clientsecrets,
-                    Scopes = new[] { "https://www.googleapis.com/auth/books" }, // Sửa lại phạm vi này
-                    DataStore = new FileDataStore("Google.Apis.Auth")
+                    Scopes = new[] { "https://www.googleapis.com/auth/books" },
+                    //DataStore = new FileDataStore("Google.Apis.Auth")
                 });
 
                 var credential = await new AuthorizationCodeInstalledApp(flow, new LocalServerCodeReceiver()).AuthorizeAsync("user", CancellationToken.None);
@@ -103,13 +105,27 @@ namespace exercise3
      
         public async Task<List<Book>> SearchBooks(string search)
         {
-            string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={search}&key={key}";
+            try
+            {
+                DotNetEnv.Env.Load();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={search}";
             try
             {
             using (var client = new HttpClient())
             {
-                    string accesstoken = await GetAccessToken();
-                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accesstoken);
+                string accesstoken = await GetAccessToken();
+                 /*   if (string.IsNullOrEmpty(accesstoken))
+                    {
+                        MessageBox.Show("Access token is null or empty. Authorization failed.");
+                        return null;
+                    }*/
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accesstoken);
                 var response = await client.GetStringAsync(apiUrl);
                 var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
 

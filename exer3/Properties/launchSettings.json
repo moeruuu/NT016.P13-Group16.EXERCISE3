@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "exer3": {
+      "commandName": "Project",
+      "commandLineArgs": "GOOGLE_OAUTH_CLIENT_ID=733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com\r\nGOOGLE_OAUTH_CLIENT_SECRET=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\r\nGOOGLE_KEY=AIzaSyCPAuwYbqhorOST7_wm4ZKTgQh5rF8nQ4Y\r\n"
+    }
+  }
+}
