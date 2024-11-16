@@ -77,6 +77,7 @@ namespace exer3
                         userinfo.email = response[3].Trim();
                         userinfo.birthday = response[4].Trim();
                         userinfo.accesstoken = response[5].Trim(); 
+                        userinfo.tokengg = response[6].Trim();
                         //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -121,9 +121,10 @@ namespace exercise3
                 };
                 activeloggingindatabase(strings[0].Trim());
                 await tokenCollection.InsertOneAsync(tokenDoc);
+                var tokengg = await bookService.GetAccessToken();
 
                 UpdateLog($"{strings[0].Trim()} đã đăng nhập");
-                return $"SUCESS{userDoc.UserId}|{userDoc.Username}|{userDoc.Fullname}|{userDoc.Email}|{userDoc.Birthday}|{accesstoken}";
+                return $"SUCESS{userDoc.UserId}|{userDoc.Username}|{userDoc.Fullname}|{userDoc.Email}|{userDoc.Birthday}|{accesstoken}|{tokengg}";
             }
             catch (Exception ex) {
 

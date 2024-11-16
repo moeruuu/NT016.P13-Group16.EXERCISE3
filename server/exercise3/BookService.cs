@@ -26,9 +26,9 @@ namespace exercise3
 
         private static readonly string baseurl = @"https://www.googleapis.com/books/v1";
 
-        private string accessToken;
+        public string accessToken;
 
-        private async Task<string> GetAccessToken()
+        public async Task<string> GetAccessToken()
         {
             try
             {
@@ -185,13 +185,12 @@ namespace exercise3
             {
             using (var client = new HttpClient())
             {
-                string accesstoken = await GetAccessToken();
                  /*   if (string.IsNullOrEmpty(accesstoken))
                     {
                         MessageBox.Show("Access token is null or empty. Authorization failed.");
                         return null;
                     }*/
-                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accesstoken);
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
                 var response = await client.GetStringAsync(apiUrl);
                 var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
 
