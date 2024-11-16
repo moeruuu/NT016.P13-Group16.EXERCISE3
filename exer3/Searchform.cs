@@ -37,6 +37,7 @@ namespace exer3
         private void CreateDataGridView()
         {
             dgvBoooks.Columns.Clear();
+            dgvBoooks.Columns.Add("Serial", "No.");
             dgvBoooks.Columns.Add("ID", "ID");
             dgvBoooks.Columns.Add("Etag", "Etag");
             dgvBoooks.Columns.Add("Title", "Title");
@@ -53,6 +54,7 @@ namespace exer3
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
+            dgvBoooks.Rows.Clear();
             if (string.IsNullOrEmpty(txtSearch.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên tìm kiếm!");
@@ -88,6 +90,7 @@ namespace exer3
                     progressBar.Value = 0;
                 }
 
+                int num = 1;
                 if (books != null && books.Count > 0)
                 {
                     foreach (var book in books)
@@ -98,6 +101,7 @@ namespace exer3
                         string publishedDate = book.PublishedDate ?? "Unknown";
 
                         dgvBoooks.Rows.Add(
+                            num++,
                             book.ID ?? "Unknown",
                             book.Etag ?? "Unknown",
                             book.Title ?? "No Title",
