@@ -124,7 +124,7 @@ namespace exercise3
                 var tokengg = await bookService.GetAccessToken();
 
                 UpdateLog($"{strings[0].Trim()} đã đăng nhập");
-                return $"SUCESS{userDoc.UserId}|{userDoc.Username}|{userDoc.Fullname}|{userDoc.Email}|{userDoc.Birthday}|{accesstoken}|{tokengg}";
+                return $"SUCCESS{userDoc.UserId}|{userDoc.Username}|{userDoc.Fullname}|{userDoc.Email}|{userDoc.Birthday}|{accesstoken}|{tokengg}";
             }
             catch (Exception ex) {
 
