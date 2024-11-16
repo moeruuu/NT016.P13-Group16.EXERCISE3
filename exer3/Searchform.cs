@@ -38,12 +38,11 @@ namespace exer3
         {
             dgvBoooks.Columns.Clear();
             dgvBoooks.Columns.Add("Serial", "No.");
-            dgvBoooks.Columns.Add("ID", "ID");
-            dgvBoooks.Columns.Add("Etag", "Etag");
             dgvBoooks.Columns.Add("Title", "Title");
             dgvBoooks.Columns.Add("Authors", "Authors");
             dgvBoooks.Columns.Add("Publisher", "Publisher");
-            dgvBoooks.Columns.Add("PublishedDate", "publishedDate");
+            dgvBoooks.Columns.Add("PublishedDate", "PublishedDate");
+            dgvBoooks.Columns.Add("Description", "Description");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -73,7 +72,7 @@ namespace exer3
                 int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
                 var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
 
-//                dgvBoooks.Rows.Add(response);
+                //                dgvBoooks.Rows.Add(response);
 
                 List<Book> books = JsonConvert.DeserializeObject<List<Book>>(response);
 
@@ -99,15 +98,15 @@ namespace exer3
                         string authors = book.Authors != null ? string.Join(", ", book.Authors) : "No authors";
                         string publisher = book.Publisher ?? "Unknown";
                         string publishedDate = book.PublishedDate ?? "Unknown";
+                        string description = book.Description ?? "None";
 
                         dgvBoooks.Rows.Add(
                             num++,
-                            book.ID ?? "Unknown",
-                            book.Etag ?? "Unknown",
                             book.Title ?? "No Title",
                             authors,
                             publisher,
-                            publishedDate
+                            publishedDate,
+                            description
                         );
                     }
                 }
@@ -119,9 +118,21 @@ namespace exer3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một tựa đề khác");
             }
         }
 
+        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 5 && e.RowIndex < dgvBoooks.Rows.Count - 1)
+            {
+                string title = dgvBoooks.Rows[e.RowIndex].Cells["Title"].Value.ToString();
+                string descript = dgvBoooks.Rows[e.RowIndex].Cells["Description"].Value.ToString();
+                if (descript == "None")
+                    MessageBox.Show("Xin lỗi. Chúng tôi không tìm thấy mô tả về sách này:((", title, MessageBoxButtons.OK);
+                else
+                    MessageBox.Show(descript, title, MessageBoxButtons.OK);
+            }
+        }
     }
 }
