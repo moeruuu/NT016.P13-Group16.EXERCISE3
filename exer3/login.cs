@@ -66,9 +66,9 @@ namespace exer3
                     string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     //MessageBox.Show(datareceived);
                     // Check response
-                    if (datareceived.StartsWith("SUCESS"))
+                    if (datareceived.StartsWith("SUCCESS"))
                     {
-                        datareceived = datareceived.Replace("SUCESS", "");
+                        datareceived = datareceived.Replace("SUCCESS", "");
                         string[] response = datareceived.Split('|');
                         user userinfo = new user();
                         userinfo.userid = response[0].Trim();
