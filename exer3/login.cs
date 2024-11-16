@@ -25,9 +25,10 @@ namespace exer3
 
         private void linksignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup signupform = new signup();
             this.Hide();
+            signup signupform = new signup();
             signupform.ShowDialog();
+            this.Close();
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace exer3
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //BookService book = new BookService();
+                        this.Hide();
                         Book book = new Book();
                         Searchform seachform = new Searchform(userinfo, book);
                         //formHome.Homepage_load(userinfo);
