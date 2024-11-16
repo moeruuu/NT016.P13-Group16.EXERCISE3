@@ -12,13 +12,23 @@ using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Util.Store;
 using DotNetEnv;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace exercise3
 {
     public class BookService
     {
-        private static readonly string clientid = "733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com";
-        private static readonly string clientsecret = "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";
+        public BookService() {
+
+            Env.Load();
+            Environment.SetEnvironmentVariable("GOOGLE_CLIENT_ID", "733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com");
+            Environment.SetEnvironmentVariable("GOOGLE_CLIENT_SECRET", "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");
+            
+        }
+        private static readonly string clientid = Env.GetString("GOOGLE_CLIENT_ID");
+        private static readonly string clientsecret = Env.GetString("GOOGLE_CLIENT_SECRET");
+
         private static readonly string baseurl = @"https://www.googleapis.com/books/v1";
 
 
@@ -105,15 +115,7 @@ namespace exercise3
      
         public async Task<List<Book>> SearchBooks(string search)
         {
-            try
-            {
-                DotNetEnv.Env.Load();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            MessageBox.Show(clientid);
             string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={search}";
             try
             {
