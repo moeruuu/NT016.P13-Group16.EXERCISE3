@@ -61,8 +61,7 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                // Handle any exceptions
-                Console.WriteLine($"Error in getting access token: {ex.Message}");
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
@@ -75,7 +74,7 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error storing refresh token: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -90,7 +89,7 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error retrieving refresh token: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
             return null;
         }
@@ -122,7 +121,7 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error refreshing access token: {ex.Message}");
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
