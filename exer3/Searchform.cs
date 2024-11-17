@@ -43,7 +43,7 @@ namespace exer3
             dgvBoooks.Columns.Add("Title", "Title");
             dgvBoooks.Columns.Add("Authors", "Authors");
             dgvBoooks.Columns.Add("Publisher", "Publisher");
-            dgvBoooks.Columns.Add("PublishedDate", "publishedDate");
+            dgvBoooks.Columns.Add("PublishedDate", "PublishedDate");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
