@@ -14,5 +14,12 @@ namespace exer3
         public string Publisher { get; set; }
         public string? PublishedDate { get; set; }
         public string Description { get; set; }
+        public Image ImageLinks { get; set; }
+    }
+
+    public class Image
+    {
+        public string thumbnail { get; set; }
+
     }
 }

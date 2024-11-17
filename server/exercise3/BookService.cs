@@ -15,11 +15,7 @@ using DotNetEnv;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using Google.Apis.Auth.OAuth2.Responses;
-<<<<<<< HEAD
 using System.Net;
-=======
-using static exercise3.BookService;
->>>>>>> 2de47ba (update)
 
 namespace exercise3
 {
@@ -322,7 +318,6 @@ namespace exercise3
             }
 
         }
-<<<<<<< HEAD
 
         public async Task<string> AddBooks(string idShelf, string idBook)
         {
@@ -370,7 +365,7 @@ namespace exercise3
             }
         }
 
-        public async Task<string> GetBookDetails(string volumeId)
+        public async Task<Book> GetBookDetails(string volumeId)
         {
             string apiUrl = $@"https://www.googleapis.com/books/v1/volumes/{volumeId}";
 

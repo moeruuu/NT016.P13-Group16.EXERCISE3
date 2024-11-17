@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "exer3/1.0.0": {
         "dependencies": {
+          "Google.Apis": "1.68.0",
           "Google.Apis.Auth": "1.68.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
           "Newtonsoft.Json": "13.0.3",
