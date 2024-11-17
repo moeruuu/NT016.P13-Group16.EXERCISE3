@@ -292,7 +292,7 @@ namespace exer3
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một tựa đề khác");
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một kệ sách khác");
             }
         }
     }

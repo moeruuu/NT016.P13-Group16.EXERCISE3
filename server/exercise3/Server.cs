@@ -356,7 +356,19 @@ namespace exercise3
                     var messagetoclient = await bookService.SearchBooks(incomingMessage);
                     UpdateLog($"{name} đã tra sách");
                     SendListToClient(tcpClient, messagetoclient);
-
+                }
+                else if (incomingMessage.StartsWith("SEARCHSHELF"))
+                {
+                    var messagetoclient = await bookService.SearchShelves();
+                    UpdateLog($"{name} đã tra kệ");
+                    SendListToClient(tcpClient, messagetoclient);
+                }
+                else if (incomingMessage.StartsWith("GETBOOK"))
+                {
+                    incomingMessage = incomingMessage.Replace("GETBOOK");
+                    var messagetoclient = await bookService.GetBooks(incomingMessage);
+                    UpdateLog($"{name} đã tra sách");
+                    SendListToClient(tcpClient, messagetoclient);
                 }
             }
         }
