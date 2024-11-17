@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\llll\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\llll\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\llll\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,65 +30,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookDetailsPage.cs",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs",
+              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs*",
+              "RelativeToolTip": "exer3\\BookDetailsPage.cs*",
+              "ViewState": "AQIAADIAAAAAAAAAAADgv0UAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T08:14:19.758Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookDetailsPage.cs",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs",
-              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs",
-              "RelativeToolTip": "exer3\\BookDetailsPage.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwE4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T08:14:19.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Searchform.cs [Design]",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\Searchform.cs",
-              "RelativeDocumentMoniker": "exer3\\Searchform.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\Searchform.cs [Design]",
-              "RelativeToolTip": "exer3\\Searchform.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T19:20:54.167Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Searchform.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
               "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\Searchform.cs",
               "RelativeToolTip": "exer3\\Searchform.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAAAJkAAAApAAAA",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAowIYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T08:57:25.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BookDetailsPage.cs [Design]",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs",
               "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs [Design]",
-              "RelativeToolTip": "exer3\\BookDetailsPage.cs [Design]",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\BookDetailsPage.cs [Design]*",
+              "RelativeToolTip": "exer3\\BookDetailsPage.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T08:13:24.236Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "login.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\login.cs",
               "RelativeDocumentMoniker": "exer3\\login.cs",
@@ -104,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\Program.cs",
               "RelativeDocumentMoniker": "exer3\\Program.cs",

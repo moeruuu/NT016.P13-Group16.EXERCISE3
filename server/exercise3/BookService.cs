@@ -314,5 +314,28 @@ namespace exercise3
             }
 
         }
+        private async Task<string> GetBookDetails(string volumeId)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    string requestUrl = $"https://www.googleapis.com/books/v1/volumes/{volumeId}";
+                    HttpResponseMessage response = await client.GetAsync(requestUrl);
+                    response.EnsureSuccessStatusCode();
+
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+                    var bookData = JsonConvert.DeserializeObject<Book>(jsonResponse);
+
+                    
+                    return JsonConvert.SerializeObject(bookData);
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Lỗi: Không thể lấy thông tin sách. {ex.Message}";
+            }
+        }
+
     }
 }
