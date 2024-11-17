@@ -148,27 +148,10 @@ namespace exer3
 
         private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgvBoooks.Rows.Count - 1)
-            {
-                string show = "";
-                if (e.ColumnIndex == 2)
-                    show = dgvBoooks.Rows[e.RowIndex].Cells["Title"].Value.ToString();
-                else if (e.ColumnIndex == 3)
-                    show = dgvBoooks.Rows[e.RowIndex].Cells["Authors"].Value.ToString();
-                else if (e.ColumnIndex == 4)
-                    show = dgvBoooks.Rows[e.RowIndex].Cells["Publisher"].Value.ToString();
-                else if (e.ColumnIndex == 6)
-                    show = dgvBoooks.Rows[e.RowIndex].Cells["Description"].Value.ToString();
+            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                string title = dgvBoooks.Rows[e.RowIndex].Cells["Title"].Value.ToString();
-                if (!show.Equals(""))
-                {
-                    if (show == "None")
-                        MessageBox.Show("Xin lỗi. Chúng tôi không tìm thấy mô tả về sách này:((", title, MessageBoxButtons.OK);
-                    else
-                        MessageBox.Show(show, title, MessageBoxButtons.OK);
-                }
-            }
+            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
+            bookDetailsPage.ShowDialog();
         }
 
         private async void btnLoadBookshelf_Click(object sender, EventArgs e)
