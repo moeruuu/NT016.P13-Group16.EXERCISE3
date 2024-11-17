@@ -146,14 +146,6 @@ namespace exer3
             }
         }
 
-        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
-            bookDetailsPage.ShowDialog();
-        }
-
         private async void btnLoadBookshelf_Click(object sender, EventArgs e)
         {
             dgvShelf.Rows.Clear();
@@ -281,6 +273,65 @@ namespace exer3
             {
                 MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một kệ sách khác");
             }
+        }
+
+        private int selectedIndexBookShelf = -1;
+        private int selectedIndexBook = -1;
+        private async void btnAddBook_Click(object sender, EventArgs e)
+        {
+            if (selectedIndexBook == -1 || selectedIndexBookShelf == -1) return;
+            try
+            {
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
+
+                string message = "ADDBOOK" + dgvShelf.Rows[selectedIndexBookShelf].Cells["ID"].Value.ToString() + "|" + dgvBoooks.Rows[selectedIndexBook].Cells["ID"].Value.ToString() + "|";
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] bytes = new byte[4096];
+                int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
+
+                progressBar.Visible = true;
+                progressBar.Minimum = 0;
+                progressBar.Maximum = 1;
+                if (response == "SUCCESS")
+                {
+                    progressBar.Value = 1;
+                    MessageBox.Show("Thêm sách thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sách thất bại!");
+                }    
+                progressBar.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử lại");
+            }
+        }
+
+        private void dgvBoooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
+            bookDetailsPage.ShowDialog();
+        }
+
+        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+                selectedIndexBook = e.RowIndex;
+        }
+
+        private void dgvShelf_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+                selectedIndexBookShelf = e.RowIndex;
         }
     }
 }

@@ -368,10 +368,17 @@ namespace exercise3
 
                     incomingMessage = incomingMessage.Replace("GETBOOK", "");
                     var strings = incomingMessage.Split("|");
-                    // MessageBox.Show(strings[0] + "hi");
                     var messagetoclient = await bookService.GetBooks(strings[0]);
                     UpdateLog($"{name} đã tra sách");
                     SendListToClient(tcpClient, messagetoclient);
+                }
+                else if (incomingMessage.StartsWith("ADDBOOK"))
+                {
+                    incomingMessage = incomingMessage.Replace("ADDBOOK", "");
+                    var strings = incomingMessage.Split("|");
+                    var messagetoclient = await bookService.AddBooks(strings[0], strings[1]);
+                    UpdateLog($"{name} đã thêm sách");
+                    SendMessageToClient(tcpClient, messagetoclient);
                 }
             }
         }

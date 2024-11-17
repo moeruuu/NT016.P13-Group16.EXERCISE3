@@ -15,12 +15,13 @@ using DotNetEnv;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using Google.Apis.Auth.OAuth2.Responses;
+using System.Net;
 
 namespace exercise3
 {
     public class BookService
     {
-       
+
         private static readonly string clientid = "733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com";
         private static readonly string clientsecret = "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";
 
@@ -180,26 +181,26 @@ namespace exercise3
             public string title { get; set; }
         }
 
-       /* public string GetAuthorize()
-        {
-            *//*return $"https://accounts.google.com/o/oauth2/v2/auth?" +
-               $"scope=email&" +
-               $"response_type=code&" +
-               $"redirect_uri={uri}&" +
-               $"client_id={clientid}";*//*
+        /* public string GetAuthorize()
+         {
+             *//*return $"https://accounts.google.com/o/oauth2/v2/auth?" +
+                $"scope=email&" +
+                $"response_type=code&" +
+                $"redirect_uri={uri}&" +
+                $"client_id={clientid}";*//*
 
-            //string redirectUri = "urn:ietf:wg:oauth:2.0:oob";
-            string redirectUri = "http://localhost:8080/";
-            *//*string oauth = string.Format("https://accounts.google.com/o/oauth2/auth?client_id={0}&redirect_uri={1}&scope={2}&response_type=code", clientid, redirectUri, scopes);
-            return oauth;*//*
+             //string redirectUri = "urn:ietf:wg:oauth:2.0:oob";
+             string redirectUri = "http://localhost:8080/";
+             *//*string oauth = string.Format("https://accounts.google.com/o/oauth2/auth?client_id={0}&redirect_uri={1}&scope={2}&response_type=code", clientid, redirectUri, scopes);
+             return oauth;*//*
 
-            return $"https://accounts.google.com/o/oauth2/v2/auth?" +
-           $"client_id={clientid}&" +
-           $"redirect_uri={Uri.EscapeDataString(redirectUri)}&" +
-           $"response_type=code&" +
-           $"scope={Uri.EscapeDataString(scopes)}";
-        }*/
-     
+             return $"https://accounts.google.com/o/oauth2/v2/auth?" +
+            $"client_id={clientid}&" +
+            $"redirect_uri={Uri.EscapeDataString(redirectUri)}&" +
+            $"response_type=code&" +
+            $"scope={Uri.EscapeDataString(scopes)}";
+         }*/
+
         public async Task<List<Book>> SearchBooks(string search)
         {
             //MessageBox.Show(clientid);
@@ -208,11 +209,11 @@ namespace exercise3
             {
                 using (var client = new HttpClient())
                 {
-                     /*   if (string.IsNullOrEmpty(accesstoken))
-                        {
-                            MessageBox.Show("Access token is null or empty. Authorization failed.");
-                            return null;
-                        }*/
+                    /*   if (string.IsNullOrEmpty(accesstoken))
+                       {
+                           MessageBox.Show("Access token is null or empty. Authorization failed.");
+                           return null;
+                       }*/
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
                     var response = await client.GetStringAsync(apiUrl);
                     var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
@@ -313,6 +314,29 @@ namespace exercise3
                 return null;
             }
 
+        }
+
+        public async Task<string> AddBooks(string idShelf, string idBook)
+        {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/mylibrary/bookshelves/{idShelf}/addVolume?volumeId={idBook}";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.PostAsync(apiUrl, null);
+
+                    if (response.StatusCode == HttpStatusCode.NoContent || response.StatusCode == HttpStatusCode.OK)
+                    {
+                        return "SUCCESS";
+                    }
+                    return "FAILED";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "FAILED";
+            }
         }
     }
 }
