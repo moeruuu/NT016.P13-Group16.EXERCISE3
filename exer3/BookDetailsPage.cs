@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 using static Google.Apis.Requests.BatchRequest;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net.Sockets;
@@ -43,11 +42,10 @@ namespace exer3
             progressBar.Style = ProgressBarStyle.Marquee;
             try
             {
-                // Kết nối tới server trung gian
+                
                 TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
                 NetworkStream stream = tcpClient.GetStream();
 
-                // Gửi yêu cầu lấy chi tiết sách
                 string message = "GETBOOKDTAILS" + volumeId + "\n";
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
@@ -57,7 +55,7 @@ namespace exer3
                 int bytesRead = await stream.ReadAsync(bytes, 0, bytes.Length);
                 var response = Encoding.UTF8.GetString(bytes, 0, bytesRead);
 
-                // Giải mã JSON thành đối tượng sách
+                
                 Book bookDetails = JsonConvert.DeserializeObject<Book>(response);
 
                 // Hiển thị thông tin chi tiết sách
