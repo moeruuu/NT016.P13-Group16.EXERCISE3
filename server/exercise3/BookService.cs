@@ -237,7 +237,6 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 return null;
             }
 
@@ -271,7 +270,6 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 return null;
             }
 
@@ -290,25 +288,28 @@ namespace exercise3
 
                     List<Book> books = new List<Book>();
 
-                    foreach (var item in booksResponse.items)
+                    if (booksResponse.items.Count() > 0)
                     {
-                        books.Add(new Book
+                        foreach (var item in booksResponse.items)
                         {
-                            ID = item.id,
-                            Title = item.volumeInfo.title,
-                            Authors = item.volumeInfo.authors,
-                            Publisher = item.volumeInfo.publisher,
-                            PublishedDate = item.volumeInfo.publishedDate,
-                            Description = item.volumeInfo.description
-                        });
-                    }
+                            books.Add(new Book
+                            {
+                                ID = item.id,
+                                Title = item.volumeInfo.title,
+                                Authors = item.volumeInfo.authors,
+                                Publisher = item.volumeInfo.publisher,
+                                PublishedDate = item.volumeInfo.publishedDate,
+                                Description = item.volumeInfo.description
+                            });
+                        }
 
-                    return books;
+                        return books;
+                    }
+                    return null;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 return null;
             }
 

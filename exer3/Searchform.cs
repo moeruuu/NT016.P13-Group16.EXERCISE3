@@ -132,12 +132,12 @@ namespace exer3
                             description
                         );
                     }
-                    progressBar.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm tháy sách nào!");
                 }
+                progressBar.Visible = false;
 
             }
             catch (Exception ex)
@@ -198,12 +198,12 @@ namespace exer3
                             shelf.Title
                         );
                     }
-                    progressBar.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm thấy kệ nào của UID này");
                 }
+                progressBar.Visible = false;
 
             }
             catch (Exception ex)
@@ -233,15 +233,18 @@ namespace exer3
 
                 progressBar.Visible = true;
                 progressBar.Minimum = 0;
-                if (books.Count > 0)
+                if (books != null)
                 {
-                    progressBar.Maximum = books.Count;
-                    progressBar.Value = 0;
-                }
-                else
-                {
-                    progressBar.Maximum = 1;
-                    progressBar.Value = 0;
+                    if (books.Count > 0)
+                    {
+                        progressBar.Maximum = books.Count;
+                        progressBar.Value = 0;
+                    }
+                    else
+                    {
+                        progressBar.Maximum = 1;
+                        progressBar.Value = 0;
+                    }
                 }
 
                 int num = 1;
@@ -266,12 +269,12 @@ namespace exer3
                             description
                         );
                     }
-                    progressBar.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm tháy sách nào!");
                 }
+                progressBar.Visible = false;
 
             }
             catch (Exception ex)
