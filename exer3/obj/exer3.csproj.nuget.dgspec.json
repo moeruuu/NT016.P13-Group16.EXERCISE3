@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\exer3.csproj": {}
+    "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\exer3.csproj": {}
   },
   "projects": {
-    "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\exer3.csproj": {
+    "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\exer3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\exer3.csproj",
+        "projectUniqueName": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\exer3.csproj",
         "projectName": "exer3",
-        "projectPath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\exer3.csproj",
-        "packagesPath": "C:\\Users\\KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\obj\\",
+        "projectPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\exer3.csproj",
+        "packagesPath": "C:\\Users\\DAN\\.nuget\\packages\\",
+        "outputPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\llll\\exer3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +90,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

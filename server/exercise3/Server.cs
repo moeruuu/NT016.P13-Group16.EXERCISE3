@@ -390,11 +390,14 @@ namespace exercise3
                 }
                 else if (incomingMessage.StartsWith("GETBOOKDETAILS"))
                 {
-                    incomingMessage = incomingMessage.Replace("GETBOOKDETAILS","");
-                    var messagetoclient = await bookService.GetBookDetails(incomingMessage);  
+                    // Loại bỏ chuỗi "GETBOOKDETAILS" khỏi message
+                    incomingMessage = incomingMessage.Replace("GETBOOKDETAILS", string.Empty).Trim(); 
+                    var bookDetails = await bookService.GetBookDetails(incomingMessage);
+                    var messagetoclient = JsonConvert.SerializeObject(bookDetails);
                     UpdateLog($"{name} đã tra chi tiết sách");
-                    SendMessageToClient(tcpClient, messagetoclient);  
+                    SendMessageToClient(tcpClient, messagetoclient);
                 }
+
             }
         }
 

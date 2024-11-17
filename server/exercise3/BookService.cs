@@ -15,7 +15,11 @@ using DotNetEnv;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using Google.Apis.Auth.OAuth2.Responses;
+<<<<<<< HEAD
 using System.Net;
+=======
+using static exercise3.BookService;
+>>>>>>> 2de47ba (update)
 
 namespace exercise3
 {
@@ -136,6 +140,8 @@ namespace exercise3
             public string Publisher { get; set; }
             public string PublishedDate { get; set; }
             public string Description { get; set; }
+            
+            [JsonProperty("imageLinks")]
             public ImageLinks ImageLinks { get; set; }
         }
 
@@ -168,6 +174,7 @@ namespace exercise3
         }
         public class ImageLinks
         {
+            [JsonProperty("thumbnail")]
             public string thumbnail { get; set; }
         }
         public class ShelvesResponse
@@ -315,6 +322,7 @@ namespace exercise3
             }
 
         }
+<<<<<<< HEAD
 
         public async Task<string> AddBooks(string idShelf, string idBook)
         {
@@ -364,24 +372,41 @@ namespace exercise3
 
         public async Task<string> GetBookDetails(string volumeId)
         {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/volumes/{volumeId}";
+
             try
             {
                 using (var client = new HttpClient())
                 {
-                    string requestUrl = $"https://www.googleapis.com/books/v1/volumes/{volumeId}";
-                    HttpResponseMessage response = await client.GetAsync(requestUrl);
-                    response.EnsureSuccessStatusCode();
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
 
-                    string jsonResponse = await response.Content.ReadAsStringAsync();
-                    var bookData = JsonConvert.DeserializeObject<Book>(jsonResponse);
+                    var response = await client.GetStringAsync(apiUrl);
+                    var bookResponse = JsonConvert.DeserializeObject<BookItem>(response);
+                    var volumeInfo = bookResponse?.volumeInfo;
 
-                    
-                    return JsonConvert.SerializeObject(bookData);
+                    if (volumeInfo != null)
+                    {
+                        var bookDetails = new Book
+                        {
+                            ID = bookResponse.id,
+                            Title = volumeInfo?.title,
+                            Authors = volumeInfo?.authors ?? new List<string> { "No authors" },
+                            Publisher = volumeInfo?.publisher ?? "Unknown",
+                            PublishedDate = volumeInfo?.publishedDate ?? "Unknown",
+                            Description = volumeInfo?.description ?? "None",
+                            ImageLinks = volumeInfo?.imageLinks
+                        };
+
+                        return bookDetails;
+                    }
+
+                    return null;  
                 }
             }
             catch (Exception ex)
             {
-                return $"Lỗi: Không thể lấy thông tin sách. {ex.Message}";
+  
+                return null;
             }
         }
 
