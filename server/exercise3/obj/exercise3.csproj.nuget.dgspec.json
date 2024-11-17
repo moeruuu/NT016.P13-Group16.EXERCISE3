@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj": {}
+    "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj": {
+    "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj",
         "projectName": "exercise3",
-        "projectPath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj",
+        "projectPath": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
