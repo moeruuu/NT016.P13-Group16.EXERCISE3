@@ -30,13 +30,24 @@
               "Title": "BookService.cs",
               "DocumentMoniker": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\server\\exercise3\\BookService.cs",
               "RelativeDocumentMoniker": "exercise3\\BookService.cs",
+<<<<<<< HEAD
               "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\server\\exercise3\\BookService.cs*",
               "RelativeToolTip": "exercise3\\BookService.cs*",
               "ViewState": "AgIAAA8BAAAAAAAAAAAYwFABAAANAAAAAAAAAA==",
+=======
+              "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\server\\exercise3\\BookService.cs",
+              "RelativeToolTip": "exercise3\\BookService.cs",
+<<<<<<< HEAD
+              "ViewState": "AgIAAOMAAAAAAAAAAAAhwO4AAAANAAAAAAAAAA==",
+=======
+              "ViewState": "AQIAACwBAAAAAAAAAAAgwD4BAAANAAAA",
+>>>>>>> 53f5e59 (update)
+>>>>>>> c6b9729aa6dba326e666f89db3bb6d9ae462d01a
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.576Z",
               "IsPinned": true,
               "EditorCaption": ""
+<<<<<<< HEAD
             },
             {
               "$type": "Bookmark",
@@ -97,6 +108,8 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+=======
+>>>>>>> 53f5e59 (update)
             },
             {
               "$type": "Bookmark",
@@ -110,7 +123,15 @@
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
               "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\server\\exercise3\\Server.cs",
               "RelativeToolTip": "exercise3\\Server.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAEUBAAAAAAAAAAApwHEBAAA9AAAAAAAAAA==",
+=======
+<<<<<<< HEAD
+              "ViewState": "AgIAAFEBAAAAAAAAAAApwI4BAAAJAAAAAAAAAA==",
+=======
+              "ViewState": "AQIAAF8BAAAAAAAAAAApwHsBAAANAAAA",
+>>>>>>> 53f5e59 (update)
+>>>>>>> c6b9729aa6dba326e666f89db3bb6d9ae462d01a
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.809Z",
               "EditorCaption": ""
