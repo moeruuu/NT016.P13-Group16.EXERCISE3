@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVnjQm09B7hsfD2QSy+uKUqcEivI5F1ujqdE43JDYXq3KEJa+mVzw6VFODbh3ZAltj3s1XKtB4cLd6pjHvnj9w==",
+  "dgSpecHash": "OEIwsa5qAqLo0ci/S5zj4bGpCU03EJQkXyLPSFcueenB6/8iGnhAt2BdHQYWLQCb6dxlMsI6o1NMMWQxp+2cWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Videos\\exer3\\server\\exercise3\\exercise3.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",
