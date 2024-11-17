@@ -32,28 +32,29 @@
             txtSearch = new TextBox();
             btnSearch = new Button();
             dgvBoooks = new DataGridView();
-            btnCreateBookshelf = new Button();
-            txtBookshelfTitle = new TextBox();
-            txtBookshelfDescription = new TextBox();
-            label2 = new Label();
+            btnLoadBookshelf = new Button();
+            lbNhap = new Label();
             labelBookList = new Label();
-            labelShelfName = new Label();
-            labelShelfDiscription = new Label();
             buttonExit = new Button();
             labelName = new Label();
             progressBar = new ProgressBar();
+            dgvShelf = new DataGridView();
+            lbNhapUID = new Label();
+            txtSearchUID = new TextBox();
+            btnAddBook = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBoooks).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvShelf).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.PaleVioletRed;
-            label1.Location = new Point(365, 39);
+            label1.Location = new Point(448, 9);
             label1.Name = "label1";
-            label1.Size = new Size(185, 31);
+            label1.Size = new Size(300, 50);
             label1.TabIndex = 0;
             label1.Text = "TÌM KIẾM SÁCH";
             // 
@@ -62,10 +63,10 @@
             txtSearch.BackColor = Color.LavenderBlush;
             txtSearch.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSearch.ForeColor = Color.PaleVioletRed;
-            txtSearch.Location = new Point(246, 106);
+            txtSearch.Location = new Point(498, 98);
             txtSearch.Margin = new Padding(2);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(244, 30);
+            txtSearch.Size = new Size(338, 30);
             txtSearch.TabIndex = 1;
             // 
             // btnSearch
@@ -73,7 +74,7 @@
             btnSearch.BackColor = Color.LavenderBlush;
             btnSearch.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSearch.ForeColor = Color.PaleVioletRed;
-            btnSearch.Location = new Point(574, 110);
+            btnSearch.Location = new Point(856, 101);
             btnSearch.Margin = new Padding(2);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(108, 29);
@@ -86,59 +87,40 @@
             // 
             dgvBoooks.BackgroundColor = Color.LavenderBlush;
             dgvBoooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBoooks.Location = new Point(74, 210);
+            dgvBoooks.Location = new Point(355, 206);
             dgvBoooks.Margin = new Padding(2);
             dgvBoooks.Name = "dgvBoooks";
             dgvBoooks.ReadOnly = true;
             dgvBoooks.RowHeadersWidth = 51;
-            dgvBoooks.Size = new Size(416, 216);
+            dgvBoooks.Size = new Size(814, 402);
             dgvBoooks.TabIndex = 3;
             dgvBoooks.CellClick += dgvBoooks_CellClick;
             // 
-            // btnCreateBookshelf
+            // btnLoadBookshelf
             // 
-            btnCreateBookshelf.BackColor = Color.LavenderBlush;
-            btnCreateBookshelf.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCreateBookshelf.ForeColor = Color.PaleVioletRed;
-            btnCreateBookshelf.Location = new Point(596, 327);
-            btnCreateBookshelf.Margin = new Padding(2);
-            btnCreateBookshelf.Name = "btnCreateBookshelf";
-            btnCreateBookshelf.Size = new Size(128, 29);
-            btnCreateBookshelf.TabIndex = 4;
-            btnCreateBookshelf.Text = "Tạo kệ sách";
-            btnCreateBookshelf.UseVisualStyleBackColor = false;
+            btnLoadBookshelf.BackColor = Color.LavenderBlush;
+            btnLoadBookshelf.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLoadBookshelf.ForeColor = Color.PaleVioletRed;
+            btnLoadBookshelf.Location = new Point(11, 159);
+            btnLoadBookshelf.Margin = new Padding(2);
+            btnLoadBookshelf.Name = "btnLoadBookshelf";
+            btnLoadBookshelf.Size = new Size(128, 29);
+            btnLoadBookshelf.TabIndex = 4;
+            btnLoadBookshelf.Text = "Load kệ sách";
+            btnLoadBookshelf.UseVisualStyleBackColor = false;
+            btnLoadBookshelf.Click += btnLoadBookshelf_Click;
             // 
-            // txtBookshelfTitle
+            // lbNhap
             // 
-            txtBookshelfTitle.BackColor = Color.LavenderBlush;
-            txtBookshelfTitle.ForeColor = Color.PaleVioletRed;
-            txtBookshelfTitle.Location = new Point(637, 180);
-            txtBookshelfTitle.Margin = new Padding(2);
-            txtBookshelfTitle.Name = "txtBookshelfTitle";
-            txtBookshelfTitle.Size = new Size(237, 27);
-            txtBookshelfTitle.TabIndex = 5;
-            // 
-            // txtBookshelfDescription
-            // 
-            txtBookshelfDescription.BackColor = Color.LavenderBlush;
-            txtBookshelfDescription.ForeColor = Color.PaleVioletRed;
-            txtBookshelfDescription.Location = new Point(637, 252);
-            txtBookshelfDescription.Margin = new Padding(2);
-            txtBookshelfDescription.Name = "txtBookshelfDescription";
-            txtBookshelfDescription.Size = new Size(234, 27);
-            txtBookshelfDescription.TabIndex = 6;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.PaleVioletRed;
-            label2.Location = new Point(74, 110);
-            label2.Name = "label2";
-            label2.Size = new Size(123, 23);
-            label2.TabIndex = 7;
-            label2.Text = "Nhập tên sách";
+            lbNhap.AutoSize = true;
+            lbNhap.BackColor = Color.Transparent;
+            lbNhap.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbNhap.ForeColor = Color.PaleVioletRed;
+            lbNhap.Location = new Point(355, 104);
+            lbNhap.Name = "lbNhap";
+            lbNhap.Size = new Size(123, 23);
+            lbNhap.TabIndex = 7;
+            lbNhap.Text = "Nhập tên sách";
             // 
             // labelBookList
             // 
@@ -146,42 +128,18 @@
             labelBookList.BackColor = Color.Transparent;
             labelBookList.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelBookList.ForeColor = Color.PaleVioletRed;
-            labelBookList.Location = new Point(74, 156);
+            labelBookList.Location = new Point(355, 165);
             labelBookList.Name = "labelBookList";
             labelBookList.Size = new Size(173, 23);
             labelBookList.TabIndex = 8;
             labelBookList.Text = "Danh sách cuốn sách";
-            // 
-            // labelShelfName
-            // 
-            labelShelfName.AutoSize = true;
-            labelShelfName.BackColor = Color.Transparent;
-            labelShelfName.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelShelfName.ForeColor = Color.PaleVioletRed;
-            labelShelfName.Location = new Point(546, 184);
-            labelShelfName.Name = "labelShelfName";
-            labelShelfName.Size = new Size(61, 23);
-            labelShelfName.TabIndex = 9;
-            labelShelfName.Text = "Tên kệ";
-            // 
-            // labelShelfDiscription
-            // 
-            labelShelfDiscription.AutoSize = true;
-            labelShelfDiscription.BackColor = Color.Transparent;
-            labelShelfDiscription.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelShelfDiscription.ForeColor = Color.PaleVioletRed;
-            labelShelfDiscription.Location = new Point(546, 253);
-            labelShelfDiscription.Name = "labelShelfDiscription";
-            labelShelfDiscription.Size = new Size(57, 23);
-            labelShelfDiscription.TabIndex = 10;
-            labelShelfDiscription.Text = "Mô tả";
             // 
             // buttonExit
             // 
             buttonExit.BackColor = Color.LavenderBlush;
             buttonExit.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonExit.ForeColor = Color.PaleVioletRed;
-            buttonExit.Location = new Point(777, 327);
+            buttonExit.Location = new Point(1075, 673);
             buttonExit.Margin = new Padding(2);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(94, 29);
@@ -196,7 +154,7 @@
             labelName.BackColor = Color.Transparent;
             labelName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelName.ForeColor = Color.PaleVioletRed;
-            labelName.Location = new Point(10, 489);
+            labelName.Location = new Point(11, 681);
             labelName.Margin = new Padding(2, 0, 2, 0);
             labelName.Name = "labelName";
             labelName.Size = new Size(89, 23);
@@ -205,11 +163,60 @@
             // 
             // progressBar
             // 
-            progressBar.Location = new Point(74, 441);
+            progressBar.Location = new Point(355, 627);
             progressBar.Margin = new Padding(2);
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(416, 27);
+            progressBar.Size = new Size(814, 27);
             progressBar.TabIndex = 14;
+            progressBar.Visible = false;
+            // 
+            // dgvShelf
+            // 
+            dgvShelf.BackgroundColor = Color.LavenderBlush;
+            dgvShelf.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvShelf.Location = new Point(12, 206);
+            dgvShelf.Margin = new Padding(2);
+            dgvShelf.Name = "dgvShelf";
+            dgvShelf.ReadOnly = true;
+            dgvShelf.RowHeadersWidth = 51;
+            dgvShelf.Size = new Size(308, 402);
+            dgvShelf.TabIndex = 15;
+            // 
+            // lbNhapUID
+            // 
+            lbNhapUID.AutoSize = true;
+            lbNhapUID.BackColor = Color.Transparent;
+            lbNhapUID.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbNhapUID.ForeColor = Color.PaleVioletRed;
+            lbNhapUID.Location = new Point(12, 101);
+            lbNhapUID.Name = "lbNhapUID";
+            lbNhapUID.Size = new Size(88, 23);
+            lbNhapUID.TabIndex = 18;
+            lbNhapUID.Text = "Nhập UID";
+            // 
+            // txtSearchUID
+            // 
+            txtSearchUID.BackColor = Color.LavenderBlush;
+            txtSearchUID.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchUID.ForeColor = Color.PaleVioletRed;
+            txtSearchUID.Location = new Point(105, 98);
+            txtSearchUID.Margin = new Padding(2);
+            txtSearchUID.Name = "txtSearchUID";
+            txtSearchUID.Size = new Size(215, 30);
+            txtSearchUID.TabIndex = 16;
+            // 
+            // btnAddBook
+            // 
+            btnAddBook.BackColor = Color.LavenderBlush;
+            btnAddBook.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddBook.ForeColor = Color.PaleVioletRed;
+            btnAddBook.Location = new Point(143, 159);
+            btnAddBook.Margin = new Padding(2);
+            btnAddBook.Name = "btnAddBook";
+            btnAddBook.Size = new Size(177, 29);
+            btnAddBook.TabIndex = 19;
+            btnAddBook.Text = "Thêm sách vào kệ";
+            btnAddBook.UseVisualStyleBackColor = false;
             // 
             // Searchform
             // 
@@ -217,17 +224,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Download_Free_Vectors__Images__Photos___Videos___Vecteezy;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(931, 518);
+            ClientSize = new Size(1180, 713);
+            Controls.Add(btnAddBook);
+            Controls.Add(lbNhapUID);
+            Controls.Add(txtSearchUID);
+            Controls.Add(dgvShelf);
             Controls.Add(progressBar);
             Controls.Add(labelName);
             Controls.Add(buttonExit);
-            Controls.Add(labelShelfDiscription);
-            Controls.Add(labelShelfName);
             Controls.Add(labelBookList);
-            Controls.Add(label2);
-            Controls.Add(txtBookshelfDescription);
-            Controls.Add(txtBookshelfTitle);
-            Controls.Add(btnCreateBookshelf);
+            Controls.Add(lbNhap);
+            Controls.Add(btnLoadBookshelf);
             Controls.Add(dgvBoooks);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
@@ -236,6 +243,7 @@
             Name = "Searchform";
             Text = "Tìm kiếm sách";
             ((System.ComponentModel.ISupportInitialize)dgvBoooks).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvShelf).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,15 +254,15 @@
         private TextBox txtSearch;
         private Button btnSearch;
         private DataGridView dgvBoooks;
-        private Button btnCreateBookshelf;
-        private TextBox txtBookshelfTitle;
-        private TextBox txtBookshelfDescription;
-        private Label label2;
+        private Button btnLoadBookshelf;
+        private Label lbNhap;
         private Label labelBookList;
-        private Label labelShelfName;
-        private Label labelShelfDiscription;
         private Button buttonExit;
         private Label labelName;
         private ProgressBar progressBar;
+        private DataGridView dgvShelf;
+        private Label lbNhapUID;
+        private TextBox txtSearchUID;
+        private Button btnAddBook;
     }
 }

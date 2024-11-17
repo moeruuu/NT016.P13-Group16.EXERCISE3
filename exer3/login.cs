@@ -84,8 +84,7 @@ namespace exer3
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //BookService book = new BookService();
                         this.Hide();
-                        Book book = new Book();
-                        Searchform seachform = new Searchform(userinfo, book);
+                        Searchform seachform = new Searchform(userinfo);
                         //formHome.Homepage_load(userinfo);
                         //formHome.ShowDialog();
                         seachform.ShowDialog();
