@@ -1109,6 +1109,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "Google.Apis >= 1.68.0",
       "Google.Apis.Auth >= 1.68.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
       "Newtonsoft.Json >= 13.0.3",
@@ -1161,6 +1162,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "Google.Apis": {
+            "target": "Package",
+            "version": "[1.68.0, )"
+          },
           "Google.Apis.Auth": {
             "target": "Package",
             "version": "[1.68.0, )"

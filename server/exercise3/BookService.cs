@@ -11,16 +11,17 @@ using static System.Formats.Asn1.AsnWriter;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Util.Store;
-using DotNetEnv;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using Google.Apis.Auth.OAuth2.Responses;
+using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace exercise3
 {
     public class BookService
     {
-       
+
         private static readonly string clientid = "733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com";
         private static readonly string clientsecret = "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";
 
@@ -135,6 +136,8 @@ namespace exercise3
             public string Publisher { get; set; }
             public string PublishedDate { get; set; }
             public string Description { get; set; }
+            
+            [JsonProperty("imageLinks")]
             public ImageLinks ImageLinks { get; set; }
         }
 
@@ -167,6 +170,7 @@ namespace exercise3
         }
         public class ImageLinks
         {
+            [JsonProperty("thumbnail")]
             public string thumbnail { get; set; }
         }
         public class ShelvesResponse
@@ -180,26 +184,26 @@ namespace exercise3
             public string title { get; set; }
         }
 
-       /* public string GetAuthorize()
-        {
-            *//*return $"https://accounts.google.com/o/oauth2/v2/auth?" +
-               $"scope=email&" +
-               $"response_type=code&" +
-               $"redirect_uri={uri}&" +
-               $"client_id={clientid}";*//*
+        /* public string GetAuthorize()
+         {
+             *//*return $"https://accounts.google.com/o/oauth2/v2/auth?" +
+                $"scope=email&" +
+                $"response_type=code&" +
+                $"redirect_uri={uri}&" +
+                $"client_id={clientid}";*//*
 
-            //string redirectUri = "urn:ietf:wg:oauth:2.0:oob";
-            string redirectUri = "http://localhost:8080/";
-            *//*string oauth = string.Format("https://accounts.google.com/o/oauth2/auth?client_id={0}&redirect_uri={1}&scope={2}&response_type=code", clientid, redirectUri, scopes);
-            return oauth;*//*
+             //string redirectUri = "urn:ietf:wg:oauth:2.0:oob";
+             string redirectUri = "http://localhost:8080/";
+             *//*string oauth = string.Format("https://accounts.google.com/o/oauth2/auth?client_id={0}&redirect_uri={1}&scope={2}&response_type=code", clientid, redirectUri, scopes);
+             return oauth;*//*
 
-            return $"https://accounts.google.com/o/oauth2/v2/auth?" +
-           $"client_id={clientid}&" +
-           $"redirect_uri={Uri.EscapeDataString(redirectUri)}&" +
-           $"response_type=code&" +
-           $"scope={Uri.EscapeDataString(scopes)}";
-        }*/
-     
+             return $"https://accounts.google.com/o/oauth2/v2/auth?" +
+            $"client_id={clientid}&" +
+            $"redirect_uri={Uri.EscapeDataString(redirectUri)}&" +
+            $"response_type=code&" +
+            $"scope={Uri.EscapeDataString(scopes)}";
+         }*/
+
         public async Task<List<Book>> SearchBooks(string search)
         {
             //MessageBox.Show(clientid);
@@ -208,11 +212,11 @@ namespace exercise3
             {
                 using (var client = new HttpClient())
                 {
-                     /*   if (string.IsNullOrEmpty(accesstoken))
-                        {
-                            MessageBox.Show("Access token is null or empty. Authorization failed.");
-                            return null;
-                        }*/
+                    /*   if (string.IsNullOrEmpty(accesstoken))
+                       {
+                           MessageBox.Show("Access token is null or empty. Authorization failed.");
+                           return null;
+                       }*/
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
                     var response = await client.GetStringAsync(apiUrl);
                     var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
@@ -237,7 +241,6 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 return null;
             }
 
@@ -271,7 +274,6 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 return null;
             }
 
@@ -290,28 +292,119 @@ namespace exercise3
 
                     List<Book> books = new List<Book>();
 
-                    foreach (var item in booksResponse.items)
+                    if (booksResponse.items.Count() > 0)
                     {
-                        books.Add(new Book
+                        foreach (var item in booksResponse.items)
                         {
-                            ID = item.id,
-                            Title = item.volumeInfo.title,
-                            Authors = item.volumeInfo.authors,
-                            Publisher = item.volumeInfo.publisher,
-                            PublishedDate = item.volumeInfo.publishedDate,
-                            Description = item.volumeInfo.description
-                        });
-                    }
+                            books.Add(new Book
+                            {
+                                ID = item.id,
+                                Title = item.volumeInfo.title,
+                                Authors = item.volumeInfo.authors,
+                                Publisher = item.volumeInfo.publisher,
+                                PublishedDate = item.volumeInfo.publishedDate,
+                                Description = item.volumeInfo.description
+                            });
+                        }
 
-                    return books;
+                        return books;
+                    }
+                    return null;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 return null;
             }
 
         }
+
+        public async Task<string> AddBooks(string idShelf, string idBook)
+        {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/mylibrary/bookshelves/{idShelf}/addVolume?volumeId={idBook}";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.PostAsync(apiUrl, null);
+
+                    if (response.StatusCode == HttpStatusCode.NoContent || response.StatusCode == HttpStatusCode.OK)
+                    {
+                        return "SUCCESS";
+                    }
+                    return "FAILED";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "FAILED";
+            }
+        }
+
+        public async Task<string> RemoveBooks(string idShelf, string idBook)
+        {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/mylibrary/bookshelves/{idShelf}/removeVolume?volumeId={idBook}";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.PostAsync(apiUrl, null);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        
+                        return "SUCCESS";
+                    }
+                    return "FAILED";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public async Task<Book> GetBookDetails(string volumeId)
+        {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/volumes/{volumeId}";
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+
+                    var response = await client.GetStringAsync(apiUrl);
+                    var bookResponse = JsonConvert.DeserializeObject<BookItem>(response);
+                    var volumeInfo = bookResponse?.volumeInfo;
+
+                    if (volumeInfo != null)
+                    {
+                        var bookDetails = new Book
+                        {
+                            ID = bookResponse.id,
+                            Title = volumeInfo?.title,
+                            Authors = volumeInfo?.authors ?? new List<string> { "No authors" },
+                            Publisher = volumeInfo?.publisher ?? "Unknown",
+                            PublishedDate = volumeInfo?.publishedDate ?? "Unknown",
+                            Description = volumeInfo?.description ?? "None",
+                            ImageLinks = volumeInfo?.imageLinks
+                        };
+
+                        return bookDetails;
+                    }
+
+                    return null;  
+                }
+            }
+            catch (Exception ex)
+            {
+  
+                return null;
+            }
+        }
+
     }
 }

@@ -368,11 +368,37 @@ namespace exercise3
 
                     incomingMessage = incomingMessage.Replace("GETBOOK", "");
                     var strings = incomingMessage.Split("|");
-                    // MessageBox.Show(strings[0] + "hi");
                     var messagetoclient = await bookService.GetBooks(strings[0]);
                     UpdateLog($"{name} đã tra sách");
                     SendListToClient(tcpClient, messagetoclient);
                 }
+                else if (incomingMessage.StartsWith("ADDBOOK"))
+                {
+                    incomingMessage = incomingMessage.Replace("ADDBOOK", "");
+                    var strings = incomingMessage.Split("|");
+                    var messagetoclient = await bookService.AddBooks(strings[0], strings[1]);
+                    UpdateLog($"{name} đã thêm sách");
+                    SendMessageToClient(tcpClient, messagetoclient);
+                }
+                else if (incomingMessage.StartsWith("REMOVEBOOK"))
+                {
+                    incomingMessage = incomingMessage.Replace("REMOVEBOOK", "");
+                    var strings = incomingMessage.Split("|");
+                    var messagetoclient = await bookService.RemoveBooks(strings[0], strings[1]);
+                    //MessageBox.Show(strings[0] + "hihi\n" + strings[1] + "hihi");
+                    UpdateLog($"{name} đã xóa sách khỏi kệ");
+                    SendMessageToClient(tcpClient, messagetoclient);
+                }
+                else if (incomingMessage.StartsWith("GETBOOKDETAILS"))
+                {
+                    // Loại bỏ chuỗi "GETBOOKDETAILS" khỏi message
+                    incomingMessage = incomingMessage.Replace("GETBOOKDETAILS", string.Empty).Trim(); 
+                    var bookDetails = await bookService.GetBookDetails(incomingMessage);
+                    var messagetoclient = JsonConvert.SerializeObject(bookDetails);
+                    UpdateLog($"{name} đã tra chi tiết sách");
+                    SendMessageToClient(tcpClient, messagetoclient);
+                }
+
             }
         }
 

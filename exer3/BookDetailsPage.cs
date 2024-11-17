@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,8 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 using static Google.Apis.Requests.BatchRequest;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net.Sockets;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace exer3
 {
@@ -36,43 +38,76 @@ namespace exer3
 
         private async Task LoadBookDetailsAsync(string volumeId)
         {
-            string apiUrl = $"https://www.googleapis.com/books/v1/volumes/{volumeId}";
-            using (HttpClient client = new HttpClient())
+
+            progressBar.Visible = true;
+            progressBar.Style = ProgressBarStyle.Marquee;
+            try
             {
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
-                if (response.IsSuccessStatusCode)
+                
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
+
+                string message = "GETBOOKDTAILS" + volumeId + "\n";
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] bytes = new byte[4096];
+                int bytesRead = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesRead);
+
+                
+                Book bookDetails = JsonConvert.DeserializeObject<Book>(response);
+                if (bookDetails != null)
                 {
-                    string jsonResult = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show(jsonResult); //để kiểm tra
-                    dynamic bookDetails = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonResult);
+                    DisplayBookDetails(bookDetails);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy chi tiết cho cuốn sách này!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lấy chi tiết sách: {ex.Message}");
 
-                    if (bookDetails != null && bookDetails.volumeInfo != null)
+            }
+        }
+            private void DisplayBookDetails(Book bookDetails)
+            {
+     
+                if (bookDetails != null)
+                {
+                    rtbBookDetails.Clear();
+
+                rtbBookDetails.AppendText($"Title: {bookDetails.Title ?? "No Title"}\n");
+                rtbBookDetails.AppendText($"Authors: {string.Join(", ", bookDetails.Authors ?? new List<string> { "No authors" })}\n");
+                rtbBookDetails.AppendText($"Publisher: {bookDetails.Publisher ?? "Unknown"}\n");
+                rtbBookDetails.AppendText($"Published Date: {bookDetails.PublishedDate ?? "Unknown"}\n");
+                rtbBookDetails.AppendText($"Description: {bookDetails.Description ?? "No description available."}\n");
+
+                if (bookDetails.ImageLinks != null && bookDetails.ImageLinks.thumbnail != null)
+                {
+                    try
                     {
-                        if (bookDetails.volumeInfo.imageLinks != null && bookDetails.volumeInfo.imageLinks.thumbnail != null)
-                        {
-                            string imageUrl = bookDetails.volumeInfo.imageLinks.thumbnail;
-                            picBookcover.Load(imageUrl);
-                        }
-
-                        rtbBookDetails.Text = $"Title: {bookDetails.volumeInfo.title ?? "N/A"}\n" +
-                                              $"Authors: {string.Join(", ", bookDetails.volumeInfo.authors ?? new string[] { "N/A" })}\n" +
-                                              $"Publisher: {bookDetails.volumeInfo.publisher ?? "Unknown"}\n" +
-                                              $"Published Date: {bookDetails.volumeInfo.publishedDate ?? "Unknown"}";
-
+                        picBookcover.Load(bookDetails.ImageLinks.thumbnail);  
+                        picBookcover.Visible = true;
                     }
-                    else
+                    catch (Exception)
                     {
-                        MessageBox.Show("No details found for this book.");
+                        picBookcover.Visible = false;
                     }
                 }
                 else
                 {
-                    string errorMessage = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Error loading book details. Status Code: {response.StatusCode}. Error: {errorMessage}");
-                    return;
+                    picBookcover.Visible = false;
                 }
             }
-
+            else
+            {
+                MessageBox.Show("Không tìm thấy chi tiết cho cuốn sách này!");
+            }
         }
     }
+
 }
+   

@@ -80,7 +80,6 @@ C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\exercise3.r
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\exercise3.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\exercise3.pdb
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\DnsClient.dll
-C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\DotNetEnv.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.Auth.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.Core.dll
@@ -98,7 +97,6 @@ C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Newtonsoft.
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Newtonsoft.Json.Bson.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\SharpCompress.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Snappier.dll
-C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\Sprache.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\System.Management.dll
@@ -186,3 +184,91 @@ D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\e
 D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\exercise3.dll
 D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\refint\exercise3.dll
 D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\exercise3.pdb
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\exercise3.exe
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\exercise3.deps.json
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\exercise3.runtimeconfig.json
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\exercise3.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\exercise3.pdb
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\DnsClient.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\DotNetEnv.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.Auth.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.Core.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.Bcl.TimeProvider.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Newtonsoft.Json.Bson.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\SharpCompress.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Snappier.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\Sprache.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\System.Management.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\ZstdSharp.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.csproj.AssemblyReference.cache
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.Properties.Resources.resources
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.TCPserver.resources
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.csproj.GenerateResource.cache
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.GeneratedMSBuildEditorConfig.editorconfig
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.AssemblyInfoInputs.cache
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.AssemblyInfo.cs
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.csproj.CoreCompileInputs.cache
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.sourcelink.json
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.csproj.Up2Date
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\refint\exercise3.dll
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.pdb
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\exercise3.genruntimeconfig.cache
+D:\1.UIT_HK3_24_25\LTMangCB\BaiTap\Baitaptuan4\git17112\server\exercise3\obj\Debug\net8.0-windows\ref\exercise3.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\exercise3.exe
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\exercise3.deps.json
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\exercise3.runtimeconfig.json
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\exercise3.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\exercise3.pdb
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\DnsClient.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\DotNetEnv.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.Auth.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Google.Apis.Core.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.Bcl.TimeProvider.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\MongoDB.Bson.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\MongoDB.Driver.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Newtonsoft.Json.Bson.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\SharpCompress.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Snappier.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\Sprache.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\System.Management.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\ZstdSharp.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\exercise3.csproj.Up2Date
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\exercise3.genruntimeconfig.cache
+D:\Lap Trinh Mang Can Ban\BT LT\llll\server\exercise3\obj\Debug\net8.0-windows\ref\exercise3.dll

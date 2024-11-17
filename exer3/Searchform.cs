@@ -19,8 +19,8 @@ namespace exer3
     public partial class Searchform : Form
     {
         private readonly user users;
-        private readonly Book book;
-        private readonly Shelf shelf;
+        private int selectedIndexBookShelf = -1;
+        private int selectedIndexBook = -1;
         public Searchform(user userinfo)
         {
             InitializeComponent();
@@ -132,26 +132,18 @@ namespace exer3
                             description
                         );
                     }
-                    progressBar.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm tháy sách nào!");
                 }
+                progressBar.Visible = false;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một tựa đề khác");
             }
-        }
-
-        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
-            bookDetailsPage.ShowDialog();
         }
 
         private async void btnLoadBookshelf_Click(object sender, EventArgs e)
@@ -198,12 +190,12 @@ namespace exer3
                             shelf.Title
                         );
                     }
-                    progressBar.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm thấy kệ nào của UID này");
                 }
+                progressBar.Visible = false;
 
             }
             catch (Exception ex)
@@ -233,15 +225,18 @@ namespace exer3
 
                 progressBar.Visible = true;
                 progressBar.Minimum = 0;
-                if (books.Count > 0)
+                if (books != null)
                 {
-                    progressBar.Maximum = books.Count;
-                    progressBar.Value = 0;
-                }
-                else
-                {
-                    progressBar.Maximum = 1;
-                    progressBar.Value = 0;
+                    if (books.Count > 0)
+                    {
+                        progressBar.Maximum = books.Count;
+                        progressBar.Value = 0;
+                    }
+                    else
+                    {
+                        progressBar.Maximum = 1;
+                        progressBar.Value = 0;
+                    }
                 }
 
                 int num = 1;
@@ -266,17 +261,112 @@ namespace exer3
                             description
                         );
                     }
-                    progressBar.Visible = false;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm tháy sách nào!");
                 }
+                progressBar.Visible = false;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một kệ sách khác");
+            }
+        }
+
+        private void dgvBoooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
+            bookDetailsPage.ShowDialog();
+        }
+
+        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+                selectedIndexBook = e.RowIndex;
+        }
+
+        private void dgvShelf_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+                selectedIndexBookShelf = e.RowIndex;
+        }
+        private async void btnAddBook_Click(object sender, EventArgs e)
+        {
+            if (selectedIndexBook == -1 || selectedIndexBookShelf == -1) return;
+            try
+            {
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
+
+                string message = "ADDBOOK" + dgvShelf.Rows[selectedIndexBookShelf].Cells["ID"].Value.ToString() + "|" + dgvBoooks.Rows[selectedIndexBook].Cells["ID"].Value.ToString() + "|";
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] bytes = new byte[4096];
+                int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
+
+                progressBar.Visible = true;
+                progressBar.Minimum = 0;
+                progressBar.Maximum = 1;
+                if (response == "SUCCESS")
+                {
+                    progressBar.Value = 1;
+                    MessageBox.Show("Thêm sách thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sách thất bại!");
+                }
+                progressBar.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử lại");
+            }
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (selectedIndexBook == -1 || selectedIndexBookShelf == -1) return;
+            try
+            {
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
+
+                string message = "REMOVEBOOK" + dgvShelf.Rows[selectedIndexBookShelf].Cells["ID"].Value.ToString() + "|" + dgvBoooks.Rows[selectedIndexBook].Cells["ID"].Value.ToString() + "|";
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] bytes = new byte[4096];
+                int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
+
+                progressBar.Visible = true;
+                progressBar.Minimum = 0;
+                progressBar.Maximum = 1;
+                if (response.StartsWith("SUCCESS"))
+                {
+                    //MessageBox.Show(response);
+                    progressBar.Value = 1;
+                    MessageBox.Show("Xóa sách thành công! Vui lòng tải lại kệ sách!");
+                    //dgvBoooks.Rows.RemoveAt(selectedIndexBook);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa sách thất bại!");
+                }
+                progressBar.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử lại");
             }
         }
     }
