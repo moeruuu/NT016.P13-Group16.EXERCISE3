@@ -8,9 +8,10 @@ namespace exer3
 {
     public class Book
     {
+        public string ID { get; set; }
         public string Title { get; set; }
         public List<string>? Authors { get; set; }
-        public string? Publisher { get; set; }
+        public string Publisher { get; set; }
         public string? PublishedDate { get; set; }
         public string Description { get; set; }
     }

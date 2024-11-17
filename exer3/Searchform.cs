@@ -40,6 +40,7 @@ namespace exer3
         {
             dgvBoooks.Columns.Clear();
             dgvBoooks.Columns.Add("Serial", "No.");
+            dgvBoooks.Columns.Add("ID", "ID");
             dgvBoooks.Columns.Add("Title", "Title");
             dgvBoooks.Columns.Add("Authors", "Authors");
             dgvBoooks.Columns.Add("Publisher", "Publisher");
@@ -47,18 +48,21 @@ namespace exer3
             dgvBoooks.Columns.Add("Description", "Description");
 
             dgvShelf.Columns.Add("No.", "No.");
+            dgvShelf.Columns.Add("ID", "ID");
             dgvShelf.Columns.Add("Bookself", "Bookself's name");
 
             //fix size
             dgvBoooks.Columns[0].Width = 45;
-            dgvBoooks.Columns[1].Width = 270;
+            dgvBoooks.Columns[1].Width = 160;
             dgvBoooks.Columns[2].Width = 270;
-            dgvBoooks.Columns[3].Width = 150;
-            dgvBoooks.Columns[4].Width = 120;
-            dgvBoooks.Columns[5].Width = 150;
+            dgvBoooks.Columns[3].Width = 270;
+            dgvBoooks.Columns[4].Width = 150;
+            dgvBoooks.Columns[5].Width = 120;
+            dgvBoooks.Columns[6].Width = 150;
 
             dgvShelf.Columns[0].Width = 45;
-            dgvShelf.Columns[1].Width = 270;
+            dgvShelf.Columns[1].Width = 100;
+            dgvShelf.Columns[2].Width = 270;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -112,6 +116,7 @@ namespace exer3
                     foreach (var book in books)
                     {
                         progressBar.Value++;
+                        string id = book.ID;
                         string authors = book.Authors != null ? string.Join(", ", book.Authors) : "No authors";
                         string publisher = book.Publisher ?? "Unknown";
                         string publishedDate = book.PublishedDate ?? "Unknown";
@@ -119,6 +124,7 @@ namespace exer3
 
                         dgvBoooks.Rows.Add(
                             num++,
+                            id,
                             book.Title ?? "No Title",
                             authors,
                             publisher,
@@ -145,13 +151,13 @@ namespace exer3
             if (e.RowIndex >= 0 && e.RowIndex < dgvBoooks.Rows.Count - 1)
             {
                 string show = "";
-                if (e.ColumnIndex == 1)
+                if (e.ColumnIndex == 2)
                     show = dgvBoooks.Rows[e.RowIndex].Cells["Title"].Value.ToString();
-                else if (e.ColumnIndex == 2)
-                    show = dgvBoooks.Rows[e.RowIndex].Cells["Authors"].Value.ToString();
                 else if (e.ColumnIndex == 3)
+                    show = dgvBoooks.Rows[e.RowIndex].Cells["Authors"].Value.ToString();
+                else if (e.ColumnIndex == 4)
                     show = dgvBoooks.Rows[e.RowIndex].Cells["Publisher"].Value.ToString();
-                else if (e.ColumnIndex == 5)
+                else if (e.ColumnIndex == 6)
                     show = dgvBoooks.Rows[e.RowIndex].Cells["Description"].Value.ToString();
 
                 string title = dgvBoooks.Rows[e.RowIndex].Cells["Title"].Value.ToString();
@@ -168,17 +174,12 @@ namespace exer3
         private async void btnLoadBookshelf_Click(object sender, EventArgs e)
         {
             dgvShelf.Rows.Clear();
-            if (string.IsNullOrEmpty(txtSearchUID.Text) && IsNumericString(txtSearchUID.Text))
-            {
-                MessageBox.Show("Vui lòng nhập UID hợp lệ.");
-                return;
-            }
             try
             {
                 TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
                 NetworkStream stream = tcpClient.GetStream();
 
-                string message = "SEARCHSHELF" + txtSearchUID.Text.Trim();
+                string message = "SEARCHSHELF";
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
 
@@ -210,6 +211,7 @@ namespace exer3
 
                         dgvShelf.Rows.Add(
                             num++,
+                            shelf.ID,
                             shelf.Title
                         );
                     }
@@ -227,9 +229,71 @@ namespace exer3
             }
         }
 
-        private bool IsNumericString(string input)
+        private async void dgvShelf_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            return Regex.IsMatch(input, @"^\d{19,}$");
+            dgvBoooks.Rows.Clear();
+            try
+            {
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
+
+                string message = "GETBOOK" + dgvShelf.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] bytes = new byte[4096];
+                int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
+
+                List<Book> books = JsonConvert.DeserializeObject<List<Book>>(response);
+
+                progressBar.Visible = true;
+                progressBar.Minimum = 0;
+                if (books.Count > 0)
+                {
+                    progressBar.Maximum = books.Count;
+                    progressBar.Value = 0;
+                }
+                else
+                {
+                    progressBar.Maximum = 1;
+                    progressBar.Value = 0;
+                }
+
+                int num = 1;
+                if (books != null && books.Count > 0)
+                {
+                    foreach (var book in books)
+                    {
+                        progressBar.Value++;
+                        string id = book.ID;
+                        string authors = book.Authors != null ? string.Join(", ", book.Authors) : "No authors";
+                        string publisher = book.Publisher ?? "Unknown";
+                        string publishedDate = book.PublishedDate ?? "Unknown";
+                        string description = book.Description ?? "None";
+
+                        dgvBoooks.Rows.Add(
+                            num++,
+                            id,
+                            book.Title ?? "No Title",
+                            authors,
+                            publisher,
+                            publishedDate,
+                            description
+                        );
+                    }
+                    progressBar.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm tháy sách nào!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một tựa đề khác");
+            }
         }
     }
 }
