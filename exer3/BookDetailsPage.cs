@@ -50,15 +50,12 @@ namespace exer3
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
 
-                // Đọc phản hồi từ server
                 byte[] bytes = new byte[4096];
                 int bytesRead = await stream.ReadAsync(bytes, 0, bytes.Length);
                 var response = Encoding.UTF8.GetString(bytes, 0, bytesRead);
 
                 
                 Book bookDetails = JsonConvert.DeserializeObject<Book>(response);
-
-                // Hiển thị thông tin chi tiết sách
                 if (bookDetails != null)
                 {
                     DisplayBookDetails(bookDetails);
@@ -76,41 +73,40 @@ namespace exer3
         }
             private void DisplayBookDetails(Book bookDetails)
             {
-                // Kiểm tra và hiển thị thông tin chi tiết sách qua RichTextBox
+     
                 if (bookDetails != null)
                 {
-                    // Hiển thị thông tin chi tiết sách vào RichTextBox
-                    rtbBookDetails.Clear(); // Xóa nội dung cũ
+                    rtbBookDetails.Clear();
 
-                    rtbBookDetails.AppendText($"Title: {bookDetails.Title ?? "No Title"}\n");
-                    rtbBookDetails.AppendText($"Authors: {string.Join(", ", bookDetails.Authors ?? new string[] { "No authors" })}\n");
-                    rtbBookDetails.AppendText($"Publisher: {bookDetails.Publisher ?? "Unknown"}\n");
-                    rtbBookDetails.AppendText($"Published Date: {bookDetails.PublishedDate ?? "Unknown"}\n");
-                    rtbBookDetails.AppendText($"Description: {bookDetails.Description ?? "No description available."}\n");
+                rtbBookDetails.AppendText($"Title: {bookDetails.Title ?? "No Title"}\n");
+                rtbBookDetails.AppendText($"Authors: {string.Join(", ", bookDetails.Authors ?? new List<string> { "No authors" })}\n");
+                rtbBookDetails.AppendText($"Publisher: {bookDetails.Publisher ?? "Unknown"}\n");
+                rtbBookDetails.AppendText($"Published Date: {bookDetails.PublishedDate ?? "Unknown"}\n");
+                rtbBookDetails.AppendText($"Description: {bookDetails.Description ?? "No description available."}\n");
 
-                    // Hiển thị hình ảnh bìa sách nếu có
-                    if (bookDetails.ImageUrl != null)
+                if (bookDetails.ImageLinks != null && bookDetails.ImageLinks.thumbnail != null)
+                {
+                    try
                     {
-                        try
-                        {
-                            picBookcover.Load(bookDetails.ImageUrl);
-                            picBookcover.Visible = true; // Hiển thị hình ảnh bìa sách
-                        }
-                        catch (Exception)
-                        {
-                            picBookcover.Visible = false; // Nếu không tải được hình ảnh thì ẩn
-                        }
+                        picBookcover.Load(bookDetails.ImageLinks.thumbnail);  
+                        picBookcover.Visible = true;
                     }
-                    else
+                    catch (Exception)
                     {
-                        picBookcover.Visible = false; // Ẩn hình ảnh nếu không có
+                        picBookcover.Visible = false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy chi tiết cho cuốn sách này!");
+                    picBookcover.Visible = false;
                 }
             }
-
+            else
+            {
+                MessageBox.Show("Không tìm thấy chi tiết cho cuốn sách này!");
+            }
         }
     }
+
+}
+   
