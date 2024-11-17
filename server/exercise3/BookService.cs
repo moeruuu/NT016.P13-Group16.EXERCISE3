@@ -135,6 +135,7 @@ namespace exercise3
             public string Publisher { get; set; }
             public string PublishedDate { get; set; }
             public string Description { get; set; }
+            public ImageLinks ImageLinks { get; set; }
         }
 
         public class BooksResponse
@@ -155,14 +156,19 @@ namespace exercise3
             public string publisher { get; set; }
             public string publishedDate { get; set; }
             public string description { get; set; }
+            public ImageLinks imageLinks { get; set; }
         }
+
 
         public class Shelf
         {
             public string ID { get; set; }
             public string Title { get; set; }
         }
-
+        public class ImageLinks
+        {
+            public string thumbnail { get; set; }
+        }
         public class ShelvesResponse
         {
             public ShelfItem[] items { get; set; }
