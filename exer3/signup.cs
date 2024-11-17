@@ -185,9 +185,9 @@ namespace exer3
 
                     DialogResult rs = MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK);
                     if (rs == System.Windows.Forms.DialogResult.OK)
-                    {
+                    {  
+                        this.Hide();
                         login loginform = new login();
-                        //this.Hide();
                         loginform.ShowDialog();
                         this.Close();
                     }
@@ -208,10 +208,10 @@ namespace exer3
 
         private void linklogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             login loginform = new login();
-            this.Hide ();
             loginform.ShowDialog();
-            
+            this.Close();
         }
 
     }

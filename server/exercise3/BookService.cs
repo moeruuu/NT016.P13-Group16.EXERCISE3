@@ -129,12 +129,11 @@ namespace exercise3
 
         public class Book
         {
-            public string ID { get; set; }
-            public string Etag { get; set; }
             public string Title { get; set; }
             public List<string> Authors { get; set; }
             public string Publisher { get; set; }
             public string PublishedDate { get; set; }
+            public string Description { get; set; }
         }
 
         public class BooksResponse
@@ -149,12 +148,11 @@ namespace exercise3
 
         public class VolumeInfo
         {
-            public string id { get; set; }
-            public string etag { get; set; }
             public string title { get; set; }
             public List<string> authors { get; set; }
             public string publisher { get; set; }
             public string publishedDate { get; set; }
+            public string description { get; set; }
         }
 
        /* public string GetAuthorize()
@@ -196,17 +194,15 @@ namespace exercise3
 
                 List<Book> books = new List<Book>();
 
-
                 foreach (var item in booksResponse.items)
                 {
                     books.Add(new Book
                     {
-                        ID = item.volumeInfo.id,
-                        Etag = item.volumeInfo.etag,
                         Title = item.volumeInfo.title,
                         Authors = item.volumeInfo.authors,
                         Publisher = item.volumeInfo.publisher,
-                        PublishedDate = item.volumeInfo.publishedDate
+                        PublishedDate = item.volumeInfo.publishedDate,
+                        Description = item.volumeInfo.description
                     });
                 }
 

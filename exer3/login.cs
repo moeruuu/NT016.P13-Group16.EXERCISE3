@@ -25,9 +25,10 @@ namespace exer3
 
         private void linksignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup signupform = new signup();
             this.Hide();
+            signup signupform = new signup();
             signupform.ShowDialog();
+            this.Close();
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
@@ -66,9 +67,9 @@ namespace exer3
                     string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     //MessageBox.Show(datareceived);
                     // Check response
-                    if (datareceived.StartsWith("SUCESS"))
+                    if (datareceived.StartsWith("SUCCESS"))
                     {
-                        datareceived = datareceived.Replace("SUCESS", "");
+                        datareceived = datareceived.Replace("SUCCESS", "");
                         string[] response = datareceived.Split('|');
                         user userinfo = new user();
                         userinfo.userid = response[0].Trim();
@@ -82,8 +83,8 @@ namespace exer3
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //BookService book = new BookService();
-                        Book book = new Book();
-                        Searchform seachform = new Searchform(userinfo, book);
+                        this.Hide();
+                        Searchform seachform = new Searchform(userinfo);
                         //formHome.Homepage_load(userinfo);
                         //formHome.ShowDialog();
                         seachform.ShowDialog();
