@@ -61,7 +61,7 @@ namespace exer3
                 // Hiển thị thông tin chi tiết sách
                 if (bookDetails != null)
                 {
-                    DisplayBookDetails(bookDetails);
+                    //DisplayBookDetails(bookDetails);
                 }
                 else
                 {
@@ -74,6 +74,7 @@ namespace exer3
 
             }
         }
+        /*
             private void DisplayBookDetails(Book bookDetails)
             {
                 // Kiểm tra và hiển thị thông tin chi tiết sách qua RichTextBox
@@ -111,6 +112,7 @@ namespace exer3
                     MessageBox.Show("Không tìm thấy chi tiết cho cuốn sách này!");
                 }
             }
+        */
 
         }
     }

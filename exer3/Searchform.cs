@@ -19,8 +19,8 @@ namespace exer3
     public partial class Searchform : Form
     {
         private readonly user users;
-        private readonly Book book;
-        private readonly Shelf shelf;
+        private int selectedIndexBookShelf = -1;
+        private int selectedIndexBook = -1;
         public Searchform(user userinfo)
         {
             InitializeComponent();
@@ -275,8 +275,25 @@ namespace exer3
             }
         }
 
-        private int selectedIndexBookShelf = -1;
-        private int selectedIndexBook = -1;
+        private void dgvBoooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
+            bookDetailsPage.ShowDialog();
+        }
+
+        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+                selectedIndexBook = e.RowIndex;
+        }
+
+        private void dgvShelf_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > 0)
+                selectedIndexBookShelf = e.RowIndex;
+        }
         private async void btnAddBook_Click(object sender, EventArgs e)
         {
             if (selectedIndexBook == -1 || selectedIndexBookShelf == -1) return;
@@ -304,7 +321,7 @@ namespace exer3
                 else
                 {
                     MessageBox.Show("Thêm sách thất bại!");
-                }    
+                }
                 progressBar.Visible = false;
 
             }
@@ -314,24 +331,41 @@ namespace exer3
             }
         }
 
-        private void dgvBoooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private async void btnDelete_Click(object sender, EventArgs e)
         {
-            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if (selectedIndexBook == -1 || selectedIndexBookShelf == -1) return;
+            try
+            {
+                TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
+                NetworkStream stream = tcpClient.GetStream();
 
-            BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
-            bookDetailsPage.ShowDialog();
-        }
+                string message = "REMOVEBOOK" + dgvShelf.Rows[selectedIndexBookShelf].Cells["ID"].Value.ToString() + "|" + dgvBoooks.Rows[selectedIndexBook].Cells["ID"].Value.ToString() + "|";
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(data, 0, data.Length);
 
-        private void dgvBoooks_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > 0)
-                selectedIndexBook = e.RowIndex;
-        }
+                byte[] bytes = new byte[4096];
+                int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
+                var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
 
-        private void dgvShelf_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > 0)
-                selectedIndexBookShelf = e.RowIndex;
+                progressBar.Visible = true;
+                progressBar.Minimum = 0;
+                progressBar.Maximum = 1;
+                if (response == "SUCCESS")
+                {
+                    progressBar.Value = 1;
+                    MessageBox.Show("Xóa sách thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa sách thất bại!");
+                }
+                progressBar.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử lại");
+            }
         }
     }
 }

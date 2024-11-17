@@ -338,7 +338,31 @@ namespace exercise3
                 return "FAILED";
             }
         }
-        private async Task<string> GetBookDetails(string volumeId)
+
+        public async Task<string> RemoveBooks(string idShelf, string idBook)
+        {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/mylibrary/bookshelves/{idShelf}/removeVolume?volumeId={idBook}";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.PostAsync(apiUrl, null);
+
+                    if (response.StatusCode == HttpStatusCode.NoContent || response.StatusCode == HttpStatusCode.OK)
+                    {
+                        return "SUCCESS";
+                    }
+                    return "FAILED";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "FAILED";
+            }
+        }
+
+        public async Task<string> GetBookDetails(string volumeId)
         {
             try
             {

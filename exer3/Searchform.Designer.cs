@@ -40,6 +40,7 @@
             progressBar = new ProgressBar();
             dgvShelf = new DataGridView();
             btnAddBook = new Button();
+            btnDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBoooks).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvShelf).BeginInit();
             SuspendLayout();
@@ -192,11 +193,25 @@
             btnAddBook.Location = new Point(11, 159);
             btnAddBook.Margin = new Padding(2);
             btnAddBook.Name = "btnAddBook";
-            btnAddBook.Size = new Size(194, 29);
+            btnAddBook.Size = new Size(142, 29);
             btnAddBook.TabIndex = 19;
-            btnAddBook.Text = "Thêm sách vào kệ";
+            btnAddBook.Text = "Thêm sách";
             btnAddBook.UseVisualStyleBackColor = false;
             btnAddBook.Click += btnAddBook_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.LavenderBlush;
+            btnDelete.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.PaleVioletRed;
+            btnDelete.Location = new Point(178, 159);
+            btnDelete.Margin = new Padding(2);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(142, 29);
+            btnDelete.TabIndex = 20;
+            btnDelete.Text = "Xóa sách";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // Searchform
             // 
@@ -205,6 +220,7 @@
             BackgroundImage = Properties.Resources.Download_Free_Vectors__Images__Photos___Videos___Vecteezy;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1180, 713);
+            Controls.Add(btnDelete);
             Controls.Add(btnAddBook);
             Controls.Add(dgvShelf);
             Controls.Add(progressBar);
@@ -240,5 +256,6 @@
         private ProgressBar progressBar;
         private DataGridView dgvShelf;
         private Button btnAddBook;
+        private Button btnDelete;
     }
 }
