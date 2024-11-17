@@ -129,6 +129,7 @@ namespace exercise3
 
         public class Book
         {
+            public string ID { get; set; }
             public string Title { get; set; }
             public List<string> Authors { get; set; }
             public string Publisher { get; set; }
@@ -143,6 +144,7 @@ namespace exercise3
 
         public class BookItem
         {
+            public string id { get; set; }
             public VolumeInfo volumeInfo { get; set; }
         }
 
@@ -153,6 +155,23 @@ namespace exercise3
             public string publisher { get; set; }
             public string publishedDate { get; set; }
             public string description { get; set; }
+        }
+
+        public class Shelf
+        {
+            public string ID { get; set; }
+            public string Title { get; set; }
+        }
+
+        public class ShelvesResponse
+        {
+            public ShelfItem[] items { get; set; }
+        }
+
+        public class ShelfItem
+        {
+            public string id { get; set; }
+            public string title { get; set; }
         }
 
        /* public string GetAuthorize()
@@ -181,33 +200,105 @@ namespace exercise3
             string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={search}";
             try
             {
-            using (var client = new HttpClient())
-            {
-                 /*   if (string.IsNullOrEmpty(accesstoken))
-                    {
-                        MessageBox.Show("Access token is null or empty. Authorization failed.");
-                        return null;
-                    }*/
-                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
-                var response = await client.GetStringAsync(apiUrl);
-                var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
-
-                List<Book> books = new List<Book>();
-
-                foreach (var item in booksResponse.items)
+                using (var client = new HttpClient())
                 {
-                    books.Add(new Book
-                    {
-                        Title = item.volumeInfo.title,
-                        Authors = item.volumeInfo.authors,
-                        Publisher = item.volumeInfo.publisher,
-                        PublishedDate = item.volumeInfo.publishedDate,
-                        Description = item.volumeInfo.description
-                    });
-                }
+                     /*   if (string.IsNullOrEmpty(accesstoken))
+                        {
+                            MessageBox.Show("Access token is null or empty. Authorization failed.");
+                            return null;
+                        }*/
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.GetStringAsync(apiUrl);
+                    var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
 
-                return books;
+                    List<Book> books = new List<Book>();
+
+                    foreach (var item in booksResponse.items)
+                    {
+                        books.Add(new Book
+                        {
+                            ID = item.id,
+                            Title = item.volumeInfo.title,
+                            Authors = item.volumeInfo.authors,
+                            Publisher = item.volumeInfo.publisher,
+                            PublishedDate = item.volumeInfo.publishedDate,
+                            Description = item.volumeInfo.description
+                        });
+                    }
+
+                    return books;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+        }
+
+        public async Task<List<Shelf>> SearchShelves()
+        {
+            string apiUrl = $"https://www.googleapis.com/books/v1/mylibrary/bookshelves";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    //MessageBox.Show(apiUrl);
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.GetStringAsync(apiUrl);
+                    var shelvesResponse = JsonConvert.DeserializeObject<ShelvesResponse>(response);
+
+                    List<Shelf> shelves = new List<Shelf>();
+
+                    foreach (var item in shelvesResponse.items)
+                    {
+                        shelves.Add(new Shelf
+                        {
+                            ID = item.id,
+                            Title = item.title
+                        });
+                    }
+
+                    return shelves;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+        }
+
+        public async Task<List<Book>> GetBooks(string idShelf)
+        {
+            string apiUrl = $@"https://www.googleapis.com/books/v1/mylibrary/bookshelves/{idShelf}/volumes";
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                    var response = await client.GetStringAsync(apiUrl);
+                    var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
+
+                    List<Book> books = new List<Book>();
+
+                    foreach (var item in booksResponse.items)
+                    {
+                        books.Add(new Book
+                        {
+                            ID = item.id,
+                            Title = item.volumeInfo.title,
+                            Authors = item.volumeInfo.authors,
+                            Publisher = item.volumeInfo.publisher,
+                            PublishedDate = item.volumeInfo.publishedDate,
+                            Description = item.volumeInfo.description
+                        });
+                    }
+
+                    return books;
+                }
             }
             catch (Exception ex)
             {

@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Videos\\Exer3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -47,8 +47,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T17:16:47.262Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -132,8 +131,7 @@
               "RelativeToolTip": "exer3\\user.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T11:33:10.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T11:33:10.27Z"
             },
             {
               "$type": "Document",
@@ -141,8 +139,8 @@
               "Title": "Searchform.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs [Design]*",
-              "RelativeToolTip": "exer3\\Searchform.cs [Design]*",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs [Design]",
+              "RelativeToolTip": "exer3\\Searchform.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:20:54.167Z",
               "EditorCaption": " [Design]"
@@ -157,8 +155,7 @@
               "RelativeToolTip": "exer3\\login.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T12:50:18.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T12:50:18.044Z"
             },
             {
               "$type": "Document",
@@ -166,9 +163,9 @@
               "Title": "Searchform.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs*",
-              "RelativeToolTip": "exer3\\Searchform.cs*",
-              "ViewState": "AQIAAOUAAAAAAAAAAAAwwO8AAABoAAAA",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs",
+              "RelativeToolTip": "exer3\\Searchform.cs",
+              "ViewState": "AQIAAP8AAAAAAAAAAAAYwAEBAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T08:57:25.211Z",
               "EditorCaption": ""
@@ -183,8 +180,7 @@
               "RelativeToolTip": "exer3\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:17:20.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T15:17:20.413Z"
             }
           ]
         }

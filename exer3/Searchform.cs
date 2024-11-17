@@ -237,7 +237,8 @@ namespace exer3
                 TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
                 NetworkStream stream = tcpClient.GetStream();
 
-                string message = "GETBOOK" + dgvShelf.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+                string message = "GETBOOK" + dgvShelf.Rows[e.RowIndex].Cells["ID"].Value.ToString() + "|";
+                //MessageBox.Show(message);
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
 
@@ -292,7 +293,7 @@ namespace exer3
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một tựa đề khác");
+                MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử với một kệ sách khác");
             }
         }
     }
