@@ -1467,19 +1467,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\DAN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj",
+      "projectUniqueName": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\exercise3.csproj",
       "projectName": "exercise3",
-      "projectPath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\exercise3.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\obj\\",
+      "projectPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\exercise3.csproj",
+      "packagesPath": "C:\\Users\\DAN\\.nuget\\packages\\",
+      "outputPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1487,6 +1487,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1562,7 +1563,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
