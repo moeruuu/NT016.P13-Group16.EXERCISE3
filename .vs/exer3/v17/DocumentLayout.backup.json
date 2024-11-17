@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,6 +98,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
@@ -106,9 +110,9 @@
               "Title": "BookDetailsPage.cs",
               "DocumentMoniker": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\BookDetailsPage.cs",
               "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
-              "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\BookDetailsPage.cs",
-              "RelativeToolTip": "exer3\\BookDetailsPage.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwE4AAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\BookDetailsPage.cs*",
+              "RelativeToolTip": "exer3\\BookDetailsPage.cs*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAUwD8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T08:14:19.758Z",
               "EditorCaption": ""
@@ -133,7 +137,7 @@
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
               "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan4\\git17112\\exer3\\Searchform.cs",
               "RelativeToolTip": "exer3\\Searchform.cs",
-              "ViewState": "AgIAABEBAAAAAAAAAAArwCoBAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADMBAAAAAAAAAAAcwGoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T08:57:25.211Z",
               "EditorCaption": ""
