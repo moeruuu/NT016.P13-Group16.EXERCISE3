@@ -373,3 +373,5 @@ D:\Lap Trinh Mang Can Ban\BT LT\iii\exer3\obj\Debug\net8.0-windows\refint\exer3.
 D:\Lap Trinh Mang Can Ban\BT LT\iii\exer3\obj\Debug\net8.0-windows\exer3.pdb
 D:\Lap Trinh Mang Can Ban\BT LT\iii\exer3\obj\Debug\net8.0-windows\exer3.genruntimeconfig.cache
 D:\Lap Trinh Mang Can Ban\BT LT\iii\exer3\obj\Debug\net8.0-windows\ref\exer3.dll
+D:\Lap Trinh Mang Can Ban\BT LT\iii\exer3\obj\Debug\net8.0-windows\exer3.ForgotPassword.resources
+D:\Lap Trinh Mang Can Ban\BT LT\iii\exer3\obj\Debug\net8.0-windows\exer3.ChangePassword.resources

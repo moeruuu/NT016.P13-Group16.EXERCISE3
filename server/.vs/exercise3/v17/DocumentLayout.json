@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\server\\exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\server\\exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\server\\exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BookService.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\BookService.cs",
               "RelativeDocumentMoniker": "exercise3\\BookService.cs",
@@ -39,8 +39,7 @@
               "ViewState": "AQIAAEIBAAAAAAAAAAAkwGABAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.576Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -52,21 +51,24 @@
               "Title": "Server.cs [Design]",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs [Design]",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\Server.cs [Design]",
+              "RelativeToolTip": "exercise3\\Server.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:13:08.271Z"
+              "WhenOpened": "2024-11-17T14:13:08.271Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Server.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
               "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\server\\exercise3\\Server.cs",
               "RelativeToolTip": "exercise3\\Server.cs",
-              "ViewState": "AQIAAGwBAAAAAAAAAAApwIIBAABCAAAA",
+              "ViewState": "AQIAAI0BAAAAAAAAAAApwJkBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T19:15:19.809Z"
+              "WhenOpened": "2024-11-15T19:15:19.809Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

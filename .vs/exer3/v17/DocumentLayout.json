@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|d:\\lap trinh mang can ban\\bt lt\\iii\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,8 +57,117 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Homepage.cs",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Homepage.cs",
+              "RelativeDocumentMoniker": "exer3\\Homepage.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Homepage.cs",
+              "RelativeToolTip": "exer3\\Homepage.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAIwJYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:23:15.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "login.cs",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\login.cs",
+              "RelativeDocumentMoniker": "exer3\\login.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\login.cs",
+              "RelativeToolTip": "exer3\\login.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAUwFkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:17:03.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChangePassword.cs [Design]",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\ChangePassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ChangePassword.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\ChangePassword.cs [Design]",
+              "RelativeToolTip": "exer3\\ChangePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:02:42.136Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\login.cs",
+              "RelativeDocumentMoniker": "exer3\\login.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\login.cs [Design]",
+              "RelativeToolTip": "exer3\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T08:42:31.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ForgotPassword.cs [Design]",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ForgotPassword.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\ForgotPassword.cs [Design]",
+              "RelativeToolTip": "exer3\\ForgotPassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T18:31:00.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Searchform.cs [Design]",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Searchform.cs",
+              "RelativeDocumentMoniker": "exer3\\Searchform.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Searchform.cs [Design]",
+              "RelativeToolTip": "exer3\\Searchform.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:12:43.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "signup.cs [Design]",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\signup.cs",
+              "RelativeDocumentMoniker": "exer3\\signup.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\signup.cs [Design]",
+              "RelativeToolTip": "exer3\\signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T18:31:11.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Program.cs",
+              "RelativeDocumentMoniker": "exer3\\Program.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Program.cs",
+              "RelativeToolTip": "exer3\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T15:17:20.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookDetailsPage.cs",
+              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\BookDetailsPage.cs",
+              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
+              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\BookDetailsPage.cs",
+              "RelativeToolTip": "exer3\\BookDetailsPage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:48:47.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Searchform.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
@@ -50,63 +175,11 @@
               "RelativeToolTip": "exer3\\Searchform.cs",
               "ViewState": "AQIAAP0AAAAAAAAAAAAwwBYBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:51:34.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T16:51:34.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookDetailsPage.cs",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\BookDetailsPage.cs",
-              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\BookDetailsPage.cs*",
-              "RelativeToolTip": "exer3\\BookDetailsPage.cs*",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:48:47.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookDetailsPage.cs [Design]",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\BookDetailsPage.cs",
-              "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\BookDetailsPage.cs [Design]*",
-              "RelativeToolTip": "exer3\\BookDetailsPage.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:48:00.998Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Searchform.cs [Design]",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Searchform.cs",
-              "RelativeDocumentMoniker": "exer3\\Searchform.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Searchform.cs [Design]",
-              "RelativeToolTip": "exer3\\Searchform.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:12:43.095Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\login.cs",
-              "RelativeDocumentMoniker": "exer3\\login.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T08:42:31.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "user.cs",
               "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\user.cs",
               "RelativeDocumentMoniker": "exer3\\user.cs",
@@ -115,18 +188,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T11:33:10.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Program.cs",
-              "RelativeDocumentMoniker": "exer3\\Program.cs",
-              "ToolTip": "D:\\Lap Trinh Mang Can Ban\\BT LT\\iii\\exer3\\Program.cs",
-              "RelativeToolTip": "exer3\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:17:20.413Z"
             }
           ]
         }

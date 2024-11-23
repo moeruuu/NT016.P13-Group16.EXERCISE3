@@ -40,7 +40,7 @@ namespace exer3
         {
 
             progressBar.Visible = true;
-            progressBar = ++;
+            
             progressBar.Style = ProgressBarStyle.Marquee;
             try
             {
@@ -48,7 +48,7 @@ namespace exer3
                 TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
                 NetworkStream stream = tcpClient.GetStream();
 
-                string message = "GETBOOKDETAILS" + volumeId + "\n";
+                string message = "GETBOOKDETAILS" + volumeId;
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
 
