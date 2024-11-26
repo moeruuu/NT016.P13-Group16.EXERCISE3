@@ -277,7 +277,7 @@ namespace exer3
 
         private void dgvBoooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells[0].Value.ToString();
+            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells["ID"].Value.ToString();
 
             BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
             bookDetailsPage.ShowDialog();

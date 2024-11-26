@@ -187,6 +187,27 @@ namespace exercise3
             return "Đăng xuất thành công";
         }
 
+        private async Task<string> ForgetPassword(string email)
+        {
+            var filter = Builders<User>.Filter.Eq(u=>u.Email, email);
+            var getemail = await accCollection.Find(filter).FirstOrDefaultAsync();
+
+            if (getemail == null) return "Email không tồn tại";
+
+            var password = Guid.NewGuid().ToString();
+
+            HashAlgorithm al = SHA256.Create();
+            byte[] inputbyte = Encoding.UTF8.GetBytes(password);
+            byte[] hashbyte = al.ComputeHash(inputbyte);
+            string hashedPassword = BitConverter.ToString(hashbyte).Replace("-", "");
+            //Viết gửi mail vào đây nhé
+
+            var update = Builders<User>.Update.Set(u=>u.Password, hashedPassword);
+            await accCollection.UpdateOneAsync(filter, update);
+
+            UpdateLog($"{getemail.Username} đã đổi mật khẩu mới!");
+            return "SUCCESS";
+        }
 
         private void UpdateLog(string message)
         {
@@ -397,6 +418,15 @@ namespace exercise3
                     var messagetoclient = JsonConvert.SerializeObject(bookDetails);
                     UpdateLog($"{name} đã tra chi tiết sách");
                     SendMessageToClient(tcpClient, messagetoclient);
+                }
+                else if (incomingMessage.StartsWith("FORGETPASSWORD"))
+                {
+                    //MessageBox.Show(incomingMessage);
+                    incomingMessage = incomingMessage.Replace("FORGETPASSWORD", "");
+                    string[] strings = incomingMessage.Split("|");
+                    var messageforgetpass = await ForgetPassword(strings[0]);
+                    //MessageBox.Show(messageforgetpass);
+                    SendMessageToClient(tcpClient, messageforgetpass);
                 }
 
             }

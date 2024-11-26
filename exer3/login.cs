@@ -17,7 +17,7 @@ namespace exer3
 {
     public partial class login : Form
     {
-       
+
         public login()
         {
             InitializeComponent();
@@ -59,7 +59,7 @@ namespace exer3
                     byte[] data = Encoding.UTF8.GetBytes(message);
                     await stream.WriteAsync(data, 0, data.Length);
                     //await stream.FlushAsync();
-                   
+
 
                     // Response from server
                     byte[] buffer = new byte[256];
@@ -77,7 +77,7 @@ namespace exer3
                         userinfo.fullname = response[2].Trim();
                         userinfo.email = response[3].Trim();
                         userinfo.birthday = response[4].Trim();
-                        userinfo.accesstoken = response[5].Trim(); 
+                        userinfo.accesstoken = response[5].Trim();
                         userinfo.tokengg = response[6].Trim();
                         //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
@@ -108,6 +108,14 @@ namespace exer3
                 MessageBox.Show("Lỗi kết nối tới server: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -66,7 +66,7 @@ namespace exer3
             if (MessageBox.Show("Bạn có muốn thoát?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Close();
-                ClearDataUser() ;
+                ClearDataUser();
             }
         }
 
@@ -143,7 +143,7 @@ namespace exer3
                 if (response[0] == "SUCCESS")
                 {
                     // Cập nhật Access Token mới
-                    userinfo.accesstoken = response[1]; 
+                    userinfo.accesstoken = response[1];
                 }
                 else
                 {
@@ -157,10 +157,14 @@ namespace exer3
             }
         }
 
-
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        { 
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.ShowDialog();
+        }
     }
 
-   
+
 
 
 

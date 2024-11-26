@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             lbWelcome = new Label();
             btnReturn = new Button();
             btnExit = new Button();
@@ -36,17 +35,8 @@
             lbBirthday = new Label();
             lbEmail = new Label();
             lbUserID = new Label();
+            btnChangePassword = new Button();
             SuspendLayout();
-            // 
-            // pbHomepage
-            // 
-            //pbHomepage.BackgroundImage = (Image)resources.GetObject("pbHomepage.BackgroundImage");
-            //pbHomepage.Location = new Point(59, 144);
-            //pbHomepage.Name = "pbHomepage";
-            //pbHomepage.Size = new Size(450, 377);
-            //pbHomepage.SizeMode = PictureBoxSizeMode.AutoSize;
-            //pbHomepage.TabIndex = 0;
-            //pbHomepage.TabStop = false;
             // 
             // lbWelcome
             // 
@@ -54,9 +44,10 @@
             lbWelcome.BackColor = Color.Transparent;
             lbWelcome.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbWelcome.ForeColor = Color.FromArgb(255, 128, 255);
-            lbWelcome.Location = new Point(314, 25);
+            lbWelcome.Location = new Point(392, 31);
+            lbWelcome.Margin = new Padding(4, 0, 4, 0);
             lbWelcome.Name = "lbWelcome";
-            lbWelcome.Size = new Size(390, 40);
+            lbWelcome.Size = new Size(449, 47);
             lbWelcome.TabIndex = 1;
             lbWelcome.Text = "WELCOME TO MY PAGE";
             lbWelcome.TextAlign = ContentAlignment.TopCenter;
@@ -69,9 +60,10 @@
             btnReturn.FlatStyle = FlatStyle.Popup;
             btnReturn.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
             btnReturn.ForeColor = Color.PaleVioletRed;
-            btnReturn.Location = new Point(753, 592);
+            btnReturn.Location = new Point(941, 740);
+            btnReturn.Margin = new Padding(4, 4, 4, 4);
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(114, 49);
+            btnReturn.Size = new Size(142, 61);
             btnReturn.TabIndex = 2;
             btnReturn.Text = "Log out";
             btnReturn.UseVisualStyleBackColor = false;
@@ -84,9 +76,10 @@
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
             btnExit.ForeColor = Color.PaleVioletRed;
-            btnExit.Location = new Point(893, 592);
+            btnExit.Location = new Point(1116, 740);
+            btnExit.Margin = new Padding(4, 4, 4, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(114, 49);
+            btnExit.Size = new Size(142, 61);
             btnExit.TabIndex = 3;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
@@ -97,9 +90,10 @@
             lbFullname.BackColor = Color.Transparent;
             lbFullname.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbFullname.ForeColor = Color.PaleVioletRed;
-            lbFullname.Location = new Point(595, 322);
+            lbFullname.Location = new Point(744, 402);
+            lbFullname.Margin = new Padding(4, 0, 4, 0);
             lbFullname.Name = "lbFullname";
-            lbFullname.Size = new Size(137, 35);
+            lbFullname.Size = new Size(160, 40);
             lbFullname.TabIndex = 4;
             lbFullname.Text = "Fullname: ";
             // 
@@ -109,9 +103,10 @@
             lbBirthday.BackColor = Color.Transparent;
             lbBirthday.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbBirthday.ForeColor = Color.PaleVioletRed;
-            lbBirthday.Location = new Point(595, 383);
+            lbBirthday.Location = new Point(744, 479);
+            lbBirthday.Margin = new Padding(4, 0, 4, 0);
             lbBirthday.Name = "lbBirthday";
-            lbBirthday.Size = new Size(122, 35);
+            lbBirthday.Size = new Size(143, 40);
             lbBirthday.TabIndex = 5;
             lbBirthday.Text = "Birthday:";
             // 
@@ -121,9 +116,10 @@
             lbEmail.BackColor = Color.Transparent;
             lbEmail.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbEmail.ForeColor = Color.PaleVioletRed;
-            lbEmail.Location = new Point(595, 445);
+            lbEmail.Location = new Point(744, 556);
+            lbEmail.Margin = new Padding(4, 0, 4, 0);
             lbEmail.Name = "lbEmail";
-            lbEmail.Size = new Size(88, 35);
+            lbEmail.Size = new Size(101, 40);
             lbEmail.TabIndex = 6;
             lbEmail.Text = "Email:";
             // 
@@ -133,19 +129,35 @@
             lbUserID.BackColor = Color.Transparent;
             lbUserID.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbUserID.ForeColor = Color.PaleVioletRed;
-            lbUserID.Location = new Point(595, 270);
+            lbUserID.Location = new Point(744, 338);
+            lbUserID.Margin = new Padding(4, 0, 4, 0);
             lbUserID.Name = "lbUserID";
-            lbUserID.Size = new Size(101, 35);
+            lbUserID.Size = new Size(120, 40);
             lbUserID.TabIndex = 7;
             lbUserID.Text = "UserID:";
             // 
+            // btnChangePassword
+            // 
+            btnChangePassword.AutoSize = true;
+            btnChangePassword.Font = new Font("Cambria", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnChangePassword.ForeColor = Color.PaleVioletRed;
+            btnChangePassword.Location = new Point(1020, 664);
+            btnChangePassword.Margin = new Padding(2);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(206, 45);
+            btnChangePassword.TabIndex = 19;
+            btnChangePassword.Text = "Change Password";
+            btnChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.Click += btnChangePassword_Click;
+            // 
             // Homepage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             BackgroundImage = Properties.Resources.f4559a0ac40cf5c464dd1c321dbd78c0;
-            ClientSize = new Size(1019, 653);
+            ClientSize = new Size(1274, 816);
+            Controls.Add(btnChangePassword);
             Controls.Add(lbUserID);
             Controls.Add(lbEmail);
             Controls.Add(lbBirthday);
@@ -154,6 +166,7 @@
             Controls.Add(btnReturn);
             Controls.Add(lbWelcome);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 4, 4, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Homepage";
@@ -171,5 +184,6 @@
         private Label lbBirthday;
         private Label lbEmail;
         private Label lbUserID;
+        private Button btnChangePassword;
     }
 }

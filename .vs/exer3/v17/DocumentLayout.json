@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Videos\\Exer3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\searchform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\searchform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -34,20 +50,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Book.cs",
               "RelativeDocumentMoniker": "exer3\\Book.cs",
               "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Book.cs",
               "RelativeToolTip": "exer3\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T17:16:47.262Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "signup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs",
+              "RelativeDocumentMoniker": "exer3\\signup.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\signup.cs [Design]",
+              "RelativeToolTip": "exer3\\signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:16:31.352Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs",
+              "RelativeDocumentMoniker": "exer3\\login.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs",
+              "RelativeToolTip": "exer3\\login.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAgwHUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:57:44.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangePassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\ChangePassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ChangePassword.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\ChangePassword.cs [Design]",
+              "RelativeToolTip": "exer3\\ChangePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:57:07.197Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ForgotPassword.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ForgotPassword.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\ForgotPassword.cs*",
+              "RelativeToolTip": "exer3\\ForgotPassword.cs*",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAwCkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:55:47.825Z",
               "EditorCaption": ""
             },
             {
@@ -124,7 +190,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "ForgotPassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ForgotPassword.cs",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\ForgotPassword.cs [Design]*",
+              "RelativeToolTip": "exer3\\ForgotPassword.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:54:49.394Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Searchform.Designer.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.Designer.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.Designer.cs",
@@ -136,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Searchform.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
@@ -147,18 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs",
-              "RelativeDocumentMoniker": "exer3\\login.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\login.cs [Design]",
-              "RelativeToolTip": "exer3\\login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T08:42:31.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "user.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\user.cs",
               "RelativeDocumentMoniker": "exer3\\user.cs",
@@ -170,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Program.cs",
               "RelativeDocumentMoniker": "exer3\\Program.cs",
