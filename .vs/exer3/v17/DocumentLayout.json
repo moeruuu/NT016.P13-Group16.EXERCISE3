@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Videos\\Exer3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Videos\\Exer3\\exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\videos\\exer3\\exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "exer3\\Book.cs",
               "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Book.cs",
               "RelativeToolTip": "exer3\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T17:16:47.262Z",
               "IsPinned": true,
@@ -143,8 +143,7 @@
               "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\exer3\\Searchform.cs [Design]",
               "RelativeToolTip": "exer3\\Searchform.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:12:43.095Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-17T14:12:43.095Z"
             },
             {
               "$type": "Document",
