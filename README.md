@@ -18,7 +18,7 @@ File solution phía server: exercise3.sln
 
 Link database: 
 
-    mongodb+srv://baitapcuacoHoi:khongbietlam@clusterbaitap.nibhk.mongodb.net/
+    mongodb+srv://btcuacoHoine:yeultmnhat@clusterbaitap.nibhk.mongodb.net/
 
 ***Chú ý**: Sau khi clone repo về, cần xóa file refresh_token.txt trong đường dẫn Exer3\server\exercise3\bin\Debug\net8.0-windows trước khi chạy chương trình*
 ### Hướng dẫn kết nối csdl bằng MongoDB
@@ -26,7 +26,7 @@ Link database:
  2. Chạy file MongoDB Compass đã tải. Tạo tài khoản và đăng nhập
  3. Tại giao diện chính của MongoDB Compass, bấm vào dấu cộng ở phần **CONNECTIONS** để tạo kết nối mới
  4.  Copy link database ở trên và pass vào ô URI. Nhấn **Save & Connect**
- <img src="https://i.imgur.com/wbS42iP.png" width="800" />
+ <img src="https://i.imgur.com/0wqSniY.png" width="800" />
 
 *Lưu ý: sau khi đã tạo kết nối thành công, khi chạy chương trình ở những lần sau không cần kết nối đến database thêm nữa.*
 
