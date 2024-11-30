@@ -320,3 +320,7 @@ D:\Lap Trinh Mang Can Ban\BT LT\iii\server\exercise3\obj\Debug\net8.0-windows\re
 D:\Lap Trinh Mang Can Ban\BT LT\iii\server\exercise3\obj\Debug\net8.0-windows\exercise3.pdb
 D:\Lap Trinh Mang Can Ban\BT LT\iii\server\exercise3\obj\Debug\net8.0-windows\exercise3.genruntimeconfig.cache
 D:\Lap Trinh Mang Can Ban\BT LT\iii\server\exercise3\obj\Debug\net8.0-windows\ref\exercise3.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\MailKit.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\MimeKit.dll
+C:\Users\DELL\Videos\Exer3\server\exercise3\bin\Debug\net8.0-windows\System.Formats.Asn1.dll

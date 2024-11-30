@@ -18,6 +18,11 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Security.Policy;
 using Newtonsoft.Json;
+using MimeKit;
+using Org.BouncyCastle.Math;
+using Org.BouncyCastle.Utilities.Net;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Net.Mail;
 
 namespace exercise3
 {
@@ -201,14 +206,117 @@ namespace exercise3
             byte[] hashbyte = al.ComputeHash(inputbyte);
             string hashedPassword = BitConverter.ToString(hashbyte).Replace("-", "");
             //Viết gửi mail vào đây nhé
+            var cfemail = await SendMail(email, password);
+            if (cfemail.Contains("thành công"))
+            {
 
-            var update = Builders<User>.Update.Set(u=>u.Password, hashedPassword);
-            await accCollection.UpdateOneAsync(filter, update);
+                var update = Builders<User>.Update.Set(u => u.Password, hashedPassword);
+                await accCollection.UpdateOneAsync(filter, update);
 
-            UpdateLog($"{getemail.Username} đã đổi mật khẩu mới!");
-            return "SUCCESS";
+                UpdateLog($"{getemail.Username} đã đổi mật khẩu mới!");
+                return "SUCCESS";
+            }
+            else
+            {
+                return cfemail;
+            }
         }
 
+        private async Task<string> SendMail(string email, string newpass)
+        {
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            string sv = "smtp.gmail.com";
+            int port = 465;
+            string from = "ltmkhongvui@gmail.com";
+            string pass = "zczehpxjavqhdlsz";
+            var filter = Builders<User>.Filter.Eq(u => u.Email, email);
+            var finduser = await accCollection.Find(filter).FirstOrDefaultAsync();
+            if (finduser == null) return "Không tồn tại email";
+            var bodybuilder = new BodyBuilder();
+            string body = $@"
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+            body {{
+                font-family: 'Arial', sans-serif;
+                background-color: #f9f9f9;
+                margin: 0;
+                padding: 0;
+            }}
+            .container {{
+                max-width: 600px;
+                margin: 20px auto;
+                background: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                border: 1px solid #ddd;
+            }}
+            .header {{
+                background-color: #4CAF50;
+                color: #ffffff;
+                text-align: center;
+                padding: 20px;
+                font-size: 24px;
+                font-weight: bold;
+            }}
+            .content {{
+                padding: 20px;
+                font-size: 16px;
+                line-height: 1.6;
+                color: #333;
+            }}
+            .content p {{
+                margin: 10px 0;
+            }}
+            .note{{
+                padding: 20px;
+                font-size: 12px;
+                color: #333;
+                line-height: 1.6;
+            }}
+        
+        </style>
+        </head>
+        <body>
+            <div class=""container"">
+                <div class=""header"">
+                    FORGET YOUR PASSWORD?
+                </div>
+                <div class=""content"">
+                    <p>Đây là password mới của bạn:</p>
+                    <p><strong>{newpass}</strong></p>
+                    <div class=""note"">
+                    <p>Đây chỉ là password tạm thời. Bạn hãy lưu lại và đổi password mới nhé!</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>";
+            try
+            {
+                var message = new MimeKit.MimeMessage();
+                message.From.Add(MailboxAddress.Parse(from));
+                message.To.Add(MailboxAddress.Parse(finduser.Email));
+                message.Subject = "FORGET PASSWORD?";
+                bodybuilder.HtmlBody = body;
+                message.Body = bodybuilder.ToMessageBody();
+                using (var client = new MailKit.Net.Smtp.SmtpClient()) {
+                    client.Connect(sv, port, true);
+                    client.Authenticate(from, pass);
+                    client.Send(message);
+                    client.Disconnect(true);
+                }
+                return "Xác nhận mail thành công";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message + "\n" + ex.StackTrace;
+            }
+        }
         private void UpdateLog(string message)
         {
             //MessageBox.Show(message);
@@ -314,7 +422,7 @@ namespace exercise3
         private async Task StartListeningAsync(int port)
         {
             isrunning = true;
-            server = new TcpListener(IPAddress.Any, port);
+            server = new TcpListener(System.Net.IPAddress.Any, port);
             server.Start();
             UpdateLog($"[SERVER]: Bắt đầu ở port {port}");
 

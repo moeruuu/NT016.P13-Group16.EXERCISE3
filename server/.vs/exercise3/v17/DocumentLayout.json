@@ -39,7 +39,8 @@
               "ViewState": "AQIAAEIBAAAAAAAAAAAkwGABAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.576Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -119,8 +120,8 @@
               "Title": "Server.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs [Design]",
-              "RelativeToolTip": "exercise3\\Server.cs [Design]",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs [Design]*",
+              "RelativeToolTip": "exercise3\\Server.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T14:13:08.271Z",
               "EditorCaption": " [Design]"
@@ -131,9 +132,9 @@
               "Title": "Server.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
-              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs",
-              "RelativeToolTip": "exercise3\\Server.cs",
-              "ViewState": "AQIAAL0AAAAAAAAAAAAjwNAAAAAUAAAA",
+              "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Server.cs*",
+              "RelativeToolTip": "exercise3\\Server.cs*",
+              "ViewState": "AQIAAPsAAAAAAAAAAAAgwBQBAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.809Z",
               "EditorCaption": ""
@@ -146,8 +147,10 @@
               "RelativeDocumentMoniker": "exercise3\\Program.cs",
               "ToolTip": "C:\\Users\\DELL\\Videos\\Exer3\\server\\exercise3\\Program.cs",
               "RelativeToolTip": "exercise3\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T19:15:19.812Z"
+              "WhenOpened": "2024-11-15T19:15:19.812Z",
+              "EditorCaption": ""
             }
           ]
         }
