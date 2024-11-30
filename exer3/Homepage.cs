@@ -26,49 +26,26 @@ namespace exer3
         private user userinfo;
         string name;
         int id;
-        public Homepage()
+        public Homepage(user user)
         {
             InitializeComponent();
             StartTokenValidation();
+            userinfo = user;
+            Homepage_load();
         }
 
-        public void Homepage_load(user USER)
+        public void Homepage_load()
         {
-            userinfo = new user();
-            userinfo = USER;
 
             lbWelcome.Text = "WELCOME TO " + userinfo.username + "'S HOMEPAGE";
             int x = (this.ClientSize.Width - lbWelcome.Width) / 2;
             lbWelcome.Location = new Point(x, lbWelcome.Height);
-
-            lbUserID.Text = $"UserID: {userinfo.userid}";
-            lbFullname.Text = $"Fullname: {userinfo.fullname}";
-            lbBirthday.Text = $"Birthday: {userinfo.birthday}";
-            lbEmail.Text = $"Email: {userinfo.email}";
+            lblUsername.Text += userinfo.username;
+            lblFullname.Text += userinfo.username;
+            lblEmail.Text += userinfo.email;
 
         }
 
-
-        private void funcLogOut_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                this.Hide();
-                login formLogin = new login();
-                formLogin.ShowDialog();
-                this.Close();
-                ClearDataUser();
-            }
-        }
-
-        private void funcExit_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                this.Close();
-                ClearDataUser();
-            }
-        }
 
         private void ClearDataUser()
         {
@@ -158,9 +135,27 @@ namespace exer3
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
-        { 
+        {
             ChangePassword changePassword = new ChangePassword();
             changePassword.ShowDialog();
+        }
+
+        private void linkBooksForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Searchform(userinfo).Show();
+        }
+
+        private void linklogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                login formLogin = new login();
+                formLogin.ShowDialog();
+                this.Close();
+                ClearDataUser();
+            }
         }
     }
 

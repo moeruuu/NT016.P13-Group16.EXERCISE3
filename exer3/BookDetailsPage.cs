@@ -24,6 +24,8 @@ namespace exer3
             InitializeComponent();
             this.volumeId = volumeId;
             LoadBookDetailsAsync(volumeId);
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void progressBar1_Click(object sender, EventArgs e)

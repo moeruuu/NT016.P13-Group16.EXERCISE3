@@ -29,13 +29,20 @@
         private void InitializeComponent()
         {
             lbWelcome = new Label();
-            btnReturn = new Button();
-            btnExit = new Button();
-            lbFullname = new Label();
-            lbBirthday = new Label();
-            lbEmail = new Label();
-            lbUserID = new Label();
-            btnChangePassword = new Button();
+            tabPage2 = new TabPage();
+            panel1 = new Panel();
+            linklogout = new LinkLabel();
+            lblEmail = new Label();
+            lblFullname = new Label();
+            lblUsername = new Label();
+            tabPage1 = new TabPage();
+            linkBooksForm = new LinkLabel();
+            txtintro = new RichTextBox();
+            tabControl1 = new TabControl();
+            tabPage2.SuspendLayout();
+            panel1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabControl1.SuspendLayout();
             SuspendLayout();
             // 
             // lbWelcome
@@ -43,8 +50,8 @@
             lbWelcome.AutoSize = true;
             lbWelcome.BackColor = Color.Transparent;
             lbWelcome.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbWelcome.ForeColor = Color.FromArgb(255, 128, 255);
-            lbWelcome.Location = new Point(392, 31);
+            lbWelcome.ForeColor = Color.White;
+            lbWelcome.Location = new Point(180, 9);
             lbWelcome.Margin = new Padding(4, 0, 4, 0);
             lbWelcome.Name = "lbWelcome";
             lbWelcome.Size = new Size(449, 47);
@@ -52,103 +59,116 @@
             lbWelcome.Text = "WELCOME TO MY PAGE";
             lbWelcome.TextAlign = ContentAlignment.TopCenter;
             // 
-            // btnReturn
+            // tabPage2
             // 
-            btnReturn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnReturn.BackColor = SystemColors.Control;
-            btnReturn.Cursor = Cursors.Hand;
-            btnReturn.FlatStyle = FlatStyle.Popup;
-            btnReturn.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
-            btnReturn.ForeColor = Color.PaleVioletRed;
-            btnReturn.Location = new Point(941, 740);
-            btnReturn.Margin = new Padding(4, 4, 4, 4);
-            btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(142, 61);
-            btnReturn.TabIndex = 2;
-            btnReturn.Text = "Log out";
-            btnReturn.UseVisualStyleBackColor = false;
+            tabPage2.BackColor = Color.White;
+            tabPage2.Controls.Add(panel1);
+            tabPage2.Controls.Add(lblEmail);
+            tabPage2.Controls.Add(lblFullname);
+            tabPage2.Controls.Add(lblUsername);
+            tabPage2.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tabPage2.ForeColor = Color.PaleVioletRed;
+            tabPage2.Location = new Point(4, 34);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(722, 204);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Information";
             // 
-            // btnExit
+            // panel1
             // 
-            btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnExit.BackColor = SystemColors.Control;
-            btnExit.Cursor = Cursors.Hand;
-            btnExit.FlatStyle = FlatStyle.Popup;
-            btnExit.Font = new Font("Calibri", 16.2F, FontStyle.Bold);
-            btnExit.ForeColor = Color.PaleVioletRed;
-            btnExit.Location = new Point(1116, 740);
-            btnExit.Margin = new Padding(4, 4, 4, 4);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(142, 61);
-            btnExit.TabIndex = 3;
-            btnExit.Text = "Exit";
-            btnExit.UseVisualStyleBackColor = false;
+            panel1.BackColor = Color.LavenderBlush;
+            panel1.Controls.Add(linklogout);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(3, 166);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(716, 35);
+            panel1.TabIndex = 3;
             // 
-            // lbFullname
+            // linklogout
             // 
-            lbFullname.AutoSize = true;
-            lbFullname.BackColor = Color.Transparent;
-            lbFullname.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbFullname.ForeColor = Color.PaleVioletRed;
-            lbFullname.Location = new Point(744, 402);
-            lbFullname.Margin = new Padding(4, 0, 4, 0);
-            lbFullname.Name = "lbFullname";
-            lbFullname.Size = new Size(160, 40);
-            lbFullname.TabIndex = 4;
-            lbFullname.Text = "Fullname: ";
+            linklogout.AutoSize = true;
+            linklogout.LinkColor = Color.DeepPink;
+            linklogout.Location = new Point(640, 6);
+            linklogout.Name = "linklogout";
+            linklogout.Size = new Size(73, 23);
+            linklogout.TabIndex = 0;
+            linklogout.TabStop = true;
+            linklogout.Text = "LogOut";
+            linklogout.LinkClicked += linklogout_LinkClicked;
             // 
-            // lbBirthday
+            // lblEmail
             // 
-            lbBirthday.AutoSize = true;
-            lbBirthday.BackColor = Color.Transparent;
-            lbBirthday.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbBirthday.ForeColor = Color.PaleVioletRed;
-            lbBirthday.Location = new Point(744, 479);
-            lbBirthday.Margin = new Padding(4, 0, 4, 0);
-            lbBirthday.Name = "lbBirthday";
-            lbBirthday.Size = new Size(143, 40);
-            lbBirthday.TabIndex = 5;
-            lbBirthday.Text = "Birthday:";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(17, 94);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(69, 23);
+            lblEmail.TabIndex = 2;
+            lblEmail.Text = "Email: ";
             // 
-            // lbEmail
+            // lblFullname
             // 
-            lbEmail.AutoSize = true;
-            lbEmail.BackColor = Color.Transparent;
-            lbEmail.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbEmail.ForeColor = Color.PaleVioletRed;
-            lbEmail.Location = new Point(744, 556);
-            lbEmail.Margin = new Padding(4, 0, 4, 0);
-            lbEmail.Name = "lbEmail";
-            lbEmail.Size = new Size(101, 40);
-            lbEmail.TabIndex = 6;
-            lbEmail.Text = "Email:";
+            lblFullname.AutoSize = true;
+            lblFullname.Location = new Point(17, 54);
+            lblFullname.Name = "lblFullname";
+            lblFullname.Size = new Size(99, 23);
+            lblFullname.TabIndex = 1;
+            lblFullname.Text = "Fullname: ";
             // 
-            // lbUserID
+            // lblUsername
             // 
-            lbUserID.AutoSize = true;
-            lbUserID.BackColor = Color.Transparent;
-            lbUserID.Font = new Font("Calibri", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbUserID.ForeColor = Color.PaleVioletRed;
-            lbUserID.Location = new Point(744, 338);
-            lbUserID.Margin = new Padding(4, 0, 4, 0);
-            lbUserID.Name = "lbUserID";
-            lbUserID.Size = new Size(120, 40);
-            lbUserID.TabIndex = 7;
-            lbUserID.Text = "UserID:";
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new Point(17, 18);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(107, 23);
+            lblUsername.TabIndex = 0;
+            lblUsername.Text = "Username: ";
             // 
-            // btnChangePassword
+            // tabPage1
             // 
-            btnChangePassword.AutoSize = true;
-            btnChangePassword.Font = new Font("Cambria", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnChangePassword.ForeColor = Color.PaleVioletRed;
-            btnChangePassword.Location = new Point(1020, 664);
-            btnChangePassword.Margin = new Padding(2);
-            btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.Size = new Size(206, 45);
-            btnChangePassword.TabIndex = 19;
-            btnChangePassword.Text = "Change Password";
-            btnChangePassword.UseVisualStyleBackColor = true;
-            btnChangePassword.Click += btnChangePassword_Click;
+            tabPage1.BackColor = Color.White;
+            tabPage1.Controls.Add(linkBooksForm);
+            tabPage1.Controls.Add(txtintro);
+            tabPage1.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tabPage1.ForeColor = Color.PaleVioletRed;
+            tabPage1.Location = new Point(4, 34);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(722, 204);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Books";
+            // 
+            // linkBooksForm
+            // 
+            linkBooksForm.AutoSize = true;
+            linkBooksForm.LinkColor = Color.Crimson;
+            linkBooksForm.Location = new Point(113, 62);
+            linkBooksForm.Name = "linkBooksForm";
+            linkBooksForm.Size = new Size(113, 23);
+            linkBooksForm.TabIndex = 2;
+            linkBooksForm.TabStop = true;
+            linkBooksForm.Text = "Books Form";
+            linkBooksForm.LinkClicked += linkBooksForm_LinkClicked;
+            // 
+            // txtintro
+            // 
+            txtintro.BorderStyle = BorderStyle.None;
+            txtintro.ForeColor = Color.PaleVioletRed;
+            txtintro.Location = new Point(22, 16);
+            txtintro.Name = "txtintro";
+            txtintro.Size = new Size(694, 79);
+            txtintro.TabIndex = 1;
+            txtintro.Text = "Chào mừng bạn đến với NT106.P13!\nNếu muốn khám phá thế giới tri thức qua những cuốn sách thì hãy ấn vào link ở dưới nhé:";
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(57, 113);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(730, 242);
+            tabControl1.TabIndex = 2;
             // 
             // Homepage
             // 
@@ -156,34 +176,38 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             BackgroundImage = Properties.Resources.f4559a0ac40cf5c464dd1c321dbd78c0;
-            ClientSize = new Size(1274, 816);
-            Controls.Add(btnChangePassword);
-            Controls.Add(lbUserID);
-            Controls.Add(lbEmail);
-            Controls.Add(lbBirthday);
-            Controls.Add(lbFullname);
-            Controls.Add(btnExit);
-            Controls.Add(btnReturn);
+            ClientSize = new Size(848, 367);
+            Controls.Add(tabControl1);
             Controls.Add(lbWelcome);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Homepage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage";
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            tabControl1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label lbWelcome;
-        private Button btnReturn;
-        private Button btnExit;
-        private Label lbFullname;
-        private Label lbBirthday;
-        private Label lbEmail;
-        private Label lbUserID;
-        private Button btnChangePassword;
+        private TabPage tabPage2;
+        private Panel panel1;
+        private Label lblEmail;
+        private Label lblFullname;
+        private Label lblUsername;
+        private TabPage tabPage1;
+        private LinkLabel linkBooksForm;
+        private RichTextBox txtintro;
+        private TabControl tabControl1;
+        private LinkLabel linklogout;
     }
 }

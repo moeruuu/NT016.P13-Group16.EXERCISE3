@@ -28,6 +28,8 @@ namespace exer3
             WelcomeText();
             //bookService = book;
             CreateDataGridView();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         private void WelcomeText()
@@ -369,5 +371,7 @@ namespace exer3
                 MessageBox.Show("Lỗi lấy dữ liệu sách: " + ex.Message + "\n\n>>>Hãy thử lại");
             }
         }
+
+
     }
 }
