@@ -16,5 +16,10 @@ namespace exer3
         {
             InitializeComponent();
         }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
