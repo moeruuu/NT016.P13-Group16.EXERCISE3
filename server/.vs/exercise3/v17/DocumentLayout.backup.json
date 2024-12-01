@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\C#\\Exercise5\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\C#\\Exercise5\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 28,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\server\\exercise3\\BookService.cs",
               "RelativeDocumentMoniker": "exercise3\\BookService.cs",
               "ToolTip": "C:\\C#\\Exercise5\\server\\exercise3\\BookService.cs",
               "RelativeToolTip": "exercise3\\BookService.cs",
-              "ViewState": "AgIAAH4BAAAAAAAAAAAswI4BAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAAAAcBAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.576Z",
               "IsPinned": true,
@@ -160,13 +160,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Server.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\server\\exercise3\\Server.cs",
               "RelativeDocumentMoniker": "exercise3\\Server.cs",
               "ToolTip": "C:\\C#\\Exercise5\\server\\exercise3\\Server.cs",
               "RelativeToolTip": "exercise3\\Server.cs",
-              "ViewState": "AgIAAGwBAAAAAAAAAAAwwBQBAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwFwAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T19:15:19.809Z",
               "EditorCaption": ""

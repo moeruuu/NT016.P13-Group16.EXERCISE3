@@ -223,7 +223,7 @@ namespace exercise3
             }
         }
 
-        private async Task<string> ChangePassword (string requestFromClient) 
+        private async Task<string> ChangePassword(string requestFromClient)
         {
             var strings = requestFromClient.Split('|');
             if (strings.Length < 3)
@@ -233,19 +233,17 @@ namespace exercise3
             string username = strings[0].Trim();
             string currentPassword = strings[1].Trim();
             string newPassword = strings[2].Trim();
-            if (newPassword.Length < 8 || newPassword.Length > 16 ||
-                        !Regex.IsMatch(newPassword, @"[A-Z]") ||
-                        !Regex.IsMatch(newPassword, @"[a-z]") ||
-                        !Regex.IsMatch(newPassword, @"\d"))
-    {
-                return "Mật khẩu mới phải từ 8-16 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.";
+            if (newPassword.Length < 8 || newPassword.Length > 16)
+            {
+                return "Mật khẩu mới phải từ 8-16 ký tự.";
             }
             if (newPassword.Length < 8 || newPassword.Length > 16)
             {
                 return "Mật khẩu mới phải có độ dài từ 8 đến 16 ký tự";
             }
+
             var filter = Builders<User>.Filter.Eq(u => u.Username, username);
-            var userDoc = await accCollection.Find (filter).FirstOrDefaultAsync();
+            var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
             if (userDoc == null)
             {
                 return "Người dùng không tồn tại";
@@ -577,7 +575,7 @@ namespace exercise3
                 }
                 else if (incomingMessage.StartsWith("CHANGE PASSWORD"))
                 {
-                    incomingMessage = incomingMessage.Replace ("CHANGE PASSWORD", "").Trim();
+                    incomingMessage = incomingMessage.Replace("CHANGE PASSWORD", "").Trim();
                     string responseMessage = await ChangePassword(incomingMessage);
                     await SendMessageToClient(tcpClient, responseMessage);
                 }

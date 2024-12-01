@@ -45,7 +45,7 @@ namespace exer3
                         //MessageBox.Show(data.Replace("SUCCESSS", ""));
                         //Clipboard.SetText(data);
                         this.Hide();
-                        new ChangePassword().ShowDialog();
+                        //new ChangePassword().ShowDialog();
                         this.Close();
                     }
                     else
