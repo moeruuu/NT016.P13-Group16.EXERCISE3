@@ -35,7 +35,7 @@ Link database:
 ### Giao diện người dùng
 
  - Form đăng nhập
-<img src="https://i.imgur.com/aSeWtVG.png" width="200" />
+<img src="https://i.imgur.com/aSeWtVG.png" width="600" />
 
  - Form đăng ký
 <img src="https://i.imgur.com/DjYrvRL.png" width="200" />
