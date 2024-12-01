@@ -59,7 +59,7 @@ Link database:
 *Viết ứng dụng tìm kiếm và quản lý sách với Google Books API*
 ### Giao diện người dùng
  - Màn hình tìm kiếm sách
-<img src="https://i.imgur.com/DjYrvRL.png" width="200" />
+<img src="https://i.imgur.com/WJk4vKy.png" width="600" />
 
  - Màn hình hiển thị thông tin chi tiết sách
 <img src="https://i.imgur.com/DjYrvRL.png" width="200" />
@@ -77,7 +77,7 @@ Link database:
 <img src="https://i.imgur.com/DjYrvRL.png" width="200" />
 
  - Email nhận được
-<img src="https://i.imgur.com/DjYrvRL.png" width="200" />
+<img src="https://i.imgur.com/rxcnn5a.png" width="600" />
 
 ### Các kỹ thuật được sử dụng
  - Quên mật khẩu
