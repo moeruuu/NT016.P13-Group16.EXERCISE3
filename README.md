@@ -38,14 +38,14 @@ Link database:
 <img src="https://i.imgur.com/aSeWtVG.png" width="600" />
 
  - Form đăng ký
-<img src="https://i.imgur.com/DjYrvRL.png" width="200" />
+<img src="https://i.imgur.com/y4e6lQa.png" width="600" />
 
  - Form home sau khi đăng nhập thành công
-<img src="https://i.imgur.com/DjYrvRL.png" width="200" />
+<img src="https://i.imgur.com/HM7Mi3K.png" width="600" />
 
 ### Giao diện server
 
-<img src="https://i.imgur.com/DjYrvRL.png" width="200" />
+<img src="https://i.imgur.com/wZMznXy.png" width="600" />
 
 ### Các kỹ thuật được sử dụng
  - Xử lý đăng ký 
