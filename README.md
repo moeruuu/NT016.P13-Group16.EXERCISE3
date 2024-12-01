@@ -5,7 +5,7 @@ GVHD: Lê Minh Khánh Hội
 
 Thành viên nhóm 16:
  1. 23521564	  Trần Lê Uyên Thy **(Leader)**
- 2. 23520401    Lê Nguyễn Phương Giang
+ 2. 23520407    Lê Nguyễn Phương Giang
  3. 23520222	  Nguyễn Xuân Đan
  4. 23520718	  Huỳnh Quốc Khánh
 
