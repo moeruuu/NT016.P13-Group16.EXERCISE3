@@ -23,6 +23,7 @@ using Org.BouncyCastle.Math;
 using Org.BouncyCastle.Utilities.Net;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace exercise3
 {
@@ -232,6 +233,13 @@ namespace exercise3
             string username = strings[0].Trim();
             string currentPassword = strings[1].Trim();
             string newPassword = strings[2].Trim();
+            if (newPassword.Length < 8 || newPassword.Length > 16 ||
+                        !Regex.IsMatch(newPassword, @"[A-Z]") ||
+                        !Regex.IsMatch(newPassword, @"[a-z]") ||
+                        !Regex.IsMatch(newPassword, @"\d"))
+    {
+                return "Mật khẩu mới phải từ 8-16 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.";
+            }
             if (newPassword.Length < 8 || newPassword.Length > 16)
             {
                 return "Mật khẩu mới phải có độ dài từ 8 đến 16 ký tự";
@@ -253,7 +261,7 @@ namespace exercise3
             }
             byte[] newPasswordBytes = Encoding.UTF8.GetBytes(newPassword);
             byte[] hashedNewPasswordBytes = hashAlgorithm.ComputeHash(newPasswordBytes);
-            string hashedNewPassword = BitConverter.ToString(newPasswordBytes).Replace("-", "");
+            string hashedNewPassword = BitConverter.ToString(hashedCurrentPasswordBytes).Replace("-", "");
 
             var update = Builders<User>.Update.Set(u => u.Password, hashedNewPassword);
             await accCollection.UpdateOneAsync(filter, update);
