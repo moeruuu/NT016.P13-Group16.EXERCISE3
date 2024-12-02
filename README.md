@@ -20,7 +20,7 @@ Link database:
 
     mongodb+srv://btcuacoHoine:yeultmnhat@clusterbaitap.nibhk.mongodb.net/
 
-***Chú ý**: Sau khi clone repo về, cần xóa file refresh_token.txt trong đường dẫn Exer3\server\exercise3\bin\Debug\net8.0-windows trước khi chạy chương trình*
+***Chú ý**: Sau khi clone repo về, nếu không chạy được, hãy xóa file refresh_token.txt trong đường dẫn Exer3\server\exercise3\bin\Debug\net8.0-windows trước khi chạy chương trình*
 ### Hướng dẫn kết nối database MongoDB
  1. Tải MongoDB Compass: [Link download](https://www.mongodb.com/try/download/compass)
  2. Chạy file MongoDB Compass đã tải. Tạo tài khoản và đăng nhập
@@ -28,7 +28,7 @@ Link database:
  4.  Copy link database ở trên và pass vào ô URI. Nhấn **Save & Connect**
  <img src="https://i.imgur.com/0wqSniY.png" width="800" />
 
-*Lưu ý: sau khi đã tạo kết nối thành công, khi chạy chương trình ở những lần sau không cần kết nối đến database thêm nữa.*
+*Lưu ý: Sau khi tạo kết nối thành công, khi chạy chương trình ở những lần sau không cần kết nối đến database thêm nữa.*
 
 ## Bài tập số 3
 *Viết ứng dụng quản lý người dùng với tính năng đăng nhập, đăng ký với TCP socket*
