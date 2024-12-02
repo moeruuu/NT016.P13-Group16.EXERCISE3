@@ -181,7 +181,7 @@
             txtintro.Name = "txtintro";
             txtintro.Size = new Size(555, 63);
             txtintro.TabIndex = 1;
-            txtintro.Text = "Chào mừng bạn đến với NT106.P13!\nNếu muốn khám phá thế giới tri thức qua những cuốn sách thì hãy ấn vào link ở dưới nhé:";
+            txtintro.Text = "Chào mừng bạn đến với NT016.P13-Group 16!\nNếu bạn muốn khám phá thế giới tri thức qua những cuốn sách thì hãy click vào link ở dưới nhé:";
             // 
             // tabControl1
             // 
