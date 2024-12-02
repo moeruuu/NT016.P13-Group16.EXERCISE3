@@ -28,7 +28,7 @@ Link database:
  4.  Copy link database ở trên và pass vào ô URI. Nhấn **Save & Connect**
  <img src="https://i.imgur.com/0wqSniY.png" width="800" />
 
-*Lưu ý: Sau khi tạo kết nối thành công, khi chạy chương trình ở những lần sau không cần kết nối đến database thêm nữa.*
+*Lưu ý: Sau khi tạo kết nối thành công, khi chạy chương trình ở những lần sau không cần kết nối đến database thêm nữa*
 
 ## Bài tập số 3
 *Viết ứng dụng quản lý người dùng với tính năng đăng nhập, đăng ký với TCP socket*
@@ -41,7 +41,7 @@ Link database:
 <img src="https://i.imgur.com/y4e6lQa.png" width="500" />
 
  - Form home sau khi đăng nhập thành công
-<img src="https://i.imgur.com/F73rhF5.png" width="500" />
+<img src="https://i.imgur.com/OaW6DTU.png" width="500" />
 
 ### Giao diện server
 
