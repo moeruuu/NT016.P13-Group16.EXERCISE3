@@ -143,7 +143,9 @@ namespace exercise3
 
         public class BooksResponse
         {
+            public string kind { get; set; }
             public BookItem[] items { get; set; }
+            public int totalItems { get; set; }
         }
 
         public class BookItem
@@ -207,7 +209,10 @@ namespace exercise3
         public async Task<List<Book>> SearchBooks(string search)
         {
             //MessageBox.Show(clientid);
-            string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={search}";
+            string searchQuery = Uri.EscapeDataString(search);
+            string apiUrlTitle = $"https://www.googleapis.com/books/v1/volumes?q=intitle:{searchQuery}";
+            string apiUrl = $"https://www.googleapis.com/books/v1/volumes?q={searchQuery}";
+
             try
             {
                 using (var client = new HttpClient())
@@ -218,22 +223,49 @@ namespace exercise3
                            return null;
                        }*/
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
-                    var response = await client.GetStringAsync(apiUrl);
-                    var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
 
                     List<Book> books = new List<Book>();
 
-                    foreach (var item in booksResponse.items)
+                    //sách có từ khóa trong tựa đề
+                    var responseTitle = await client.GetStringAsync(apiUrlTitle);
+                    var booksResponseTitle = JsonConvert.DeserializeObject<BooksResponse>(responseTitle);
+
+                    if (booksResponseTitle.items.Length > 0)
                     {
-                        books.Add(new Book
+                        for (int i = 0; i < booksResponseTitle.items.Length; i++)
                         {
-                            ID = item.id,
-                            Title = item.volumeInfo.title,
-                            Authors = item.volumeInfo.authors,
-                            Publisher = item.volumeInfo.publisher,
-                            PublishedDate = item.volumeInfo.publishedDate,
-                            Description = item.volumeInfo.description
-                        });
+                            var item = booksResponseTitle.items[i];
+                            books.Add(new Book
+                            {
+                                ID = item.id,
+                                Title = item.volumeInfo?.title,
+                                Authors = item.volumeInfo?.authors ?? new List<string> { "No authors" },
+                                Publisher = item.volumeInfo?.publisher ?? "Unknown",
+                                PublishedDate = item.volumeInfo?.publishedDate ?? "Unknown",
+                                Description = !string.IsNullOrEmpty(item.volumeInfo?.description) ? "Have details" : "None",
+                            });
+                        }
+                    }
+
+                    //sách có từ khóa trong nội dung
+                    var response = await client.GetStringAsync(apiUrl);
+                    var booksResponse = JsonConvert.DeserializeObject<BooksResponse>(response);
+
+                    if (booksResponse.items.Length > 0)
+                    {
+                        for (int i = 0; i < booksResponse.items.Length; i++)
+                        {
+                            var item = booksResponse.items[i];
+                            books.Add(new Book
+                            {
+                                ID = item.id,
+                                Title = item.volumeInfo?.title,
+                                Authors = item.volumeInfo?.authors ?? new List<string> { "No authors" },
+                                Publisher = item.volumeInfo?.publisher ?? "Unknown",
+                                PublishedDate = item.volumeInfo?.publishedDate ?? "Unknown",
+                                Description = !string.IsNullOrEmpty(item.volumeInfo?.description) ? "Have details" : "None",
+                            });
+                        }
                     }
 
                     return books;

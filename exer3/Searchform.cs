@@ -60,7 +60,7 @@ namespace exer3
             dgvBoooks.Columns[3].Width = 270;
             dgvBoooks.Columns[4].Width = 150;
             dgvBoooks.Columns[5].Width = 120;
-            dgvBoooks.Columns[6].Width = 150;
+            dgvBoooks.Columns[6].Width = 120;
 
             dgvShelf.Columns[0].Width = 45;
             dgvShelf.Columns[1].Width = 100;
@@ -86,22 +86,21 @@ namespace exer3
                 TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
                 NetworkStream stream = tcpClient.GetStream();
 
-                string message = "SEARCHBOOK" + txtSearch.Text.Trim();
+                string message = "SEARCH_BOOK" + txtSearch.Text.Trim() + "|";
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
 
                 byte[] bytes = new byte[4096];
                 int bytesread = await stream.ReadAsync(bytes, 0, bytes.Length);
                 var response = Encoding.UTF8.GetString(bytes, 0, bytesread);
-
                 //                dgvBoooks.Rows.Add(response);
 
-                List<Book> books = JsonConvert.DeserializeObject<List<Book>>(response);
+                var books = JsonConvert.DeserializeObject<List<Book>>(response);
 
                 // MessageBox.Show(books[1].ToString());
                 progressBar.Visible = true;
                 progressBar.Minimum = 0;
-                if (books.Count > 0)
+                if (books != null)
                 {
                     progressBar.Maximum = books.Count;
                     progressBar.Value = 0;
@@ -113,26 +112,33 @@ namespace exer3
                 }
 
                 int num = 1;
-                if (books != null && books.Count > 0)
+                if (books != null && books.Count != 0)
                 {
                     foreach (var book in books)
                     {
-                        progressBar.Value++;
-                        string id = book.ID;
-                        string authors = book.Authors != null ? string.Join(", ", book.Authors) : "No authors";
-                        string publisher = book.Publisher ?? "Unknown";
-                        string publishedDate = book.PublishedDate ?? "Unknown";
-                        string description = book.Description ?? "None";
+                        try
+                        {
+                            progressBar.Value++;
+                            string id = book.ID;
+                            string authors = book.Authors != null ? string.Join(", ", book.Authors) : "No authors";
+                            string publisher = book.Publisher ?? "Unknown";
+                            string publishedDate = book.PublishedDate ?? "Unknown";
+                            string description = book.Description ?? "None";
 
-                        dgvBoooks.Rows.Add(
-                            num++,
-                            id,
-                            book.Title ?? "No Title",
-                            authors,
-                            publisher,
-                            publishedDate,
-                            description
-                        );
+                            dgvBoooks.Rows.Add(
+                                num++,
+                                id,
+                                book.Title ?? "No Title",
+                                authors,
+                                publisher,
+                                publishedDate,
+                                description
+                            );
+                        }
+                        catch 
+                        {
+                            continue;
+                        }
                     }
                 }
                 else
@@ -279,8 +285,7 @@ namespace exer3
 
         private void dgvBoooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells["ID"].Value.ToString();
-
+            string volumeId = dgvBoooks.Rows[e.RowIndex].Cells["ID"].Value.ToString().Trim();
             BookDetailsPage bookDetailsPage = new BookDetailsPage(volumeId);
             bookDetailsPage.ShowDialog();
         }

@@ -163,7 +163,7 @@
             // 
             linkBooksForm.AutoSize = true;
             linkBooksForm.LinkColor = Color.Crimson;
-            linkBooksForm.Location = new Point(90, 50);
+            linkBooksForm.Location = new Point(18, 78);
             linkBooksForm.Margin = new Padding(2, 0, 2, 0);
             linkBooksForm.Name = "linkBooksForm";
             linkBooksForm.Size = new Size(95, 20);
