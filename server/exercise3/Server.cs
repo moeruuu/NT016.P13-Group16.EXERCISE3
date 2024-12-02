@@ -525,10 +525,11 @@ namespace exercise3
                     string messgaetoclient = await VerifyToken(incomingMessage);
                     SendMessageToClient(tcpClient, messgaetoclient);
                 }
-                else if (incomingMessage.StartsWith("SEARCHBOOK"))
+                else if (incomingMessage.StartsWith("SEARCH_BOOK"))
                 {
-                    incomingMessage = incomingMessage.Replace("SEARCHBOOK", "");
-                    var messagetoclient = await bookService.SearchBooks(incomingMessage);
+                    incomingMessage = incomingMessage.Replace("SEARCH_BOOK", "");
+                    var strings = incomingMessage.Split("|");
+                    var messagetoclient = await bookService.SearchBooks(strings[0]);
                     UpdateLog($"{name} đã tra sách");
                     SendListToClient(tcpClient, messagetoclient);
                 }
@@ -564,11 +565,12 @@ namespace exercise3
                     UpdateLog($"{name} đã xóa sách khỏi kệ");
                     SendMessageToClient(tcpClient, messagetoclient);
                 }
-                else if (incomingMessage.StartsWith("GETBOOKDETAILS"))
+                else if (incomingMessage.StartsWith("BOOKINFO"))
                 {
                     // Loại bỏ chuỗi "GETBOOKDETAILS" khỏi message
-                    incomingMessage = incomingMessage.Replace("GETBOOKDETAILS", string.Empty).Trim(); 
-                    var bookDetails = await bookService.GetBookDetails(incomingMessage);
+                    incomingMessage = incomingMessage.Replace("BOOKINFO", "");
+                    var strings = incomingMessage.Split("|");
+                    var bookDetails = await bookService.GetBookDetails(strings[0]);
                     var messagetoclient = JsonConvert.SerializeObject(bookDetails);
                     UpdateLog($"{name} đã tra chi tiết sách");
                     SendMessageToClient(tcpClient, messagetoclient);

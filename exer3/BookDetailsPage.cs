@@ -28,11 +28,6 @@ namespace exer3
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,15 +37,15 @@ namespace exer3
         {
 
             progressBar.Visible = true;
-            
+
             progressBar.Style = ProgressBarStyle.Marquee;
             try
             {
-                
+
                 TcpClient tcpClient = new TcpClient("127.0.0.1", 8080);
                 NetworkStream stream = tcpClient.GetStream();
 
-                string message = "GETBOOKDETAILS" + volumeId;
+                string message = "BOOKINFO" + volumeId + "|";
                 byte[] data = Encoding.UTF8.GetBytes(message);
                 await stream.WriteAsync(data, 0, data.Length);
 
@@ -58,11 +53,12 @@ namespace exer3
                 int bytesRead = await stream.ReadAsync(bytes, 0, bytes.Length);
                 var response = Encoding.UTF8.GetString(bytes, 0, bytesRead);
 
-                
-                Book bookDetails = JsonConvert.DeserializeObject<Book>(response);
+
+                var bookDetails = JsonConvert.DeserializeObject<Book>(response);
                 if (bookDetails != null)
                 {
                     DisplayBookDetails(bookDetails);
+                    progressBar.Visible = false;
                 }
                 else
                 {
@@ -75,34 +71,34 @@ namespace exer3
 
             }
         }
-            private void DisplayBookDetails(Book bookDetails)
+        private void DisplayBookDetails(Book bookDetails)
+        {
+
+            if (bookDetails != null)
             {
-     
-                if (bookDetails != null)
-                {
-                    rtbBookDetails.Clear();
+                rtbBookDetails.Clear();
 
                 rtbBookDetails.AppendText($"Title: {bookDetails.Title ?? "No Title"}\n");
                 rtbBookDetails.AppendText($"Authors: {string.Join(", ", bookDetails.Authors ?? new List<string> { "No authors" })}\n");
                 rtbBookDetails.AppendText($"Publisher: {bookDetails.Publisher ?? "Unknown"}\n");
-                rtbBookDetails.AppendText($"Published Date: {bookDetails.PublishedDate ?? "Unknown"}\n");
-                rtbBookDetails.AppendText($"Description: {bookDetails.Description ?? "No description available."}\n");
+                rtbBookDetails.AppendText($"Published Date: {bookDetails.PublishedDate ?? "Unknown"}");
+                rtbDescription.AppendText($"{bookDetails.Description}\n");
 
                 if (bookDetails.ImageLinks != null && bookDetails.ImageLinks.thumbnail != null)
                 {
                     try
                     {
-                        picBookcover.Load(bookDetails.ImageLinks.thumbnail);  
-                        picBookcover.Visible = true;
+                        picBookcover.Load(bookDetails.ImageLinks.thumbnail);
+                        picBookcover.BackColor = Color.Transparent;
                     }
                     catch (Exception)
                     {
-                        picBookcover.Visible = false;
+                        lbNotFoundCover.Visible = true;
                     }
                 }
                 else
                 {
-                    picBookcover.Visible = false;
+                    lbNotFoundCover.Visible = true;
                 }
             }
             else
@@ -110,6 +106,7 @@ namespace exer3
                 MessageBox.Show("Không tìm thấy chi tiết cho cuốn sách này!");
             }
         }
+
     }
 
 }
