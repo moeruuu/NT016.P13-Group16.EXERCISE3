@@ -51,7 +51,7 @@ namespace exer3
                         byte[] bytes = Encoding.UTF8.GetBytes(message);
                         await network.WriteAsync(bytes, 0, bytes.Length);
 
-                        byte[] buffer = new byte[24];
+                        byte[] buffer = new byte[1024];
                         int byteCount = await network.ReadAsync(buffer, 0, buffer.Length);
                         string response = Encoding.UTF8.GetString(buffer, 0, byteCount);
 

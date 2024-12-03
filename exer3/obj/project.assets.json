@@ -1119,16 +1119,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Admin\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
->>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\C#\\Exercise5\\exer3\\exer3.csproj",
       "projectName": "exer3",
       "projectPath": "C:\\C#\\Exercise5\\exer3\\exer3.csproj",
@@ -1137,16 +1132,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\DELL\\Music\\BT\\exer3\\exer3.csproj",
-      "projectName": "exer3",
-      "projectPath": "C:\\Users\\DELL\\Music\\BT\\exer3\\exer3.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Music\\BT\\exer3\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1225,12 +1210,16 @@
             "privateAssets": "none"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
->>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\C#\\Exercise5\\exer3\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

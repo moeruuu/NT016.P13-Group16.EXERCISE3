@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = exercise3
-build_property.ProjectDir = C:\Users\DELL\Music\BT\server\exercise3\
+build_property.ProjectDir = C:\C#\Exercise5\server\exercise3\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

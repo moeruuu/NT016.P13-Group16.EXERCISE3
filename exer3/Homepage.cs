@@ -134,11 +134,6 @@ namespace exer3
             }
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            //ChangePassword changePassword = new ChangePassword();
-            //changePassword.ShowDialog();
-        }
 
         private void linkBooksForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -162,8 +157,7 @@ namespace exer3
         {
             this.Hide();
             ChangePassword changePassword1 = new ChangePassword(userinfo.email);
-            changePassword1.Show();
-            this.Close();
+            changePassword1.ShowDialog();
         }
     }
 

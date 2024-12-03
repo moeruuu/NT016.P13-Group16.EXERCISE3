@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\C#\\Exercise5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise5\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise5\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise5\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise5\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -43,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\bookdetailspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise5\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\searchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -72,19 +68,6 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 31,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Book.cs",
-              "RelativeDocumentMoniker": "exer3\\Book.cs",
-              "ToolTip": "C:\\C#\\Exercise5\\exer3\\Book.cs",
-              "RelativeToolTip": "exer3\\Book.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wAMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T17:16:47.262Z",
-              "IsPinned": true
-            },
             {
               "$type": "Document",
               "DocumentIndex": 11,
@@ -205,14 +188,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ForgotPassword.cs [Design]",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs",
               "RelativeDocumentMoniker": "exer3\\ForgotPassword.cs",
               "ToolTip": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs [Design]",
               "RelativeToolTip": "exer3\\ForgotPassword.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:54:49.394Z"
+              "WhenOpened": "2024-12-03T07:21:02.307Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -223,36 +207,74 @@
               "ToolTip": "C:\\C#\\Exercise5\\exer3\\ChangePassword.cs [Design]",
               "RelativeToolTip": "exer3\\ChangePassword.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T17:52:32.011Z"
+              "WhenOpened": "2024-12-03T06:37:31.165Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Homepage.cs [Design]",
+              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Homepage.cs",
+              "RelativeDocumentMoniker": "exer3\\Homepage.cs",
+              "ToolTip": "C:\\C#\\Exercise5\\exer3\\Homepage.cs [Design]",
+              "RelativeToolTip": "exer3\\Homepage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:18:38.8Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ChangePassword.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\ChangePassword.cs",
               "RelativeDocumentMoniker": "exer3\\ChangePassword.cs",
               "ToolTip": "C:\\C#\\Exercise5\\exer3\\ChangePassword.cs",
               "RelativeToolTip": "exer3\\ChangePassword.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA+wCQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA5wEgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:37:35.067Z"
+              "WhenOpened": "2024-12-01T10:37:35.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ForgotPassword.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ForgotPassword.cs",
+              "ToolTip": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs",
+              "RelativeToolTip": "exer3\\ForgotPassword.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T15:33:17.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Homepage.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Homepage.cs",
               "RelativeDocumentMoniker": "exer3\\Homepage.cs",
               "ToolTip": "C:\\C#\\Exercise5\\exer3\\Homepage.cs",
               "RelativeToolTip": "exer3\\Homepage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAnwIoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T07:12:29.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "signup.cs [Design]",
+              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\signup.cs",
+              "RelativeDocumentMoniker": "exer3\\signup.cs",
+              "ToolTip": "C:\\C#\\Exercise5\\exer3\\signup.cs [Design]",
+              "RelativeToolTip": "exer3\\signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T17:56:32.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "user.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\user.cs",
               "RelativeDocumentMoniker": "exer3\\user.cs",
@@ -264,30 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ForgotPassword.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs",
-              "RelativeDocumentMoniker": "exer3\\ForgotPassword.cs",
-              "ToolTip": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs",
-              "RelativeToolTip": "exer3\\ForgotPassword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T15:33:17.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "signup.cs [Design]",
-              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\signup.cs",
-              "RelativeDocumentMoniker": "exer3\\signup.cs",
-              "ToolTip": "C:\\C#\\Exercise5\\exer3\\signup.cs [Design]",
-              "RelativeToolTip": "exer3\\signup.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T17:56:32.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "login.cs [Design]",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\login.cs",
               "RelativeDocumentMoniker": "exer3\\login.cs",
@@ -298,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BookDetailsPage.cs [Design]",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\BookDetailsPage.cs",
               "RelativeDocumentMoniker": "exer3\\BookDetailsPage.cs",
@@ -309,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Searchform.cs [Design]",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
@@ -320,18 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Homepage.cs [Design]",
-              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Homepage.cs",
-              "RelativeDocumentMoniker": "exer3\\Homepage.cs",
-              "ToolTip": "C:\\C#\\Exercise5\\exer3\\Homepage.cs [Design]",
-              "RelativeToolTip": "exer3\\Homepage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T07:18:38.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "Searchform.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Searchform.cs",
               "RelativeDocumentMoniker": "exer3\\Searchform.cs",
@@ -343,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Program.cs",
               "RelativeDocumentMoniker": "exer3\\Program.cs",
