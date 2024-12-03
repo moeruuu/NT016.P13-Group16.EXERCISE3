@@ -127,8 +127,7 @@ namespace exercise3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return null;
+                return string.Empty;
             }
         }
 
