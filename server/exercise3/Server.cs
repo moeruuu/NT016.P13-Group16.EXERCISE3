@@ -225,47 +225,52 @@ namespace exercise3
 
         private async Task<string> ChangePassword(string requestFromClient)
         {
-            var strings = requestFromClient.Split('|');
-            if (strings.Length < 3)
+            try
             {
-                return "Dữ liệu không hợp lệ";
-            }
-            string email = strings[0].Trim();
-            string currentPassword = strings[1].Trim();
-            string newPassword = strings[2].Trim();
-            if (newPassword.Length < 6)
-            {
-                return "Mật khẩu mới phải từ 8 ký tự.";
-            }
-            /*if (newPassword.Length < 6)
-            {
-                return "Mật khẩu mới phải có độ dài từ 8 đến 16 ký tự";
-            }*/
+                var strings = requestFromClient.Split('|');
+                if (strings.Length < 3)
+                {
+                    return "Dữ liệu không hợp lệ";
+                }
+                string email = strings[0].Trim();
+                string currentPassword = strings[1].Trim();
+                string newPassword = strings[2].Trim();
+                if (newPassword.Length < 6)
+                {
+                    return "Mật khẩu mới phải từ 6 ký tự.";
+                }
 
-            var filter = Builders<User>.Filter.Eq(u => u.Email, email);
-            var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
-            if (userDoc == null)
-            {
-                return "Người dùng không tồn tại";
+                var filter = Builders<User>.Filter.Eq(u => u.Email, email);
+                var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
+                if (userDoc == null)
+                {
+                    return "Người dùng không tồn tại";
+                }
+                HashAlgorithm hashAlgorithm = SHA256.Create();
+                byte[] currentPasswordBytes = Encoding.UTF8.GetBytes(currentPassword);
+                byte[] hashedCurrentPasswordBytes = hashAlgorithm.ComputeHash(currentPasswordBytes);
+                string hashedCurrentPassword = BitConverter.ToString(hashedCurrentPasswordBytes).Replace("-", "");
+
+                if (hashedCurrentPassword != userDoc.Password)
+                {
+                    return "Mật khẩu hiện tại không đúng";
+                }
+                byte[] newPasswordBytes = Encoding.UTF8.GetBytes(newPassword);
+                byte[] hashedNewPasswordBytes = hashAlgorithm.ComputeHash(newPasswordBytes);
+                string hashedNewPassword = BitConverter.ToString(hashedNewPasswordBytes).Replace("-", "");
+
+                var update = Builders<User>.Update.Set(u => u.Password, hashedNewPassword);
+                await accCollection.UpdateOneAsync(filter, update);
+
+                UpdateLog($"{userDoc.Username} đã đổi mật khẩu thành công");
+                return "SUCCESS";
             }
-            HashAlgorithm hashAlgorithm = SHA256.Create();
-            byte[] currentPasswordBytes = Encoding.UTF8.GetBytes(currentPassword);
-            byte[] hashedCurrentPasswordBytes = hashAlgorithm.ComputeHash(currentPasswordBytes);
-            string hashedCurrentPassword = BitConverter.ToString(hashedCurrentPasswordBytes).Replace("-", "");
-
-            if (hashedCurrentPassword != userDoc.Password)
+            catch (Exception ex)
             {
-                return "Mật khẩu hiện tại không đúng";
+                UpdateLog($"Lỗi: {ex.Message}");
+                return "Lỗi hệ thống";
             }
-            byte[] newPasswordBytes = Encoding.UTF8.GetBytes(newPassword);
-            byte[] hashedNewPasswordBytes = hashAlgorithm.ComputeHash(newPasswordBytes);
-            string hashedNewPassword = BitConverter.ToString(hashedCurrentPasswordBytes).Replace("-", "");
 
-            var update = Builders<User>.Update.Set(u => u.Password, hashedNewPassword);
-            await accCollection.UpdateOneAsync(filter, update);
-
-            UpdateLog($"{userDoc.Username} đã đổi mật khẩu thành công");
-            return "SUCCESS";
         }
 
         private async Task<string> SendMail(string email, string newpass)

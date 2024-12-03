@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan5\\0312_3\\server\\",
   "Documents": [
     {
@@ -16,6 +17,24 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|d:\\1.uit_hk3_24_25\\ltmangcb\\baitap\\baitaptuan5\\0312_3\\server\\exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+  "WorkspaceRootPath": "C:\\C#\\Exercise5\\server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|C:\\C#\\Exercise5\\server\\exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|c:\\c#\\exercise5\\server\\exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
       "RelativeMoniker": "D:0:0:{B77946C3-04F6-4970-94B7-C5CD700B9B58}|exercise3\\exercise3.csproj|solutionrelative:exercise3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -33,6 +52,23 @@
           "SelectedChildIndex": 22,
           "Children": [
             {
+<<<<<<< HEAD
+=======
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise5\\server\\exercise3\\BookService.cs",
+              "RelativeDocumentMoniker": "exercise3\\BookService.cs",
+              "ToolTip": "C:\\C#\\Exercise5\\server\\exercise3\\BookService.cs",
+              "RelativeToolTip": "exercise3\\BookService.cs",
+              "ViewState": "AgIAALcBAAAAAAAAAADwvzEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T19:15:19.576Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
               "$type": "Bookmark",
               "Name": "ST:4:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
@@ -118,6 +154,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan5\\0312_3\\server\\exercise3\\Properties\\launchSettings.json",
@@ -128,10 +165,22 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-03T14:16:44.12Z",
               "EditorCaption": ""
+=======
+              "DocumentIndex": 2,
+              "Title": "Server.cs [Design]",
+              "DocumentMoniker": "C:\\C#\\Exercise5\\server\\exercise3\\Server.cs",
+              "RelativeDocumentMoniker": "exercise3\\Server.cs",
+              "ToolTip": "C:\\C#\\Exercise5\\server\\exercise3\\Server.cs [Design]",
+              "RelativeToolTip": "exercise3\\Server.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:13:08.271Z",
+              "EditorCaption": " [Design]"
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "BookService.cs",
               "DocumentMoniker": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan5\\0312_3\\server\\exercise3\\BookService.cs",
               "RelativeDocumentMoniker": "exercise3\\BookService.cs",
@@ -165,19 +214,37 @@
               "ViewState": "AgIAACYCAAAAAAAAAAAYwGcCAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T06:36:50.131Z",
+=======
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\C#\\Exercise5\\server\\exercise3\\Server.cs",
+              "RelativeDocumentMoniker": "exercise3\\Server.cs",
+              "ToolTip": "C:\\C#\\Exercise5\\server\\exercise3\\Server.cs",
+              "RelativeToolTip": "exercise3\\Server.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAAAPQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T19:15:19.809Z",
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
+<<<<<<< HEAD
               "DocumentMoniker": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan5\\0312_3\\server\\exercise3\\Program.cs",
+=======
+              "DocumentMoniker": "C:\\C#\\Exercise5\\server\\exercise3\\Program.cs",
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
               "RelativeDocumentMoniker": "exercise3\\Program.cs",
               "ToolTip": "D:\\1.UIT_HK3_24_25\\LTMangCB\\BaiTap\\Baitaptuan5\\0312_3\\server\\exercise3\\Program.cs",
               "RelativeToolTip": "exercise3\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-12-03T06:36:50.139Z",
+=======
+              "WhenOpened": "2024-11-15T19:15:19.812Z",
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
               "EditorCaption": ""
             }
           ]
@@ -201,10 +268,13 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+<<<<<<< HEAD
             },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+=======
+>>>>>>> 097f40c734f8a36f883113fc2924377144aa8454
             }
           ]
         }
