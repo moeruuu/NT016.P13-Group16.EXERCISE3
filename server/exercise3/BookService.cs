@@ -25,8 +25,6 @@ namespace exercise3
         private static readonly string clientid = "733627747078-guf0vb5qrui6f0dkfnit0n7tvtf0fahg.apps.googleusercontent.com";
         private static readonly string clientsecret = "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";
 
-        private static readonly string baseurl = @"https://www.googleapis.com/books/v1";
-
         public string accessToken;
 
         public async Task<string> GetAccessToken()
@@ -41,7 +39,14 @@ namespace exercise3
                 if (!string.IsNullOrEmpty(storedRefreshToken))
                 {
                     accessToken = await RefreshAccessToken(storedRefreshToken);
-                    return accessToken;
+                    using (HttpClient client = new HttpClient())
+                    {
+                        string url = $"https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={accessToken}";
+                        HttpResponseMessage response = await client.GetAsync(url);
+
+                        if (response.IsSuccessStatusCode)
+                            return accessToken;
+                    }
                 }
                 var clientsecrets = new ClientSecrets
                 {
