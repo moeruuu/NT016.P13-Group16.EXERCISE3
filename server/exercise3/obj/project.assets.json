@@ -1729,11 +1729,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Admin\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\C#\\Exercise5\\server\\exercise3\\exercise3.csproj",
       "projectName": "exercise3",
       "projectPath": "C:\\C#\\Exercise5\\server\\exercise3\\exercise3.csproj",
@@ -1742,6 +1747,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\DELL\\Music\\BT\\server\\exercise3\\exercise3.csproj",
+      "projectName": "exercise3",
+      "projectPath": "C:\\Users\\DELL\\Music\\BT\\server\\exercise3\\exercise3.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Music\\BT\\server\\exercise3\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1828,7 +1843,11 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
       }
     }
   }

@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\C#\\Exercise5\\",
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Music\\BT\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,12 +14,33 @@
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\C#\\Exercise5\\exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+=======
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Music\\BT\\exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\music\\bt\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\music\\bt\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\music\\bt\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\users\\dell\\music\\bt\\exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Music\\BT\\exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,6 +83,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|c:\\c#\\exercise5\\exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|C:\\Users\\DELL\\Music\\BT\\exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D30BF07D-86F7-4751-9906-0B15A9A3BD42}|exer3\\exer3.csproj|solutionrelative:exer3\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
     }
   ],
   "DocumentGroupContainers": [
@@ -70,6 +96,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 31,
           "Children": [
             {
@@ -100,12 +127,21 @@
               "EditorCaption": ""
             },
             {
+=======
+          "SelectedChildIndex": 30,
+          "Children": [
+            {
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
               "$type": "Bookmark",
               "Name": "ST:4:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -145,19 +181,23 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             },
             {
               "$type": "Bookmark",
@@ -169,23 +209,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:908254218:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -205,6 +233,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "ForgotPassword.cs [Design]",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\ForgotPassword.cs",
@@ -219,10 +248,30 @@
               "DocumentIndex": 5,
               "Title": "ChangePassword.cs [Design]",
               "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\ChangePassword.cs",
-              "RelativeDocumentMoniker": "exer3\\ChangePassword.cs",
-              "ToolTip": "C:\\C#\\Exercise5\\exer3\\ChangePassword.cs [Design]",
-              "RelativeToolTip": "exer3\\ChangePassword.cs [Design]",
+=======
+              "DocumentIndex": 4,
+              "Title": "signup.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\signup.cs",
+              "RelativeDocumentMoniker": "exer3\\signup.cs",
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\signup.cs",
+              "RelativeToolTip": "exer3\\signup.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAUwNUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:45:41.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePassword.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\ChangePassword.cs",
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
+              "RelativeDocumentMoniker": "exer3\\ChangePassword.cs",
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\ChangePassword.cs",
+              "RelativeToolTip": "exer3\\ChangePassword.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-12-02T17:52:32.011Z"
             },
             {
@@ -239,25 +288,80 @@
             },
             {
               "$type": "Document",
+=======
+              "WhenOpened": "2024-12-03T05:45:13.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangePassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\ChangePassword.cs",
+              "RelativeDocumentMoniker": "exer3\\ChangePassword.cs",
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\ChangePassword.cs [Design]",
+              "RelativeToolTip": "exer3\\ChangePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:45:11.618Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\login.cs",
+              "RelativeDocumentMoniker": "exer3\\login.cs",
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\login.cs",
+              "RelativeToolTip": "exer3\\login.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwFAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:44:01.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\login.cs",
+              "RelativeDocumentMoniker": "exer3\\login.cs",
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\login.cs [Design]",
+              "RelativeToolTip": "exer3\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:55:52.795Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
               "DocumentIndex": 0,
               "Title": "Homepage.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\Homepage.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\Homepage.cs",
               "RelativeDocumentMoniker": "exer3\\Homepage.cs",
+<<<<<<< HEAD
               "ToolTip": "C:\\C#\\Exercise5\\exer3\\Homepage.cs",
               "RelativeToolTip": "exer3\\Homepage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+=======
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\Homepage.cs*",
+              "RelativeToolTip": "exer3\\Homepage.cs*",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAswKIAAABOAAAA",
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T07:12:29.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 5,
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
               "Title": "user.cs",
-              "DocumentMoniker": "C:\\C#\\Exercise5\\exer3\\user.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Music\\BT\\exer3\\user.cs",
               "RelativeDocumentMoniker": "exer3\\user.cs",
-              "ToolTip": "C:\\C#\\Exercise5\\exer3\\user.cs",
+              "ToolTip": "C:\\Users\\DELL\\Music\\BT\\exer3\\user.cs",
               "RelativeToolTip": "exer3\\user.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T11:33:10.27Z"
@@ -352,6 +456,12 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T15:17:20.413Z"
+=======
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvxEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T11:33:10.27Z",
+              "EditorCaption": ""
+>>>>>>> 4f68c00a149b6dab2c6ecd40f0acbb0d557c6cf7
             }
           ]
         },

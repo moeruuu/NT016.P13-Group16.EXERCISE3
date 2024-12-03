@@ -230,19 +230,19 @@ namespace exercise3
             {
                 return "Dữ liệu không hợp lệ";
             }
-            string username = strings[0].Trim();
+            string email = strings[0].Trim();
             string currentPassword = strings[1].Trim();
             string newPassword = strings[2].Trim();
-            if (newPassword.Length < 8 || newPassword.Length > 16)
+            if (newPassword.Length < 6)
             {
-                return "Mật khẩu mới phải từ 8-16 ký tự.";
+                return "Mật khẩu mới phải từ 8 ký tự.";
             }
-            if (newPassword.Length < 8 || newPassword.Length > 16)
+            /*if (newPassword.Length < 6)
             {
                 return "Mật khẩu mới phải có độ dài từ 8 đến 16 ký tự";
-            }
+            }*/
 
-            var filter = Builders<User>.Filter.Eq(u => u.Username, username);
+            var filter = Builders<User>.Filter.Eq(u => u.Email, email);
             var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
             if (userDoc == null)
             {
@@ -264,7 +264,7 @@ namespace exercise3
             var update = Builders<User>.Update.Set(u => u.Password, hashedNewPassword);
             await accCollection.UpdateOneAsync(filter, update);
 
-            UpdateLog($"{username} đã đổi mật khẩu thành công");
+            UpdateLog($"{userDoc.Username} đã đổi mật khẩu thành công");
             return "SUCCESS";
         }
 
@@ -575,9 +575,10 @@ namespace exercise3
                     UpdateLog($"{name} đã tra chi tiết sách");
                     SendMessageToClient(tcpClient, messagetoclient);
                 }
-                else if (incomingMessage.StartsWith("CHANGE PASSWORD"))
+                else if (incomingMessage.StartsWith("CHANGEPASSWORD"))
                 {
-                    incomingMessage = incomingMessage.Replace("CHANGE PASSWORD", "").Trim();
+                    //MessageBox.Show(incomingMessage);
+                    incomingMessage = incomingMessage.Replace("CHANGEPASSWORD", "").Trim();
                     string responseMessage = await ChangePassword(incomingMessage);
                     await SendMessageToClient(tcpClient, responseMessage);
                 }

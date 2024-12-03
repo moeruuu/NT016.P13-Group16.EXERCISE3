@@ -14,11 +14,11 @@ namespace exer3
 {
     public partial class ChangePassword : Form
     {
-        private string username;
-        public ChangePassword(string username)
+        private string email;
+        public ChangePassword(string email)
         {
             InitializeComponent();
-            this.username = username;
+            this.email = email;
         }
 
         private async void btnChangePassword_Click(object sender, EventArgs e)
@@ -31,9 +31,9 @@ namespace exer3
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
-            if (newPassword.Length < 8 || newPassword.Length > 16)
+            if (newPassword.Length < 6)
             {
-                MessageBox.Show("Mật khẩu mới phải từ 8 đến 16 ký tự!");
+                MessageBox.Show("Mật khẩu mới phải từ 6 ký tự!");
                 return;
             }
             if (newPassword != confirmPassword)
@@ -47,7 +47,7 @@ namespace exer3
                 {
                     using (NetworkStream network = client.GetStream())
                     {
-                        string message = $"CHANGEPASSWORD|{username}|{currentPassword}|{newPassword}|";
+                        string message = $"CHANGEPASSWORD{email}|{currentPassword}|{newPassword}|";
                         byte[] bytes = Encoding.UTF8.GetBytes(message);
                         await network.WriteAsync(bytes, 0, bytes.Length);
 
@@ -57,7 +57,9 @@ namespace exer3
 
                         if (response == "SUCCESS")
                         {
+                            this.Hide();
                             MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            new login().ShowDialog();
                             this.Close();
                         }
                         else
