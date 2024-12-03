@@ -107,7 +107,7 @@ namespace exer3
         }
         private bool checkpass(string pass)
         {
-            return Regex.IsMatch(pass, @"^[\w]{6,20}$");
+            return Regex.IsMatch(pass, @"^[\w]{6,250}$");
         }
         private bool checkmail(string mail)
         {
@@ -135,7 +135,7 @@ namespace exer3
             }
             if (!checkpass(pass))
             {
-                MessageBox.Show("Vui lòng nhập mật khẩu từ 6 đến 20 chữ số", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Vui lòng nhập mật khẩu từ 6 chữ số", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
            /* if (!checkfullname(name))
@@ -202,7 +202,7 @@ namespace exer3
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối đến server: " + ex.Message);
+                MessageBox.Show("Lỗi kết nối đến server: " + ex.Message + '\n' + ex.StackTrace);
             }
         }
 

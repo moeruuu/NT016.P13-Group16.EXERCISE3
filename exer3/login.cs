@@ -102,7 +102,7 @@ namespace exer3
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối tới server: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi kết nối tới server: " + ex.Message + '\n' + ex.StackTrace, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

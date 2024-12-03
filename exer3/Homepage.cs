@@ -160,8 +160,10 @@ namespace exer3
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ChangePassword changePassword1 = new ChangePassword(userinfo.username);
+            this.Hide();
+            ChangePassword changePassword1 = new ChangePassword(userinfo.email);
             changePassword1.Show();
+            this.Close();
         }
     }
 
