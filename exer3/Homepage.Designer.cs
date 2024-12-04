@@ -52,9 +52,10 @@
             lbWelcome.BackColor = Color.Transparent;
             lbWelcome.Font = new Font("Stencil", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbWelcome.ForeColor = Color.White;
-            lbWelcome.Location = new Point(144, 7);
+            lbWelcome.Location = new Point(180, 9);
+            lbWelcome.Margin = new Padding(4, 0, 4, 0);
             lbWelcome.Name = "lbWelcome";
-            lbWelcome.Size = new Size(390, 40);
+            lbWelcome.Size = new Size(449, 47);
             lbWelcome.TabIndex = 1;
             lbWelcome.Text = "WELCOME TO MY PAGE";
             lbWelcome.TextAlign = ContentAlignment.TopCenter;
@@ -68,11 +69,11 @@
             tabPage2.Controls.Add(lblUsername);
             tabPage2.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tabPage2.ForeColor = Color.PaleVioletRed;
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 34);
             tabPage2.Margin = new Padding(2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(2);
-            tabPage2.Size = new Size(576, 161);
+            tabPage2.Size = new Size(722, 204);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Information";
             // 
@@ -82,10 +83,10 @@
             panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(linklogout);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(2, 131);
+            panel1.Location = new Point(2, 167);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(572, 28);
+            panel1.Size = new Size(718, 35);
             panel1.TabIndex = 3;
             // 
             // linkLabel1
@@ -93,9 +94,10 @@
             linkLabel1.AutoSize = true;
             linkLabel1.ForeColor = Color.PaleVioletRed;
             linkLabel1.LinkColor = Color.PaleVioletRed;
-            linkLabel1.Location = new Point(11, 5);
+            linkLabel1.Location = new Point(14, 6);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(134, 20);
+            linkLabel1.Size = new Size(161, 23);
             linkLabel1.TabIndex = 1;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Change password";
@@ -105,10 +107,10 @@
             // 
             linklogout.AutoSize = true;
             linklogout.LinkColor = Color.DeepPink;
-            linklogout.Location = new Point(512, 5);
+            linklogout.Location = new Point(640, 6);
             linklogout.Margin = new Padding(2, 0, 2, 0);
             linklogout.Name = "linklogout";
-            linklogout.Size = new Size(61, 20);
+            linklogout.Size = new Size(73, 23);
             linklogout.TabIndex = 0;
             linklogout.TabStop = true;
             linklogout.Text = "LogOut";
@@ -117,30 +119,30 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(14, 75);
+            lblEmail.Location = new Point(18, 94);
             lblEmail.Margin = new Padding(2, 0, 2, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(59, 20);
+            lblEmail.Size = new Size(69, 23);
             lblEmail.TabIndex = 2;
             lblEmail.Text = "Email: ";
             // 
             // lblFullname
             // 
             lblFullname.AutoSize = true;
-            lblFullname.Location = new Point(14, 43);
+            lblFullname.Location = new Point(18, 54);
             lblFullname.Margin = new Padding(2, 0, 2, 0);
             lblFullname.Name = "lblFullname";
-            lblFullname.Size = new Size(84, 20);
+            lblFullname.Size = new Size(99, 23);
             lblFullname.TabIndex = 1;
             lblFullname.Text = "Fullname: ";
             // 
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(14, 14);
+            lblUsername.Location = new Point(18, 18);
             lblUsername.Margin = new Padding(2, 0, 2, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(89, 20);
+            lblUsername.Size = new Size(107, 23);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username: ";
             // 
@@ -151,11 +153,11 @@
             tabPage1.Controls.Add(txtintro);
             tabPage1.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tabPage1.ForeColor = Color.PaleVioletRed;
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 34);
             tabPage1.Margin = new Padding(2);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(2);
-            tabPage1.Size = new Size(576, 161);
+            tabPage1.Size = new Size(722, 204);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Books";
             // 
@@ -163,10 +165,10 @@
             // 
             linkBooksForm.AutoSize = true;
             linkBooksForm.LinkColor = Color.Crimson;
-            linkBooksForm.Location = new Point(18, 78);
+            linkBooksForm.Location = new Point(22, 98);
             linkBooksForm.Margin = new Padding(2, 0, 2, 0);
             linkBooksForm.Name = "linkBooksForm";
-            linkBooksForm.Size = new Size(95, 20);
+            linkBooksForm.Size = new Size(113, 23);
             linkBooksForm.TabIndex = 2;
             linkBooksForm.TabStop = true;
             linkBooksForm.Text = "Books Form";
@@ -176,10 +178,10 @@
             // 
             txtintro.BorderStyle = BorderStyle.None;
             txtintro.ForeColor = Color.PaleVioletRed;
-            txtintro.Location = new Point(18, 13);
+            txtintro.Location = new Point(22, 16);
             txtintro.Margin = new Padding(2);
             txtintro.Name = "txtintro";
-            txtintro.Size = new Size(555, 63);
+            txtintro.Size = new Size(694, 79);
             txtintro.TabIndex = 1;
             txtintro.Text = "Chào mừng bạn đến với NT016.P13-Group 16!\nNếu bạn muốn khám phá thế giới tri thức qua những cuốn sách thì hãy click vào link ở dưới nhé:";
             // 
@@ -187,28 +189,30 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(46, 90);
+            tabControl1.Location = new Point(58, 112);
             tabControl1.Margin = new Padding(2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(584, 194);
+            tabControl1.Size = new Size(730, 242);
             tabControl1.TabIndex = 2;
             // 
             // Homepage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             BackgroundImage = Properties.Resources.f4559a0ac40cf5c464dd1c321dbd78c0;
-            ClientSize = new Size(678, 294);
+            ClientSize = new Size(848, 368);
             Controls.Add(tabControl1);
             Controls.Add(lbWelcome);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Homepage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Homepage";
+            FormClosing += Homepage_FormClosing;
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             panel1.ResumeLayout(false);

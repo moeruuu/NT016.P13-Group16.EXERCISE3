@@ -51,10 +51,10 @@ namespace exercise3
             bookService = book;
         }
 
-        private async Task activeloggingindatabase(string username)
+        private async Task activeloggingindatabase(string username, bool active)
         {
             var filter = Builders<User>.Filter.Eq("Username", username);
-            var update = Builders<User>.Update.Set("logging", true);
+            var update = Builders<User>.Update.Set("logging", active);
             await accCollection.UpdateOneAsync(filter, update);
         }
 
@@ -125,7 +125,7 @@ namespace exercise3
                     CreateTime = DateTime.Now,
                     ExpiresTime = DateTime.Now.AddMinutes(30),
                 };
-                activeloggingindatabase(strings[0].Trim());
+                await activeloggingindatabase(strings[0].Trim(), true);
                 await tokenCollection.InsertOneAsync(tokenDoc);
                 var tokengg = await bookService.GetAccessToken();
 
@@ -174,23 +174,24 @@ namespace exercise3
 
         }
 
-        private async Task<string> LogOut(string username)
+        private async Task<string> LogOut(string user)
         {
-            var userFilter = Builders<User>.Filter.Eq("Username", username);
-            var userDoc = await accCollection.Find(userFilter).FirstOrDefaultAsync();
+            var strings = user.Split("|");
+            var username = strings[0].Trim();
+            var filter = Builders<User>.Filter.Eq(u => u.Username, username);
+            var userDoc = await accCollection.Find(filter).FirstOrDefaultAsync();
 
 
             if (userDoc == null) return "Lỗi: Tài khoản không tồn tại";
             var userid = userDoc.UserId.ToString();
 
-            var tokenFilter = Builders<Token>.Filter.Eq("userid", userid);
-            await tokenCollection.DeleteManyAsync(tokenFilter);
+            var tokenfilter = Builders<Token>.Filter.Eq("userid", userid);
+            await tokenCollection.DeleteManyAsync(tokenfilter);
 
-            var update = Builders<User>.Update.Set("Logging", false);
-            await accCollection.UpdateOneAsync(userFilter, update);
+            await activeloggingindatabase(username, false);
 
             UpdateLog($"{username} đã đăng xuất!");
-            return "Đăng xuất thành công";
+            return "SUCCESS";
         }
 
         private async Task<string> ForgetPassword(string email)
@@ -529,6 +530,13 @@ namespace exercise3
                     incomingMessage = incomingMessage.Replace("VERIFY_TOKEN", "");
                     string messgaetoclient = await VerifyToken(incomingMessage);
                     SendMessageToClient(tcpClient, messgaetoclient);
+                }
+                else if (incomingMessage.StartsWith("LOGOUT"))
+                {
+                    incomingMessage = incomingMessage.Replace("LOGOUT", "");
+                    string messagetoclients = await LogOut(incomingMessage);
+                    //MessageBox.Show(messagetoclients);
+                    SendMessageToClient(tcpClient, messagetoclients);
                 }
                 else if (incomingMessage.StartsWith("SEARCH_BOOK"))
                 {

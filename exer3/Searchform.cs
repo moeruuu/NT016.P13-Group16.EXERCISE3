@@ -63,7 +63,7 @@ namespace exer3
             dgvBoooks.Columns[6].Width = 120;
 
             dgvShelf.Columns[0].Width = 45;
-            dgvShelf.Columns[1].Width = 100;
+            dgvShelf.Columns[1].Width = 80;
             dgvShelf.Columns[2].Width = 270;
         }
 

@@ -41,7 +41,7 @@ namespace exer3
             int x = (this.ClientSize.Width - lbWelcome.Width) / 2;
             lbWelcome.Location = new Point(x, lbWelcome.Height);
             lblUsername.Text += userinfo.username;
-            lblFullname.Text += userinfo.username;
+            lblFullname.Text += userinfo.fullname;
             lblEmail.Text += userinfo.email;
 
         }
@@ -140,24 +140,56 @@ namespace exer3
             new Searchform(userinfo).Show();
         }
 
-        private void linklogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private async Task<string> LogOut(string username)
+        {
+            using (TcpClient client = new TcpClient("127.0.0.1", 8080))
+            using (NetworkStream stream = client.GetStream())
+            {
+                string message = $"LOGOUT{username}|";
+                byte[] bytes = Encoding.UTF8.GetBytes(message);
+                await stream.WriteAsync(bytes, 0, bytes.Length);
+
+                byte[] newbytes = new byte[1024];
+                int getbytes = await stream.ReadAsync(newbytes, 0, newbytes.Length);
+                string getmessages = Encoding.UTF8.GetString(newbytes, 0, getbytes);
+                MessageBox.Show(getmessages);
+                return getmessages;
+            }
+
+        }
+        private async void linklogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
             if (MessageBox.Show("Bạn có muốn đăng xuất?", "Chú ý", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.Hide();
-                login formLogin = new login();
-                formLogin.ShowDialog();
-                this.Close();
-                ClearDataUser();
+                var response = await LogOut(userinfo.username);
+                //MessageBox.Show(response);
+                if (response == "SUCCESS")
+                {
+                    this.Hide();
+                    login formLogin = new login();
+                    formLogin.ShowDialog();
+                    this.Close();
+                    ClearDataUser();
+                }
+                else
+                {
+                    MessageBox.Show("Xảy ra lỗi khi log out!");
+                }
             }
         }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             ChangePassword changePassword1 = new ChangePassword(userinfo.email);
             changePassword1.ShowDialog();
+        }
+
+        private async void Homepage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           await LogOut(userinfo.username);
         }
     }
 
