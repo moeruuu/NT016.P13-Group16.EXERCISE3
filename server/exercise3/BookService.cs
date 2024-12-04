@@ -68,7 +68,7 @@ namespace exercise3
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return null;
+                return string.Empty;
             }
         }
 
@@ -97,7 +97,7 @@ namespace exercise3
             {
                 MessageBox.Show(ex.Message);
             }
-            return null;
+            return string.Empty;
         }
 
         private async Task<string> RefreshAccessToken(string refreshToken)

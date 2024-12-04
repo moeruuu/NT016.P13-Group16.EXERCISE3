@@ -15,6 +15,6 @@ namespace exer3
         public string birthday { get; set; }
         public string accesstoken { get; set; }
         public string refreshtoken { get; set; }
-        //public string tokengg { get; set; }
+        public string tokengg { get; set; }
     }
 }

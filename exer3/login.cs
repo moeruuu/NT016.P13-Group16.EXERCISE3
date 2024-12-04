@@ -62,7 +62,7 @@ namespace exer3
 
 
                     // Response from server
-                    byte[] buffer = new byte[256];
+                    byte[] buffer = new byte[4092];
                     int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                     string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     //MessageBox.Show(datareceived);
@@ -78,7 +78,7 @@ namespace exer3
                         userinfo.email = response[3].Trim();
                         userinfo.birthday = response[4].Trim();
                         userinfo.accesstoken = response[5].Trim();
-                        //userinfo.tokengg = response[6].Trim();
+                        userinfo.tokengg = response[6].Trim();
                         //userinfo.refreshtoken = response[7].Split(":")[1].Trim();
 
                         MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
