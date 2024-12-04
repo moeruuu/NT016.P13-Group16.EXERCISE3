@@ -31,6 +31,7 @@
             tboxEmail = new TextBox();
             lblEmail = new Label();
             btnGetNewPassword = new Button();
+            linkLogin = new LinkLabel();
             SuspendLayout();
             // 
             // tboxEmail
@@ -70,12 +71,27 @@
             btnGetNewPassword.UseVisualStyleBackColor = true;
             btnGetNewPassword.Click += btnGetNewPassword_Click;
             // 
+            // linkLogin
+            // 
+            linkLogin.AutoSize = true;
+            linkLogin.BackColor = Color.Transparent;
+            linkLogin.Font = new Font("Cambria", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLogin.LinkColor = Color.PaleVioletRed;
+            linkLogin.Location = new Point(236, 171);
+            linkLogin.Name = "linkLogin";
+            linkLogin.Size = new Size(59, 23);
+            linkLogin.TabIndex = 20;
+            linkLogin.TabStop = true;
+            linkLogin.Text = "Login";
+            linkLogin.LinkClicked += linkLogin_LinkClicked;
+            // 
             // ForgotPassword
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._3046153;
             ClientSize = new Size(782, 375);
+            Controls.Add(linkLogin);
             Controls.Add(btnGetNewPassword);
             Controls.Add(tboxEmail);
             Controls.Add(lblEmail);
@@ -91,5 +107,6 @@
         private TextBox tboxEmail;
         private Label lblEmail;
         private Button btnGetNewPassword;
+        private LinkLabel linkLogin;
     }
 }

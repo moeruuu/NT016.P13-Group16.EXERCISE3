@@ -259,6 +259,10 @@ namespace exercise3
                 byte[] newPasswordBytes = Encoding.UTF8.GetBytes(newPassword);
                 byte[] hashedNewPasswordBytes = hashAlgorithm.ComputeHash(newPasswordBytes);
                 string hashedNewPassword = BitConverter.ToString(hashedNewPasswordBytes).Replace("-", "");
+                if (hashedNewPassword == userDoc.Password)
+                {
+                    return "Không thể đổi thành mật khẩu cũ";
+                }
 
                 var update = Builders<User>.Update.Set(u => u.Password, hashedNewPassword);
                 await accCollection.UpdateOneAsync(filter, update);

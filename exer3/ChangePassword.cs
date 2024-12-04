@@ -43,6 +43,7 @@ namespace exer3
             }
             try
             {
+                btnChangePassword.Enabled = false;
                 using (TcpClient client = new TcpClient ("127.0.0.1", 8080))
                 {
                     using (NetworkStream network = client.GetStream())
@@ -54,7 +55,7 @@ namespace exer3
                         byte[] buffer = new byte[1024];
                         int byteCount = await network.ReadAsync(buffer, 0, buffer.Length);
                         string response = Encoding.UTF8.GetString(buffer, 0, byteCount);
-
+                        btnChangePassword.Enabled = true;
                         if (response == "SUCCESS")
                         {
                             this.Hide();

@@ -33,6 +33,7 @@ namespace exer3
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            
             string username = tbusername.Text;
             string pass = tbpass.Text.Trim();
 
@@ -51,6 +52,7 @@ namespace exer3
 
             try
             {
+                this.Enabled = false;
                 using (TcpClient client = new TcpClient("127.0.0.1", 8080))
                 using (NetworkStream stream = client.GetStream())
                 {
@@ -67,6 +69,7 @@ namespace exer3
                     string datareceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     //MessageBox.Show(datareceived);
                     // Check response
+                    this.Enabled = true;
                     if (datareceived.StartsWith("SUCCESS"))
                     {
                         datareceived = datareceived.Replace("SUCCESS", "");
@@ -99,10 +102,6 @@ namespace exer3
 
                 }
 
-            }
-            catch (SocketException ex)
-            {
-                MessageBox.Show("Lỗi kết nối tới server: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
